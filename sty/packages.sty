@@ -1,0 +1,46 @@
+%------- Temp. packages -------
+\usepackage{lipsum}
+% -----------------------------
+%------- Constants -------
+\newcommand{\marginnotewidth}{3.7cm}
+\newcommand{\marginnotesep}{.8cm}
+% -----------------------------
+
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[a4paper, top=2.5cm, headheight=4cm, bottom=1.5cm, outer=6.8cm, inner=2.2cm, marginparwidth=\marginnotewidth, marginparsep=\marginnotesep, includefoot]{geometry} 
+% \usepackage[stretch=10]{microtype}  % Only pdflatex
+\usepackage{setspace}
+
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage[norule, multiple]{footmisc}
+\addtolength{\skip\footins}{7pt plus 2pt minus 1.5pt}
+
+\usepackage{graphicx, subcaption}
+\usepackage{csquotes}  % \enquote{⟨text⟩} and \blockquote[⟨cite⟩]{⟨text⟩}
+\usepackage{hyperref}
+\usepackage{todonotes} 	% Use \todo{⟨text⟩} to set and \listoftodos to list
+\usepackage{booktabs, multirow}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{physics}
+\usepackage{systeme}  % \systeme{a=a, b=b} or \systeme*{...} for left alignment
+\usepackage[linesnumbered, lined]{algorithm2e}
+
+\onehalfspacing
+
+% Definitions for amsthm
+\newtheorem{thm}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}[section]
+\newtheorem{exmp}{Example}[section]
+\theoremstyle{remark}
+\newtheorem*{note}{Note}
+
+% Definitions for algorithm2e
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\SetEndCharOfAlgoLine{}  % No semicolon at eol.
+

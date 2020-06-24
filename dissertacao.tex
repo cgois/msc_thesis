@@ -1,0 +1,35 @@
+\documentclass[12pt, draft]{book}
+\usepackage{sty/packages}
+
+\begin{document}
+
+	\pagestyle{empty}
+	
+	\frontmatter	
+	\include{pretext/titlepage}
+	\include{pretext/abstract}
+	\include{pretext/preface}
+	
+	\tableofcontents
+	\thispagestyle{empty}  % Remove page number
+
+	\mainmatter
+	\include{sty/fancy}  % Set header style
+	\include{text/introducao}
+	\include{text/chapter1}
+	\include{text/chapter2}
+	\include{text/chapter3}
+	\include{text/lipsum-chapter}
+	% ...
+	
+	\include{postext/final_remarks}
+	
+	\bibliographystyle{unsrt}
+	\bibliography{bibliography}
+	\thispagestyle{empty}  % Remove page number
+	\addcontentsline{toc}{chapter}{Bibliography}
+	
+	\appendix
+	\include{postext/appendices}
+	
+\end{document}

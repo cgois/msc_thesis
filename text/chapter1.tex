@@ -1,0 +1,36 @@
+\chapter{Foundations of quantum theory}
+\thispagestyle{empty}  % Remove opening page number
+
+	Quantum theory is an intrinsically statistical theory. Our inability to deterministically describe measurement results is not due to a lack of information on the system, but emerges from the theory itself. An analogy with classical systems may be found through the description of classical ensembles in phase space.
+
+	\section{Classical particles in phase space}
+		
+		A phase space is a geometric construct able to represent every possible state and evolution of a given physical system. For a single classical particle with $N$ degrees of freedom, it is usual to define
+		%
+		\begin{equation}
+			\Gamma = \{ (p_i, q_i) \mid i = 1, 2, \ldots N \}
+		\end{equation}
+		%
+		as the particle's phase space, where $p_i$ is its position on the $i$-th coordinate, and $q_i$ its respective conjugate momentum.
+		
+		Any point $x \in \Gamma$ is a state of the system, and the evolution $x(t)$ of $x$ is given by its trajectory. In closed systems, trajectories are ruled by the system's Hamiltonian $H$ through Liouville's equation,
+		%
+		\begin{equation}
+			\pdv{}{t} x = \sum_{i=1}^{N} \left( \pdv{H}{q_i} \pdv{x}{p_i} - \pdv{H}{p_i} \pdv{x}{q_i} \right) \equiv \{ H, x \} .
+			\label{eq:liouville}
+		\end{equation}
+		%
+		
+		It is common that we cannot exactly describe the state of a system. In such cases, the best we can look for is to know the set of possible states, $S = \{ x_i \}_{i=1}^N$, and their respective probabilities of begin the actual state of the system, $w = \{ w_i \}_{i=1}^N$, with $\sum_i w_i = 1$ and $w_i \geq 0,\,\forall i$. We then say the system is in the state $ \rho(x, t) = \sum_{i=1}^N w_i x_i $. It is frequently convenient to define a probability density function $\rho(x, t)$ over $\Gamma$ to play this role, requiring then that
+		%
+		\begin{subequations}
+			\begin{gather}
+				\rho(x, t) \geq 0,\quad\forall x, t \\
+				\int \rho(x, t)\dd x = 1,\quad\forall t .
+			\end{gather}
+		\end{subequations}
+		%
+		Whenever $\rho(x, t) = \delta(x - x^\prime)$, the system is definitely at state $x^\prime$, and we'll call it a \emph{pure state}\marginpar{\footnotesize\bf Pure and mixed states}. The system will otherwise be said to be in a \emph{mixed state} --- as in \enquote{a mixture of pure states} ---, and will be interpreted as a volume in phase space. 		
+		
+		Equation \ref{eq:liouville} trivially generalizes to mixed states. Its solution portray the dynamical evolution of $\rho$ under a given $H$. % TODO: Mostrar que vira um mapa [...]
+
