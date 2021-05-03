@@ -1,6 +1,6 @@
 # Gell-Mann operators and Bloch vectors
 
-In sec. \ref{sec:density-operator} we argued that any quantum state is a linear, positive semi-definite, unit-trace $d$-dimensional density operator $\rho$, and that any such $\rho$ is a quantum state. Thus we define the set of density operators as
+In sec. \ref{sec:states} we argued that any quantum state is a linear, positive semi-definite, unit-trace $d$-dimensional density operator $\rho$, and that any such $\rho$ is a quantum state. Thus we define the set of density operators as
 $$
 \mathcal{D}(d) = \{ \rho \in \mathcal{L}(\mathcal{H}^d) \mid \text{tr}\rho=1, \rho \succeq0 \} ,
 $$

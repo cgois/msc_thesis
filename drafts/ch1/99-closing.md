@@ -1,0 +1,1 @@
+Quantum information is the study of the encoding, processing and decoding of information in quantum systems, which are done by preparing a state $\rho$, transforming, and measuring it. Quantum theory, on the other hand, tells us we should associate these steps to density operators, CPTP maps, and complete collections of positive-semidefinite operators, respectively.
