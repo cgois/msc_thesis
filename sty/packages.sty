@@ -2,14 +2,14 @@
 \usepackage{lipsum}
 % -----------------------------
 %------- Constants -------
-\newcommand{\marginnotewidth}{3.7cm}
-\newcommand{\marginnotesep}{.8cm}
+\newcommand{\marginnotewidth}{4.3cm}
+\newcommand{\marginnotesep}{.6cm}
 % -----------------------------
 
 
 \usepackage[utf8]{inputenc}
 
-\usepackage[a4paper, top=2.5cm, headheight=4cm, bottom=1.5cm, outer=6.8cm, inner=2.2cm, marginparwidth=\marginnotewidth, marginparsep=\marginnotesep, includefoot]{geometry} 
+\usepackage[a4paper, top=2.5cm, headheight=4cm, bottom=1.5cm, outer=6cm, inner=2.4cm, marginparwidth=\marginnotewidth, marginparsep=\marginnotesep, includefoot]{geometry} 
 % \usepackage[stretch=10]{microtype}  % Only pdflatex
 \usepackage{setspace}
 
@@ -29,6 +29,9 @@
 \usepackage{systeme}  % \systeme{a=a, b=b} or \systeme*{...} for left alignment
 \usepackage[linesnumbered, lined]{algorithm2e}
 
+% \usepackage{auto-pst-pdf}
+% \usepackage{psvectorian}
+
 \onehalfspacing
 
 % Definitions for amsthm
@@ -44,3 +47,16 @@
 \SetKwInOut{Output}{output}
 \SetEndCharOfAlgoLine{}  % No semicolon at eol.
 
+% Pretty text separator
+% \newcommand{\ornamentleft}{%
+%     \psvectorian[width=2em]{2}%
+% }
+% \newcommand{\ornamentright}{%
+%     \psvectorian[width=2em,mirror]{2}%
+% }
+% \newcommand{\ornamentbreak}{%
+%     \begin{center}
+%     \ornamentleft\quad\ornamentright
+%     \end{center}%
+% }
+\newcommand{\ornamentbreak}{\begin{center}$\ast$~$\ast$~$\ast$\end{center}}
