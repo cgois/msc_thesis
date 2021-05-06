@@ -1,14 +1,19 @@
 \contentsline {chapter}{Preface}{iii}{chapter*.1}% 
-\contentsline {chapter}{\numberline {1}Quantum theory}{1}{chapter.1}% 
-\contentsline {section}{\numberline {1.1}States}{1}{section.1.1}% 
-\contentsline {section}{\numberline {1.2}Transformations}{6}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}Measurements}{8}{section.1.3}% 
-\contentsline {section}{\numberline {1.4}Gell-Mann operators and Bloch vectors}{10}{section.1.4}% 
-\contentsline {chapter}{\numberline {2}Mathematical optimization}{15}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Convexity}{15}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Linear programming}{15}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Semidefinite programming}{15}{section.2.3}% 
-\contentsline {chapter}{\numberline {3}The prepare and measure scenario}{17}{chapter.3}% 
-\contentsline {chapter}{\numberline {4}Classicality in the prepare and measure scenario}{19}{chapter.4}% 
-\contentsline {chapter}{\numberline {5}Superdense coding in the prepare and measure scenario}{21}{chapter.5}% 
-\contentsline {chapter}{Bibliography}{25}{chapter*.3}% 
+\contentsline {part}{I\hspace {1em}Tools}{1}{part.1}% 
+\contentsline {chapter}{\numberline {1}Quantum theory}{3}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}States}{3}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Transformations}{8}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Measurements}{10}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Gell-Mann operators and Bloch vectors}{12}{section.1.4}% 
+\contentsline {chapter}{\numberline {2}Mathematical optimization}{17}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Convexity}{17}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Linear programming}{17}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Semidefinite programming}{17}{section.2.3}% 
+\contentsline {part}{II\hspace {1em}Prepare and measure}{19}{part.2}% 
+\contentsline {chapter}{\numberline {3}The prepare and measure scenario}{21}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}Classicality in the prepare and measure scenario}{23}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}Superdense coding in the prepare and measure scenario}{25}{chapter.5}% 
+\contentsline {chapter}{Appendices}{27}{section*.3}% 
+\contentsline {chapter}{Appendix \numberline {A}Proofs for chap. \ref {cap:pam-classical}}{29}{Appendix.a.A}% 
+\contentsline {chapter}{Appendix \numberline {B}Proofs for chap. \ref {cap:pam-quantum}}{31}{Appendix.a.B}% 
+\contentsline {chapter}{Bibliography}{35}{chapter*.4}% 

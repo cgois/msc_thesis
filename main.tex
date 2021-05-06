@@ -18,22 +18,26 @@
 	\mainmatter
 	\include{sty/fancy}  % Set header style
 	\include{text/introducao}
-	\include{text/chapter1}
-	\include{text/chapter2}
-	\include{text/chapter3}
-	\include{text/chapter4}
-	\include{text/chapter5}
-	\include{text/lipsum-chapter}
+	\part{Tools}
+		\include{text/chapter1}
+		\include{text/chapter2}
+	\part{Prepare and measure}
+		\include{text/chapter3}
+		\include{text/chapter4}
+		\include{text/chapter5}
+	%
+	\include{postext/final_remarks}
 	% ...
 	
-	\include{postext/final_remarks}
+	\begin{appendices}
+		\input{postext/appendix_a.tex}
+		\input{postext/appendix_b.tex}
+	\end{appendices}
+	
 	
 	\bibliographystyle{unsrt}
 	\bibliography{bibliography}
 	\thispagestyle{empty}  % Remove page number
 	\addcontentsline{toc}{chapter}{Bibliography}
-	
-	\appendix
-	\include{postext/appendices}
 	
 \end{document}
