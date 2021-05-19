@@ -1,3 +1,7 @@
 In the widest sense, *quantum information* is the study of encoding, processing and decoding information by means of quantum systems. Its origins can be traced back to the first decades following the inception of quantum theory \cite{epr,schrodinger,bohm}, and most notably to \cite{bell}, which went largely unnoticed for years. These earlier discussions were mostly focused on conceptual puzzles arising from the theory; a similar motivation that now grounds the field we call *quantum foundations*. During the 80's and 90's, groundbreaking results in *quantum computing* \cite{algoritmos} and, most notably, *quantum cryptography* \cite{bb84,ekert}, connected informational with foundational aspects of quantum theory, ultimately paving the way that turned quantum information into a vast and widely studied field.
 
 *Correlation scenarios* are [...]
+
+
+
+- Importância de DI e SDI em informação quantica (ref. intro do Dall'Arno robustness)

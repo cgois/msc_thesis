@@ -17,6 +17,10 @@ $$
 \newcommand{\idd}[1]{\mathbf{1}_{#1}}
 \newcommand{\povm}{\mathcal{P}}
 \newcommand{\pvm}{\mathbb{P}}
+\newcommand{\natrange}[1]{\{ 1, \ldots, #1 \}}
+\newcommand{\posrange}[1]{\{ 0, \ldots, #1 \}}
+\newcommand{\condprob}[2]{p \left( #1 \mid #2 \right)}
+\newcommand{\conv}[1]{\text{conv} \left( #1 \right)}
+\newcommand{\rac}[3]{\left( #1, #2 \right) \mapsto #3}
 $$
-
 
