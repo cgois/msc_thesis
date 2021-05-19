@@ -3,10 +3,12 @@
 
 \chapter{Quantum theory}
 \thispagestyle{empty}  % Remove opening page number
+\label{chap:quantum-theory}
 
 	States, transformations and measurements are the basic building blocks in the description of any physical system. In this chapter I review the mathematical structures that quantum theory assigns to each of these building blocks, emphasizing the aspects that most drastically differ from their classical counterparts. 
 
 	\section{States}
+	\label{sec:states}
 
 		A structure at the core of the most unusual of quantum behaviors is \emph{entanglement} --- a property that may or not be present in composite quantum systems. The unusual correlations that entanglement may originate were pointed out as early as 1935 by Einstein, Podolsky and Rosen \cite{epr}, and also discussed by Schrödinger, who coined the term (originally, ``Verschränkung'') \cite{schrodinger_1935}. This discussion was later rescued by John Bell in 1964 \cite{bell_1964}, and since then been extensively tested and developed \cite{horodecki_2009_entanglement}, ultimately becoming a central feature of many quantum informational protocols, such as superdense coding \cite{bennett_1992_superdense}, quantum key distribution \cite{bb84} and teleportation \cite{bennett_1993_teleporting}. Entanglement theory is a vast and endlessly interesting field of study in itself, some aspects of which I now review with special focus on bipartite systems, and making no attempt of comprehensiveness.
 
@@ -52,7 +54,7 @@
 			\ptr{B}{O} \equiv \sum_{ij\alpha\beta} O_{ij\alpha\beta} \,\tr{\ketbra{\psi_i}{\psi_j}} \otimes \ketbra{\varphi_\alpha}{\varphi_\beta} = \sum_{i\alpha\beta} O_{ii\alpha\beta} \ketbra{\varphi_\alpha}{\varphi_\beta}
 		$$
 		%
-		and call $O^A = \ptr{B}{O}$ the reduced operator. This definition can be trivially adapted to tracing out $\hilb_A$ instead, and to dealing with more than two subsystems. Moreover, it can be shown that this is the unique operation satisfying the expectation value equality condition, and that it is also completely positive and trace preserving (the significance of these latter conditions will be discussed later) \cite{}. This operation is especially useful when applied to density operators, in which case we call $\ptr{B}{\rho} = \rho^A$ the \emph{reduced state} (of $\rho$ in subsystem $A$).
+		and call $O^A = \ptr{B}{O}$ the reduced operator. This definition can be trivially adapted to tracing out $\hilb_A$ instead, and to dealing with more than two subsystems. Moreover, it can be shown that this is the unique operation satisfying the expectation value equality condition, and that it is also completely positive and trace preserving (the significance of these latter conditions will be discussed later) \cite{}\todo{}. This operation is especially useful when applied to density operators, in which case we call $\ptr{B}{\rho} = \rho^A$ the \emph{reduced state} (of $\rho$ in subsystem $A$).
 	
 		Given a factorization of $\hilb$, a state $\rho$ acting on $\hilb$ is said to be \emph{separable} if and only if it can be written as 
 		\begin{equation}
@@ -94,10 +96,10 @@
 		Making the Schmidt spectrum respect the first condition is easy (just subtract $1$). Using it to impose a partial ordering on the set of pure states requires some extra caution, but it can be done through majorization. We first order the \emph{Schmidt spectrum} $\{ \eta_i (\psi) \}_{i=1}^{r_S(\psi)}$ of some state $\ket{\psi}$ in non-increasing order, then define
 		%
 		$$
-			\psi \succ \varphi \;\Longleftrightarrow\; \sum_{i=1}^{r} \eta_i^2(\psi) \geq \sum_{i=1}^{r} \eta_i^2(\varphi), \;\forall r .
+			\psi \prec \varphi \quad\Longleftrightarrow\quad \sum_{i=1}^{r} \eta_i^2(\psi) \leq \sum_{i=1}^{r} \eta_i^2(\varphi), \;\forall r .
 		$$
 		%
-		Then, if $\psi \succ \varphi$, we can safely say that $\ket{\psi}$ is \emph{more} entangled than $\ket{\varphi}$, in the sense that we may convert $\ket{\psi}$ to $\ket{\phi}$ solely with LOCC \cite{nielsen_1999_majorization,terra_tese}. With this in mind, states for which $\eta_i = 1/\sqrt{d}$ are said to be \emph{maximally entangled}.
+		If $\psi \prec \varphi$, we say that $\psi$ is majorized by $\varphi$, or that $\varphi$ majorizes $\psi$. In relation to entanglement, $\psi$ would then be \emph{more} entangled than $\ket{\varphi}$, in the sense that we may convert $\ket{\psi}$ to $\ket{\varphi}$ solely by means of LOCC \cite{nielsen_1999_majorization,terra_tese}. With this in mind, states for which $\eta_i = 1/\sqrt{d}$ are said to be \emph{maximally entangled}.
 	
 		Although the Schmidt decomposition only works for pure states, the idea of the Schmidt rank can be nicely generalized to an entanglement measure over mixed states. The so called \emph{Schmidt number} \cite{terhal_2000_schmidtnumber} is given by 
 		%
@@ -154,9 +156,10 @@
 			\label{eq:singlet-fraction-isotropic-states}
 		\end{equation}
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\section{Transformations}
+	\label{sec:transformations}
 
 		% Unitary transformations
 		We now know how to describe static physical systems, which is something that physical systems rarely are. In introductory quantum theory, we learn that the evolution of closed quantum systems is governed by the Schrödinger equation. Its solution dictates that an initial state $\rho$ that transforms to $\rho^\prime$ does so unitarily following $\rho^\prime = U \rho U^\dagger$. Here, $U$ must be an unitary operator, which means that $UU^\dagger = U^\dagger U = \id$. Given $U$, we can always find a Hamiltonian $H$ and a suitable interaction time to perform the evolution. Nonetheless, these are not the most general transformations that a quantum state can undergo.
@@ -194,12 +197,12 @@
 			\label{eq:state-to-channel}
 		\end{equation}
 		%
-		This inverse mapping shows us that we can also take a bipartite state and turn it into a quantum channel. Together, eqs.~\eqref{eq:channel-to-state} and \eqref{eq:state-to-channel} consist in the so-called \emph{channel-state duality}. The representation of quantum channels as bipartite states will become handy when dealing with optimization problems over channels, where a CPTP constraint can be cast as a positivity condition (see secs. \ref{sec:sdps} and \ref{sec:pam-quantum-optimization}).
+		This inverse mapping shows us that we can also take a bipartite state and turn it into a quantum channel. Together, eqs.~\eqref{eq:channel-to-state} and \eqref{eq:state-to-channel} consist in the so-called \emph{channel-state duality}. The representation of quantum channels as bipartite states will become handy when dealing with optimization problems over channels, where a CPTP constraint can be cast as a positivity condition (see secs. \ref{sec:sdp} and \ref{sec:pam-quantum-optimization}).
 		
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\section{Measurements}
+	\label{sec:measurements}
 	
 		To finish our review of quantum theory, we must remember how to measure a state. While in classical mechanics we usually gloss over the concept of measurements, taking for granted that any physical property of a state is trivially accessible, in quantum theory we must not. On a par with entanglement, measurement incompatibility is a concept at the heart of the most interesting quantum phenomena, especially those with no classical counterpart. It is unavoidably linked to some of the most intriguing consequences of quantum theory. Decision problems on the Einstein-Podolsky-Rosen steering scenario \cite{uola_2020_steering,cavalcanti_2016_steering}, for one, can be one-to-one mapped to joint-measurability problems, in the sense that a measurement set is incompatible if and only if it can be used to demonstrate steering. In the also widely studied Bell nonlocality scenario \cite{brunner_2014_nonlocality}, generating nonlocal statistic require incompatible measurements, but not every set of incompatible measurements is sufficient to observe nonlocality \cite{quintino_2016_incompatibilitybell,quintino_2018_incompatibilitybellgeneral,bene_2018_incompatibilitybell}. In this section I review the main mathematical structures related to quantum measurements, together with some aspects of measurement incompatibility.
 	
@@ -232,7 +235,7 @@
 		$$
 		
 		% Incompatibility
-		One of the most intriguing aspects of the quantum measurement formalism is that it implies the existence of quantities that may not be simultaneously measured with arbitrary precision on a single copy of a quantum system.\marginpar{Joint-measurability} Measurements behaving in this way are called \emph{incompatible measurements}. Throughout this work, we will understand "compatibility" as a synonym of "joint measurability". A set $\mathcal{M} = \{E_m^x \}_{m, x}$ of $X$ quantum measurements indexed by $x$ with $\mathcal{O}(x)$ outcomes each is said to be \emph{jointly measurable} whenever a parent measurement $J_\ell$ exists. To be a parent measurement, $J_\ell$ must be a valid quantum measurement from which any $E_m^x \in \mathcal{M}$ may be recovered. Letting $\ell = \ell_1\ell_2\ldots\ell_X$, where each $\ell_i \in \{ 1, \ldots, \mathcal{O}(i) \}$, the latter condition requires that $\sum_\ell J_\ell \delta_{m, \ell_x} = E_m^x$. We interpret this as saying that the measurement statistics that the set $\mathcal{M}$ could generate can be reproduced by applying the single measurement $J_\ell$ then coarse-graining the results. In the plenty of situations where no parent measurement exist, $\mathcal{M}$ is called incompatible or non-jointly measurable. We will get back to this topic in sec. \ref{sec:incompatibility_robustness}, where we discuss how to quantify how incompatible a measurement set is.
+		One of the most intriguing aspects of the quantum measurement formalism is that it implies the existence of quantities that may not be simultaneously measured with arbitrary precision on a single copy of a quantum system.\marginpar{Joint-measurability} Measurements behaving in this way are called \emph{incompatible measurements}. Throughout this work, we will understand ``compatibility'' as a synonym of ``joint measurability''. A set $\mathcal{M} = \{E_m^x \}_{m, x}$ of $X$ quantum measurements indexed by $x$ with $\mathcal{O}(x)$ outcomes each is said to be \emph{jointly measurable} whenever a parent measurement $J_\ell$ exists. To be a parent measurement, $J_\ell$ must be a valid quantum measurement from which any $E_m^x \in \mathcal{M}$ may be recovered. Letting $\ell = \ell_1\ell_2\ldots\ell_X$, where each $\ell_i \in \{ 1, \ldots, \mathcal{O}(i) \}$, the latter condition requires that $\sum_\ell J_\ell \delta_{m, \ell_x} = E_m^x$. We interpret this as saying that the measurement statistics that the set $\mathcal{M}$ could generate can be reproduced by applying the single measurement $J_\ell$ then coarse-graining the results. In the plenty of situations where no parent measurement exist, $\mathcal{M}$ is called incompatible or non-jointly measurable. We will get back to this topic in sec. \ref{sec:incompatibility-robustness}, where we discuss how to quantify how incompatible a measurement set is.
 		
 		Several other notions of measurement compatibility exist. Introductory quantum mechanics courses, for instance, usually discuss incompatibility as commutativity: two non-commuting observables $A$ and $B$ can only be simultaneously determined up to a degree of certainty, and a trade-off between the standard deviations on the obtained results is given by Robertson's uncertainty relation $\sigma_A \sigma_B \geq \frac{1}{2} \abs{ \langle \left[ A, B \right] \rangle }$. Notably, in this particular case of sharp measurements, commutativity is equivalent to joint-measurability. Regarding POVMs, though, this is not the case, as with several other inequivalent definitions of incompatibility, such as non-disturbance and coexistence \cite{heinosaari_2016_incompatible}.
 		
@@ -250,10 +253,11 @@
 		
 
 	\section{Gell-Mann operators and Bloch vectors}
+	\label{sec:gell-mann}
 
-		Before ending this chapter, we must discuss an interesting representation for quantum states (and some measurement operators) in terms of vectors instead of operators, which will be central to our discussion in chap. \ref{sec:pam-classical}.
+		Before ending this chapter, we must discuss an interesting representation for quantum states (and some measurement operators) in terms of vectors instead of operators, which will be central to our discussion in chap. \ref{chap:pam-classical}.
 
-		In sec. \ref{sec:density-operator} we argued that any quantum state is a linear, positive semi-definite, unit-trace $d$-dimensional density operator $\rho$, and that any such $\rho$ is a quantum state. Thus we defined the set of density operators as
+		In sec. \ref{sec:states} we argued that any quantum state is a linear, positive semi-definite, unit-trace $d$-dimensional density operator $\rho$, and that any such $\rho$ is a quantum state. Thus we defined the set of density operators as
 		%
 		$$
 			\mathcal{D}(d) = \{ \rho \in \mathcal{L}(\mathcal{H}^d) \mid \text{tr}\rho=1, \rho \succeq0 \} ,
@@ -271,15 +275,11 @@
 
 		Generalizing these concepts to $\mathcal{H}^d$ can be done in a similar fashion, but will lead us to an important caveat. Our starting point will be picking a basis. While there are a bunch of useful choices \cite{bertlmann_2008_bloch}, the most adequate for our future endeavors will be the generalized Gell-Mann matrices. The (standard) Gell-Mann matrices naturally extend the Pauli matrices from $\text{SU}(2)$ to $\text{SU}(3)$, and they are likewise traceless and Hermitian. As these are the most important properties we will want to preserve in our applications, it is sensible to choose the standard $\text{SU}(d)$ generators when moving on to $\mathcal{H}^d$. Apart from the identity operator, we will need another $d^2 - 1$ operators to span $\mathcal{H}^d$. These generalized Gell-Mann matrices can be conveniently written as $\sigma = \{ \sigma^{(s)}_{jk}, \sigma^{(a)}_{jk}, \sigma^{(d)}_l \}$, where
 		%
-		$$
-			\sigma^{(s)}_{jk} = \lvert j \rangle \langle k \rvert + \lvert k \rangle \langle j \rvert, \quad 1 \leq j < k \leq d
-		$$
-		$$
-			\sigma^{(a)}_{jk} = -i\lvert j \rangle \langle k \rvert + i\lvert k \rangle \langle j \rvert, \quad 1 \leq j < k \leq d
-		$$
-		$$
-			\sigma^{(d)}_{l} = \sqrt{\frac{2}{l (l+1)}} \left( \sum_{j=1}^l \lvert j \rangle \langle j \rvert - l\lvert l + 1 \rangle \langle l + 1 \rvert \right), \quad 1 \leq l \leq d - 1
-		$$
+		\begin{alignat*}{3}
+			&\sigma^{(s)}_{jk} = \lvert j \rangle \langle k \rvert + \lvert k \rangle \langle j \rvert, \quad &&1 \leq j < k \leq d, \\
+			&\sigma^{(a)}_{jk} = -i\lvert j \rangle \langle k \rvert + i\lvert k \rangle \langle j \rvert, \quad &&1 \leq j < k \leq d, \\
+			&\sigma^{(d)}_{l} = \sqrt{\frac{2}{l (l+1)}} \left( \sum_{j=1}^l \lvert j \rangle \langle j \rvert - l\lvert l + 1 \rangle \langle l + 1 \rvert \right), \quad &&1 \leq l \leq d - 1 .
+		\end{alignat*}
 		%
 
 		Representing an element of $\mathcal{H}^d$ asks for $d^2$ coefficients. However, because we fix $\text{tr}(\rho) = 1$, there's a redundancy that will leave us with only $d^2 - 1$ free parameters. Preserving the previous notation we then propose that
@@ -289,11 +289,11 @@
 			\label{eq:gell-mann-representation}
 		\end{equation}
 		%
-		where with the summation we made it explicit that now $v \in \mathbb{R}^{d^2 - 1}$, and by $\sigma_i$ we mean the elements of $\sigma$ defined above. This is, again, clearly a unit-trace and Hermitian operator. The condition $\text{tr}(\rho^2) \leq 1$ further imposes that $\lvert v \rvert \leq \sqrt{\frac{d - 1}{2d}}$. Our next step would be to characterize $\mathcal{B}(d)$ and consequently the (generalized) Bloch vectors. Unfortunately, finding a structure on $v$ that guarantees that $\rho \succeq 0$ is not as straightforward as in the $2$-dimensional case. Naively trying to associate any vector in a $d$-dimensional ball with a density operator won't take us far, as we'll soon find out that many choices lead to operators having negative eigenvalues. Albeit the complete characterization of Bloch vectors for arbitrary dimensions has been done \cite{kimura_2003_bloch}, it does not lead to a natural parameterization such as in the $2$-dimensional case. We will keep calling any $\mathcal{B}(d)$ a Bloch "ball", but it is important to keep in mind that are not balls at all, for there will in general be holes where there are no allowed Bloch vectors.
+		where with the summation we made it explicit that now $v \in \mathbb{R}^{d^2 - 1}$, and by $\sigma_i$ we mean the elements of $\sigma$ defined above. This is, again, clearly a unit-trace and Hermitian operator. The condition $\text{tr}(\rho^2) \leq 1$ further imposes that $\lvert v \rvert \leq \sqrt{\frac{d - 1}{2d}}$. Our next step would be to characterize $\mathcal{B}(d)$ and consequently the (generalized) Bloch vectors. Unfortunately, finding a structure on $v$ that guarantees that $\rho \succeq 0$ is not as straightforward as in the $2$-dimensional case. Naively trying to associate any vector in a $d$-dimensional ball with a density operator won't take us far, as we'll soon find out that many choices lead to operators having negative eigenvalues. Albeit the complete characterization of Bloch vectors for arbitrary dimensions has been done \cite{kimura_2003_bloch}, it does not lead to a natural parameterization such as in the $2$-dimensional case. We will keep calling any $\mathcal{B}(d)$ a Bloch ``ball'', but it is important to keep in mind that are not balls at all, for there will in general be holes where there are no allowed Bloch vectors.
 
 		Even being more complex than for qubits, this geometric interpretation is still fruitful. For one, its inverse map has quite an intuitive interpretation inside of quantum theory. We have so far been interested in defining which Bloch vectors lead to a density operator, but haven't mentioned the converse problem --- the one of determining $v$ from $\rho$ --- at all. The answer, which can be straightforwardly verified, is that $v_i = \text{tr}(\sigma_i \rho)$. Hence, each component of $v$ is the expectation value of an observable $\sigma_i$ that can, at least in principle, be experimentally obtained. Luckily, this is the mapping we will usually worry about.
 
-		Another useful consequence of this geometric description is that the effect of operations on a state can be interpreted visually. An specific example that will later become important is that of depolarizing channels. These channels are worst-case scenario noise models describing the situation where information on a state $\rho$ is, with some probability $p$, completely lost. Thus $\rho \mapsto (1 - p) \rho + p \frac{\mathbf{1}_d}{d}$, where $\mathbf{1}_d/d$ is the maximally mixed state (the "noise"). Letting $v_\rho$ be the Bloch vector associated to $\rho$, and observing that $v = 0$ defines the maximally mixed state, we are led to the conclusion that a depolarizing channel "shrinks" $\rho$'s Bloch vector towards the origin of the Bloch sphere.
+		Another useful consequence of this geometric description is that the effect of operations on a state can be interpreted visually. An specific example that will later become important is that of depolarizing channels. These channels are worst-case scenario noise models describing the situation where information on a state $\rho$ is, with some probability $p$, completely lost. Thus $\rho \mapsto (1 - p) \rho + p \frac{\mathbf{1}_d}{d}$, where $\mathbf{1}_d/d$ is the maximally mixed state (the noise). Letting $v_\rho$ be the Bloch vector associated to $\rho$, and observing that $v = 0$ defines the maximally mixed state, we are led to the conclusion that a depolarizing channel shrinks $\rho$'s Bloch vector towards the origin of the Bloch sphere.
 
 		Considering that measurement operators share similarities with density matrices, we may attempt to extend this representation. Our first observation is that not all measurement effects can be written as in eq. \ref{eq:gell-mann-representation}, because they are not required to have unit-trace. However, as any measurement effect is a positive-semidefinite operator, those of which do have unit-trace can also be described through Bloch vectors. As already pointed out, projective measurements are an important class of measurements where every effect is a projection, which is furthermore orthogonal to all the others. For any projection $\Pi$, it is true that $\text{tr}(\Pi) = \text{rank}(\Pi)$. Therefore, all rank-1 projective measurements can be described by a set of Bloch vectors, each associated to one of its effects. As all projections with larger rank can be simulated by rank-1 projections and coarse-graining, we conclude that all projective measurements can be interpreted through Bloch vectors together with post-processing. Because, by definition, $\Pi^2 = \Pi$, then $\text{tr}(\Pi^2) = \text{tr}(\Pi) = 1$, which means that a rank-1 projection operator's Bloch vector is actually on the Bloch sphere, analogously to pure states. Finally, as a measurement's effects must sum to the identity, a nice interpretation of projective measurements on qubits arises: given one of the effect's Bloch vector, the other must be its antipodal.
 
