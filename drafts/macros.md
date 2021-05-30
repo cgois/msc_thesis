@@ -22,5 +22,7 @@ $$
 \newcommand{\condprob}[2]{p \left( #1 \mid #2 \right)}
 \newcommand{\conv}[1]{\text{conv} \left( #1 \right)}
 \newcommand{\rac}[3]{\left( #1, #2 \right) \mapsto #3}
+\newcommand{\blochball}{\mathcal{Bl}}
+\newcommand{\blochballd}[1]{\mathcal{Bl}\left( #1 \right)}
 $$
 

@@ -1,4 +1,5 @@
 \chapter{The prepare-and-measure scenario}
+\label{chap:pam}
 
     The prepare-and-measure (PM) scenario is one of the simplest and most fundamental examples of correlation scenarios. In it, a preparation apparatus produces and then sends a physical system, over a communication channel, to a measurement device which reads out information from the received state. Wherefore, it is an adequate setting in which to investigate two of the most fundamental building blocks of physical theories: states and measurements.
 
@@ -15,9 +16,9 @@
 
         The simplest prepare-and-measure setup consists of two black-boxes. One is the preparation device P, handled by Alice, and the other the measurement device M, handled by Bob. Nothing about the inner workings of these devices is assumed \emph{a priori} (see \ref{chap:introduction}), except that P prepares and communicates a physical system to M, which extracts information from the received preparation by measuring it.
     
-        Alice is allowed to interact with her device through a classical input $x \in \mathcal{X} \equiv \natrange{X} \equiv [X]$. Her choice may weight on the probability $\condprob{m}{x}$ with which a state labeled by $m \in \mathcal{S}$ is prepared. Here, $\mathcal{S}$ represents the set of possible preparations.
+        Alice is allowed to interact with her device through a classical input $x \in \mathcal{X} \equiv \natrange{X} \equiv [X]$. Her choice may weight on the probability $\condprob{m}{x}$ with which a state labeled by $m \in \mathcal{S}$ is prepared. Here, $\mathcal{S}$ represents the set of possible preparations. This choice can be more intuitively understood as the message Alice aims to encode in her preparation.
         
-        Similarly, Bob can choose a configuration $y \in \mathcal{Y} \equiv [Y]$ for the measurement device, which will thence output $b \in \mathcal{B} \equiv [B]$ with probability $\condprob{b}{m,y}$. This reflects the fact that the outcome of the experiment may be influenced by both the received message and Bob's choice of measurement (fig. \ref{fig:pam}).
+        Similarly, Bob can choose a configuration $y \in \mathcal{Y} \equiv [Y]$ for the measurement device, which will thence output $b \in \mathcal{B} \equiv [B]$ with probability $\condprob{b}{m,y}$. This reflects the fact that the outcome of the experiment may be influenced by both the received message and Bob's choice of measurement (fig. \ref{fig:pam}). More intuitively, $Y$ limits how many choices of decoding procedures can be used by Bob to try and recover Alice's message $x$.
 
         \begin{figure}
             \caption{\todo{}}
@@ -32,10 +33,11 @@
     
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \subsection{Classical preparations}
+        \label{sec:classical-behaviors}
 
             Quantum preparations may behave quite distinctly from classical preparations, and knowing how to tell them apart is of the essence for developing quantum communication protocols. An important open question regards the properties that allow some sets of preparations and measurements to behave nonclassically. In chapter \ref{chap:pam-classical}, I will discuss the problem of classical simulatability of quantum behaviors in reasonable generality, and prove that measurement incompatibility is not a sufficient condition for nonclassicality in the PM scenario. To make that discussion precise, we must begin by defining what it is that we will call classically-simulatable behaviors or, for shortness, \emph{classical behaviors}.
         
-            Starting from the paradigmatic prepare-and-measure scenario, let us further impose that $\mathcal{S}$, the set of possible preparations, contains only \emph{classical states} (dits). Naturally, as this is a communication scenario, the dimension $\abs{\mathcal{S}}$ of the classical system used for encoding the states must be bounded, otherwise communication becomes trivial and all behaviors are possible.
+            Starting from the paradigmatic prepare-and-measure scenario, let us further impose that $\mathcal{S}$, the set of possible preparations, contains only \emph{classical states} (dits). Naturally, as this is a communication scenario, the dimension $\abs{\mathcal{S}}$ of the classical system used for encoding the states must be bounded, otherwise communication becomes trivial (i.e., Alice can perfectly encode her message $x$ and Bob can perfectly recover it) and all behaviors are possible.
             
             Our first aim is to investigate the set of behaviors that can be achieved when communicating $d$-dimensional classical systems, or rather, when  $\mathcal{S} = \posrange{d}$. They will, in general, also depend on $X$ (the size of Alice's input alphabet) and $Y$ (the number of choices for Bob's measurement). Letting this set of behaviors be $\mathcal{C}_{d,X,Y}$, our previous discussion implies that
             %
@@ -73,6 +75,7 @@
     
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \subsection{Quantum preparations}
+        \label{sec:quantum-behaviors}
 
             To continue generalizing our discussion, let us also remove the assumption of classical preparations. 
             
@@ -92,7 +95,7 @@
             
             As a side note, although I have presented entanglement-assisted quantum communication scenarios as the most general kind of PM scenario, there are still further possible generalizations if we allow Alice's and/or Bob's inputs $x$ and $y$ to also be quantum variables \cite{guerini_distributed_2019}. These are interesting and little explored scenarios, but dealing with them is out of our scope.
             
-            Clearly, any of the sets $\mathcal{Q}$, $\mathcal{Q}^\lambda$ and $\mathcal{Q}^\rho$ is contained in their respective larger-dimensional counterparts. Thence, the same observations made before make it possible to also derive \emph{quantum} dimension witnesses \cite{gallego_pam_2010}. Whereas witnessing dimension for classical or quantum preparations is already of practical and fundamental interest, we ideally want to also distinguish between classical and strictly quantum behaviors.\marginpar{Nonclassicality witnesses} To that end, it is useful to recognize that a set of pair-wise commuting density operators can only generate classically reproducible statistics \cite{dallarno_robustness_2012}. More precisely, if $\mathcal{S}_C$ is a set of $X$ $d$-dimensional states such that $\left[ \rho_i, \rho_j \right] = 0, \,\forall \rho_i, \rho_j \in \mathcal{S}_C$, then its behavior under any set of measurements can be mimicked with dits. \review{Not so sure about this justification for "classical states" and whether this is valid for any situation like with SR, without SR etc...}
+            Clearly, any of the sets $\mathcal{Q}$, $\mathcal{Q}^\lambda$ and $\mathcal{Q}^\rho$ is contained in their respective larger-dimensional counterparts. Thence, the same observations made before make it possible to also derive \emph{quantum} dimension witnesses \cite{gallego_pam_2010}. Whereas witnessing dimension for classical or quantum preparations is already of practical and fundamental interest, we ideally want to also distinguish between classical and strictly quantum behaviors.\marginpar{Nonclassicality witnesses} To that end, it is useful to recognize that a set of pair-wise commuting density operators can only generate classically reproducible statistics. More precisely, if $\mathcal{S}_C$ is a set of $d$-dimensional density operators such that $\left[ \rho_i, \rho_j \right] = 0, \,\forall \rho_i, \rho_j \in \mathcal{S}_C$, then they can be simultaneously diagonalized w.r.t. some orthonormal basis $\{ \ket{ e_i } \}_{i=1}^d$. There can be at most $X=d$ $d$-dimensional preparations with this property. Letting $\rho_x = \sum_i c_{i,x} \ketbra{e_i}{e_i}$, we get that $\tr{ E_{b \mid y} \rho_x } = \sum_i c_{i,x} \braopket{e_i}{E_{b \mid y}}{e_i}$. Operationally, this means that communicating the label $x$ (a classical variable with dimension $X \leq d$) is enough to reproduce all possible behaviors: upon getting $x$ and Bob's choice $y$, the measurement device samples $\ket{e_i}$ with probability $c_{i,x}$, measures it considering $y$, and after collecting asymptotically many results the parties recover the correct $\condprob{b}{x,y}$.  
             
             As not all quantum states commute, it turns out that $\mathcal{C}_d \subset \mathcal{Q}_d$, and similarly for the sets allowing for shared randomness and entanglement assistance. Collecting the aforestated set relationships, we find that 
             %
@@ -116,6 +119,7 @@
         The preeminent practical interest in prepare-and-measure scenarios is due to the fact that quantum communication can beat classical protocols in many tasks that can me modeled as preparing and measuring states. These include cryptographic key distribution \cite{pawlowski_pamqkd_2011}, secret sharing \cite{schmid_secret_2005} and communication complexity scenarios \cite{buhrman_communicationreview_2010}. Simplifiedly, the latter deals with the question of how much is the least amount of communication needed to compute or approximate some function $f(x,y)$ where the inputs $x$ and $y$ are distributed. Prepare-and-measure scenarios clearly resemble this structure. All we have to do is to stipulate a figure of merit that, generally depending on $f$, measures how well some protocol performs. If we additionally manage to show some separation between the best performance achievable, for instance, in $\mathcal{C}_d^\lambda$ against $\mathcal{Q}_d^\lambda$, we can prove quantum advantage in the task. A special and widely studied choice of $f(x,y) = x_y$ leads us to the so-called \emph{random access coding} (RAC) protocol.
 
         \subsection{Random access coding}
+        \label{sec:racs}
 
             An $\rac{n}{d}{m}$ random access code (RAC) is a communication task in which a party --- commonly Alice, --- is given a $n$-length $d$itstring $\mathbf{x} = x_1 x_2 \ldots x_n$, with each $x_i \in \{0, \ldots, d - 1 \}$, and required to encode it in another ditstring $\mathbf{a}$ of length $m$, where $m < n$.
 
