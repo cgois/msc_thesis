@@ -3,5 +3,5 @@ In the widest sense, *quantum information* is the study of encoding, processing 
 *Correlation scenarios* are [...]
 
 
-
-- Importância de DI e SDI em informação quantica (ref. intro do Dall'Arno robustness)
+- Importância de protocolos de comunicação quântica (intro do artigo de sd coding do george)
+- Importância de DI e SDI em informação quantica (ref. intro do Dall'Arno robustness + understanding the relationship between some figure of merit and the underlying resources is the frequent question that + leads to provably secure protocols (intro do george))

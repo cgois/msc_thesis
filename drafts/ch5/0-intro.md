@@ -1,0 +1,7 @@
+Dense coding is an astonishingly straightforward use of quantum systems in the transmission of classical information. In sharp contrast to Holevo's bound \\cite{}, it allows for the lossless encoding of two \\emph{d}its in one single qu\\emph{d}it. Entanglement between the communicating parties is the price to pay for that.
+
+In its original formulation \\cite{dcoding}, dense coding is a device dependent protocol: Alice's encoding operators and Bob's measurements must be fully characterized. Already hinted in sec. \\sec{sec:dense-coding} is the possibility of interpreting a type of prepare-and-measure scenario --- the one with quantum preparations, entanglement assistance, and a single measurement --- as a physical implementation of dense coding. In return, the characterization requirements are eased, and, remarkably, interesting properties can be inferred from only observing the behaviors and imposing bounds on the amount of communication.
+
+Our task in this chapter is to define this device-independent formulation of dense coding and derive some first results. Among them, we will show how to build entanglement witnesses, self-test maximally entangled states, and optimize the preparations and measurements to better perform the protocol. Stepping in the direction of more general entanglement-assisted prepare-and-mesure scenarios, we also provide a witness in the case where more measurements are allowed.
+
+These results were published in \\cite{moreno}, and all their proofs are provided in appendix \\ref{ap:b}.

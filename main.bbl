@@ -10,7 +10,7 @@ A.~Einstein, B.~Podolsky, and N.~Rosen.
 E.~Schrödinger.
 \newblock Discussion of probability relations between separated systems.
 \newblock {\em Mathematical Proceedings of the Cambridge Philosophical
-  Society}, 31(4):555–563, 1935.
+  Society}, 31(4):555--563, 1935.
 
 \bibitem{bell_1964}
 J.~S. Bell.
@@ -33,8 +33,6 @@ Charles~H. Bennett and Stephen~J. Wiesner.
 Charles~H. Bennett and Gilles Brassard.
 \newblock Quantum cryptography: Public key distribution and coin tossing.
 \newblock {\em Theoretical Computer Science}, 560:7--11, 2014.
-\newblock Theoretical Aspects of Quantum Cryptography – celebrating 30 years
-  of BB84.
 
 \bibitem{bennett_1993_teleporting}
 Charles~H. Bennett, Gilles Brassard, Claude Cr\'epeau, Richard Jozsa, Asher
@@ -169,6 +167,22 @@ Roope Uola, Ana C.~S. Costa, H.~Chau Nguyen, and Otfried G\"uhne.
 D~Cavalcanti and P~Skrzypczyk.
 \newblock Quantum steering: a review with focus on semidefinite programming.
 \newblock {\em Reports on Progress in Physics}, 80(2):024001, dec 2016.
+
+\bibitem{quintino_incompatibilitysteering_2014}
+Marco~T\'ulio Quintino, Tam\'as V\'ertesi, and Nicolas Brunner.
+\newblock Joint measurability, einstein-podolsky-rosen steering, and bell
+  nonlocality.
+\newblock {\em Phys. Rev. Lett.}, 113:160402, Oct 2014.
+
+\bibitem{uola_incompatibilitysteering_2014}
+Roope Uola, Tobias Moroder, and Otfried G\"uhne.
+\newblock Joint measurability of generalized measurements implies classicality.
+\newblock {\em Phys. Rev. Lett.}, 113:160403, Oct 2014.
+
+\bibitem{uola_onetoonesteering_2015}
+Roope Uola, Costantino Budroni, Otfried G\"uhne, and Juha-Pekka Pellonp\"a\"a.
+\newblock One-to-one mapping between steering and joint measurability problems.
+\newblock {\em Phys. Rev. Lett.}, 115:230402, Dec 2015.
 
 \bibitem{brunner_2014_nonlocality}
 Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
@@ -374,7 +388,7 @@ Johan Ahrens, Piotr Badziag, Ad{\'a}n Cabello, and Mohamed Bourennane.
 \newblock {\em Nature Physics}, 8(8):592--595, 2012.
 
 \bibitem{dambrosio_highdimensional_2014}
-Vincenzo D’Ambrosio, Fabrizio Bisesto, Fabio Sciarrino, Johanna~F. Barra,
+Vincenzo D'Ambrosio, Fabrizio Bisesto, Fabio Sciarrino, Johanna~F. Barra,
   Gustavo Lima, and Adán Cabello.
 \newblock Device-{Independent} {Certification} of {High}-{Dimensional}
   {Quantum} {Systems}.
@@ -471,7 +485,7 @@ Harry Buhrman, Richard Cleve, Serge Massar, and Ronald de~Wolf.
 Andris Ambainis, Ashwin Nayak, Ammon Ta-Shma, and Umesh Vazirani.
 \newblock Dense quantum coding and a lower bound for 1-way quantum automata.
 \newblock In {\em Proceedings of the Thirty-First Annual ACM Symposium on
-  Theory of Computing}, STOC '99, page 376–383, New York, NY, USA, 1999.
+  Theory of Computing}, STOC '99, pages 376--383, New York, NY, USA, 1999.
   Association for Computing Machinery.
 
 \bibitem{ambainis_srqracs_2009}
@@ -528,6 +542,13 @@ Adriano Barenco and Artur~K. Ekert.
 Ashwin Nayak and Henry Yuen.
 \newblock Rigidity of superdense coding, 2020.
 
+\bibitem{degois_2021_general}
+Carlos de~Gois, George Moreno, Ranieri Nery, Samura{\'\i} Brito, Rafael Chaves,
+  and Rafael Rabelo.
+\newblock General method for classicality certification in the prepare and
+  measure scenario.
+\newblock {\em arXiv preprint arXiv:2101.10459}, 2021.
+
 \bibitem{cavalcanti_generalmethod_2016}
 D.~Cavalcanti, L.~Guerini, R.~Rabelo, and P.~Skrzypczyk.
 \newblock General method for constructing local hidden variable models for
@@ -583,22 +604,6 @@ Vittorio Giovannetti, Seth Lloyd, and Lorenzo Maccone.
 \newblock Quantum metrology.
 \newblock {\em Phys. Rev. Lett.}, 96:010401, Jan 2006.
 
-\bibitem{quintino_incompatibilitysteering_2014}
-Marco~T\'ulio Quintino, Tam\'as V\'ertesi, and Nicolas Brunner.
-\newblock Joint measurability, einstein-podolsky-rosen steering, and bell
-  nonlocality.
-\newblock {\em Phys. Rev. Lett.}, 113:160402, Oct 2014.
-
-\bibitem{uola_incompatibilitysteering_2014}
-Roope Uola, Tobias Moroder, and Otfried G\"uhne.
-\newblock Joint measurability of generalized measurements implies classicality.
-\newblock {\em Phys. Rev. Lett.}, 113:160403, Oct 2014.
-
-\bibitem{uola_onetoonesteering_2015}
-Roope Uola, Costantino Budroni, Otfried G\"uhne, and Juha-Pekka Pellonp\"a\"a.
-\newblock One-to-one mapping between steering and joint measurability problems.
-\newblock {\em Phys. Rev. Lett.}, 115:230402, Dec 2015.
-
 \bibitem{fillettaz_algorithmic_2018}
 Mathieu Fillettaz, Flavien Hirsch, S\'ebastien Designolle, and Nicolas Brunner.
 \newblock Algorithmic construction of local models for entangled quantum
@@ -611,11 +616,19 @@ C.~de~Gois.
   prepare and measure scenario'' (\cite{degois_2021_general}).
 \newblock \url{https://github.com/cgois/pam_classicality}, 2021.
 
-\bibitem{degois_2021_general}
-Carlos de~Gois, George Moreno, Ranieri Nery, Samura{\'\i} Brito, Rafael Chaves,
-  and Rafael Rabelo.
-\newblock General method for classicality certification in the prepare and
-  measure scenario.
-\newblock {\em arXiv preprint arXiv:2101.10459}, 2021.
+\bibitem{guhne_faithful_2021}
+Otfried G\"uhne, Yuanyuan Mao, and Xiao-Dong Yu.
+\newblock Geometry of faithful entanglement.
+\newblock {\em Phys. Rev. Lett.}, 126:140503, Apr 2021.
+
+\bibitem{collins_cglmp_2002}
+Daniel Collins, Nicolas Gisin, Noah Linden, Serge Massar, and Sandu Popescu.
+\newblock Bell inequalities for arbitrarily high-dimensional systems.
+\newblock {\em Phys. Rev. Lett.}, 88:040404, Jan 2002.
+
+\bibitem{divianszky_qutritwitness_2017}
+P\'eter Divi\'anszky, Erika Bene, and Tam\'as V\'ertesi.
+\newblock Qutrit witness from the grothendieck constant of order four.
+\newblock {\em Phys. Rev. A}, 96:012113, Jul 2017.
 
 \end{thebibliography}

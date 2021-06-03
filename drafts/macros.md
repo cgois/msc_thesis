@@ -24,5 +24,8 @@ $$
 \newcommand{\rac}[3]{\left( #1, #2 \right) \mapsto #3}
 \newcommand{\blochball}{\mathcal{Bl}}
 \newcommand{\blochballd}[1]{\mathcal{Bl}\left( #1 \right)}
+\newcommand{\densop}[1]{\mathcal{D}\left( #1 \right)}
+\newcommand{\dim}[1]{\text{dim} \left( #1 \right)}
+\newcommand{\psuc}{p_{\text{suc}}}
 $$
 
