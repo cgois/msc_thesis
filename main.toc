@@ -1,7 +1,7 @@
 \contentsline {part}{I\hspace {1em}Tools}{3}{part.1}% 
 \contentsline {chapter}{\numberline {1}Quantum theory}{4}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}States}{4}{section.1.1}% 
-\contentsline {section}{\numberline {1.2}Transformations}{9}{section.1.2}% 
+\contentsline {section}{\numberline {1.2}Transformations}{10}{section.1.2}% 
 \contentsline {section}{\numberline {1.3}Measurements}{11}{section.1.3}% 
 \contentsline {section}{\numberline {1.4}Gell-Mann operators and Bloch vectors}{14}{section.1.4}% 
 \contentsline {chapter}{\numberline {2}Mathematical optimization}{17}{chapter.2}% 
@@ -22,17 +22,17 @@
 \contentsline {subsection}{\numberline {4.1.1}Nonclassicality activation and quantum advantage in a RAC}{33}{subsection.4.1.1}% 
 \contentsline {section}{\numberline {4.2}Classicality of measurements}{35}{section.4.2}% 
 \contentsline {subsection}{\numberline {4.2.1}Measurement incompatibility is insufficient for nonclassicality}{37}{subsection.4.2.1}% 
-\contentsline {section}{\numberline {4.3}Open questions}{38}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Dense coding in the prepare-and-measure scenario}{40}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Semi-device independent dense coding}{40}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Witnessing and self-testing entanglement}{41}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Optimizing the dense coding probability of success}{45}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Open questions}{46}{section.5.4}% 
-\contentsline {chapter}{Appendices}{48}{section*.12}% 
-\contentsline {chapter}{Appendix \numberline {A}Proofs for chap. \ref {chap:pam-classical}}{49}{Appendix.a.A}% 
-\contentsline {section}{\numberline {A.1}Proofs}{49}{section.a.A.1}% 
-\contentsline {section}{\numberline {A.2}Computational details}{49}{section.a.A.2}% 
-\contentsline {chapter}{Appendix \numberline {B}Proofs for chap. \ref {chap:pam-quantum}}{50}{Appendix.a.B}% 
-\contentsline {section}{\numberline {B.1}Mathematical tools}{50}{section.a.B.1}% 
-\contentsline {section}{\numberline {B.2}Proofs}{50}{section.a.B.2}% 
-\contentsline {chapter}{Bibliography}{58}{chapter*.13}% 
+\contentsline {section}{\numberline {4.3}Open questions}{39}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Dense coding in the prepare-and-measure scenario}{41}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Semi-device independent dense coding}{41}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Witnessing and self-testing entanglement}{42}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Optimizing the dense coding probability of success}{46}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Open questions}{47}{section.5.4}% 
+\contentsline {chapter}{Appendices}{49}{section*.12}% 
+\contentsline {chapter}{Appendix \numberline {A}Proofs for chap. \ref {chap:pam-classical}}{50}{Appendix.a.A}% 
+\contentsline {section}{\numberline {A.1}Proofs}{50}{section.a.A.1}% 
+\contentsline {section}{\numberline {A.2}Computational details}{50}{section.a.A.2}% 
+\contentsline {chapter}{Appendix \numberline {B}Proofs for chap. \ref {chap:pam-quantum}}{51}{Appendix.a.B}% 
+\contentsline {section}{\numberline {B.1}Mathematical tools}{51}{section.a.B.1}% 
+\contentsline {section}{\numberline {B.2}Proofs}{51}{section.a.B.2}% 
+\contentsline {chapter}{Bibliography}{59}{chapter*.13}% 

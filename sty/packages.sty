@@ -10,7 +10,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage[a4paper, top=2.5cm, headheight=4cm, bottom=1.5cm, outer=6cm, inner=2.4cm, marginparwidth=\marginnotewidth, marginparsep=\marginnotesep, includefoot]{geometry} 
+\usepackage[a4paper, top=2.5cm, headheight=4cm, bottom=1.5cm, outer=5.5cm, inner=3cm, marginparwidth=\marginnotewidth, marginparsep=\marginnotesep, includefoot]{geometry} 
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
 % \usepackage[stretch=10]{microtype}  % Only pdflatex
 \usepackage{setspace}
 
