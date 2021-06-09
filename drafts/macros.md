@@ -27,5 +27,6 @@ $$
 \newcommand{\densop}[1]{\mathcal{D}\left( #1 \right)}
 \newcommand{\dim}[1]{\text{dim} \left( #1 \right)}
 \newcommand{\psuc}{p_{\text{suc}}}
+\newcommand{\aff}[1]{\text{aff} \left( #1 \right)}
 $$
 

@@ -1,0 +1,54 @@
+% \title{[Sem título]}
+% \author{Carlos Augusto Belini de Gois}
+% %\date{}
+% %
+% \begin{titlingpage}
+% 	\maketitle
+% 	\begin{center}
+% 	\begin{minipage}{.7\textwidth}
+% 		\centering Dissertação de mestrado submetida ao Programa de Pós-Graduação em Física do Instituto de Física \enquote{Gleb Wataghin} da Universidade Estadual de Campinas para título de mestre.
+% 	\end{minipage}
+% 	\end{center}
+	
+% 	\vfill
+% 	\begin{center}
+% 	\begin{minipage}{.7\textwidth}
+% 		\centering Departamento de Física da Matéria Condensada\\Instituto de Física \enquote{Gleb Wataghin}\\Universidade Estadual de Campinas
+% 	\end{minipage}
+% 	\end{center}
+% 	\vspace{3.5em}
+% \end{titlingpage}
+
+\title{Classicality and dense coding in the prepare-and-measure scenario}
+\author{Carlos Augusto Belini de Gois}
+\def\advisor{Rafael Luiz da Silva Rabelo}           
+\def\university{Universidade estadual de Campinas} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Formatação da capa
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\maketitle}[1][]{%
+ \begin{titlepage}
+   %\OnehalfSpacing
+   %\let\footnotesize\small \let\footnoterule\relax 
+   \vskip-\headsep
+   \begin{center}
+     {\Large\textbf{ \@title }\par}
+     \vspace{3em}
+     {\large \@author}\par
+     \vspace{1em}
+     Supervisor:\\
+     {\large \advisor}\par
+	 {\vfill}
+    {\Large\color{red}Versão preliminar apresentada para o pré-requisito do título de Mestre em Física}\\
+    \vspace{1em}
+    {\large\color{red}\textbf{Nota:} Caps. 4 e 5 são os principais, e discutem os resultados que publicamos em \cite{degois_2021_general} (aceito na PRX Quantum) e \cite{moreno_pamdense_2021} (PRA). O Cap. 3 serve de revisão bibliográfica e introdução a eles.}\\
+    \vspace{1em}
+    {\large\color{red}\textbf{Nota:} Cap. 2 incompleto; introdução e apêndices A e B ausentes; terá mais figuras.}\\
+     \vspace{1em}
+     \MakeUppercase{\university}\\
+   \end{center}
+   \vspace*{.5in}
+ \end{titlepage}
+}%

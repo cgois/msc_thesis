@@ -1,23 +1,26 @@
 \documentclass[draft,oneside]{book}
 \usepackage{sty/packages}
 \usepackage{sty/macros}
+\usepackage{pretext/titlepage}  % Set header style
 
 \begin{document}
 
 	\pagestyle{empty}
 	
 	\frontmatter	
+	\maketitle
 	% \include{pretext/titlepage}
-	\include{pretext/quotes}
+	% \include{pretext/quotes}
 	% \include{pretext/abstract}
 	% \include{pretext/preface}
+	% \include{pretext/publications}
 	
 	\tableofcontents
 	\thispagestyle{empty}  % Remove page number
 
 	\mainmatter
 	\include{sty/fancy}  % Set header style
-	\include{text/introducao}
+	% \include{text/introducao}
 	\part{Tools}
 		\include{text/chapter1}
 		\include{text/chapter2}
