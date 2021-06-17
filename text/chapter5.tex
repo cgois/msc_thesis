@@ -12,6 +12,7 @@
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Semi-device independent dense coding}
+    \label{sec:sdi-dense-coding}
         In dense coding, two parties share an entangled pair and communicate via a quantum state. Quantum communication happens one-way, and the transmitted state is of the same local dimension (w.r.t. the encoding device) as the entangled pair. The task is to encode a classical message $x \in \mathcal{X} \equiv \posrange{N-1}$, and it is known that two \emph{d}its ($N = d^2$) can be perfectly recovered from one qudit of communication, for some choices of a measurement with $N$ outcomes \cite{}\todo{where?}.
     
         Translating to the prepare-and-measure lingo, we let Alice and Bob share an entangled state $\rho \in \densop{\hilb_A \otimes \hilb_B}$ as a resource. Their local dimensions, $\dim{\hilb_A} = d_A$ and $\dim{\hilb_B} = d_B$, need not be the same, but Alice's preparation must be of dimension $d_A$. To achieve quantum advantage in the dense coding task, Alice and Bob must be able to exploit the correlations available in their entangled pair. Under the circumstances, her most general strategy is to apply a local transformation $\Lambda_x : \densop{\hilb_A} \mapsto \densop{\hilb_A}$ directly on her share of $\rho$, then send it to Bob. After that,
@@ -38,9 +39,10 @@
         %
         and from it we can assess their performance. To that end, we assume that her choices of $x$ are equiprobable in $\mathcal{X}$ and define the probability of success as
         %
-        $$
-            p_{\text{suc}} = \frac{1}{N} \sum_0^{N-1} \condprob{b=x}{x} .
-        $$
+        \begin{equation}
+            p_{\text{suc}} = \frac{1}{N} \sum_{x=0}^{N-1} \condprob{b=x}{x} .
+            \label{eq:psuc-dense-coding}
+        \end{equation}
         %
         This is the very same average success probability discussed under the random access coding protocols of sec. \ref{sec:racs}, except that we now deal with a single measurement on Bob's side. Differently from the usual dense coding formulation --- which requires knowledge on the exact preparations and measurements employed ---, computing $p_{\text{suc}}$ relies solely observational data. It is thus a device independent figure of merit, completing our device independent formulation of the dense coding protocol.
         
@@ -53,7 +55,7 @@
         
         Our first result generalizes theirs in the following way
         %
-        \begin{result}
+        \begin{restatable}[Schmidt number witness]{res}{schmidtnumber}
             Let $\rho$ be a shared resource with Schmidt number $s$ and local dimension $d_A$ on Alice's side. If she chooses one out of $N$ preparations, and Bob performs a single measurement with $N$ outcomes on the joint state, then
             %
             \begin{equation}
@@ -63,22 +65,23 @@
             %
             When $N \geq d_A s$, the bound is tight.
             \label{res:1}
-        \end{result}
+            \label{res:schmidt-number-witness}
+        \end{restatable}
         %
         Separable states ($s=1$) thus recover the bound $\psuc \leq d_A / N$ from \cite{brunner_dimension_2013}. For this reason, whenever the transmitted state's dimension is knowingly $d_A$, a $\psuc > d_A / N$ witness entanglement. Because only local operations are used to prepare the $\rho_x$, and those cannot increase $s$, any $\psuc > d_A s / N$ unambiguously certifies that $\rho \notin S_s$, so providing a lower bound on its Schmidt number.
         
         A particular instance of ineq. \ref{eq:result-1} can also be used for self-testing of maximally entangled states.
         %
-        \begin{result}
+        \begin{restatable}[Self-testing maximally entangled states]{res}{selftest}
             In dense coding instances ($N=d_A^2$) of the prepare-and-measure scenario with $s=d_A$, saturation of ineq. \ref{eq:result-1} certifies, up to a local unitary transformation, that the shared state $\rho$ is maximally entangled.
             \label{res:self-testing-maximally-entangled}
-        \end{result}
+        \end{restatable}
         
         Interestingly, this has implications for quantum key distribution protocols in the prepare-and-measure dense coding scenario. Suppose Alice does not actually share a maximally entangled pair with Bob, but rather with a third, malicious party that wants to eavesdrop on their communication. Let us suitably call her Eve. Apart from sharing a maximally entangled pair $\rho_{AE}$ with Alice, she intercepts Alice's communication of her share of $\rho_x$. From result \ref{res:self-testing-maximally-entangled}, she reads out $x$ with $\psuc = 1$, thus perfectly learning Alice's message. Because, at the end of the day, it will be Alice and Bob who share data to infer their $\psuc$, Eve must share a second maximally entangled pair $\rho_{EB}$ with Bob, which she exploits to reencode $x$ and transmit to Bob. In this way, Alice and Bob's $\psuc$ will saturate, tricking them into believing they share a maximally entangled pair. As Eve succeeds in eavesdropping without being detected, the prepare-and-measure dense coding protocol is not cryptographically secure.
         
         Historically, dense coding was introduced as a perfect encoding protocol. Relaxing this condition, by letting $\psuc < 1$, can shine more light on the role of entanglement assistance. Sharing pure entangled states, as the following result shows, is always advantageous over having only classical correlations (in the form of separable states).
         %
-        \begin{result}
+        \begin{restatable}[Pure states quantum advantage]{res}{purestates}
             Sharing a pure entangled state, which we write in the Schmidt decomposition $\ket{\psi} = \sum_{i = 0}^{s-1} \eta_i \ket{i} \otimes \ket{i}$, the best probability of success in the encoding of $N = d_A^2$ dits is lower bounded as
             %
             $$
@@ -86,7 +89,8 @@
             $$
             %
             where $\Gamma \equiv \sum_{i \neq j} \eta_i \eta_j \geq 0$.
-        \end{result}
+        \label{res:pure-states-advantage}
+        \end{restatable}
         
         From result \ref{res:1}, $N = d_A^2$ with $\rho \in \text{SEP}$ implies that $\psuc \leq 1 / d_A$, and as an entangled state is such that $\Gamma > 0$, all pure entangled states provide quantum advantage in the dense coding protocol.
         
@@ -94,12 +98,14 @@
         
         Apropos of mixed states, a similar relation holds. Setting $d_A = d_B = d$ and making use of the singlet fraction $\zeta(\rho)$, which, in a loose sense, measures how much of a maximally entangled state is in $\rho$ (sec. \ref{sec:states}), it is true that
         %
-        \begin{result}
+        \begin{restatable}[Singlet fraction bound]{res}{singletfraction}
+            The best probability of success achievable with a resource $\rho$ is lower bounded as
            \begin{equation}
                 \psuc \geq \zeta(\rho) .
                 \label{eq:psuc-singlet-fraction}
             \end{equation}
-        \end{result}
+        \label{res:singlet-fraction-bound}
+        \end{restatable}
 
         Interestingly, this fact closely links our witness to \emph{faithful entangled states}. These are defined to be those states whose entanglement can be certified by a fidelity-based witness, and it was recently proven that a state is faithful if and only if its singlet fraction is greater than $1/d$ \cite{guhne_faithful_2021}. Eq. \ref{eq:psuc-singlet-fraction} hence implies that any $\psuc > 1/d$ certifies $\rho$ is faithful. 
  
@@ -142,16 +148,17 @@
         %
         is a quantum dimension witness for any communication dimension $d_A < N$, and can also distinguish between quantum and classical systems (in the sense of pair-wise mutually commuting preparations, explained in sec. \ref{sec:quantum-behaviors}) for any $N$ which is not a multiple of $d$. By allowing for an entangled resource of Schmidt number $s$ between the parties, we found the following generalization.
         
-        \begin{result}
+        \begin{restatable}[Multiple measurements witness]{res}{moremeasurements}
             Given a shared bipartite resource with Schmidt number $s$, a prepare-and-measure scenario with $N$ $d_A$-dimensional preparations labeled by $x \in \posrange{N-1}$, and $N (N-1)/2$ dichotomic measurements labeled as $(x, x^\prime)$ for $x > x^\prime$ is such that
             %
-            $$
-                V_N \equiv \sum_{x > x^\prime} \abs{ \condprob{b=1}{x, (x, x^\prime)} - \condprob{b=1}{x^\prime, (x, x^\prime)} }^2 \leq \frac{N^2}{2} \left( 1 - \frac{1}{\min(d_A s,N)} \right) .
-            $$
+            \begin{align*}
+                V_N &\equiv \sum_{x > x^\prime} \abs{ \condprob{b=1}{x, (x, x^\prime)} - \condprob{b=1}{x^\prime, (x, x^\prime)} }^2 \\
+                &\qquad\qquad\leq \frac{N^2}{2} \left( 1 - \frac{1}{\min(d_A s,N)} \right) .
+            \end{align*}
             %
             If $s = d_A$, and $N < d_A^2$ or $N$ is an integer multiple of $d_A^2$, the inequality is tight.
             \label{res:more-measurements}
-        \end{result}
+        \end{restatable}
         
         For fixed $N$ and $d_A$, $V_N$ can witness whether $\rho \in S_s$ or not.
     
@@ -222,3 +229,4 @@
     Below result \ref{res:self-testing-maximally-entangled}, we discussed how an eavesdropper could intercept Alice's communication while still tricking she and Bob into believing they share a maximally entangled resource. One interest in studying $Y > 1$ witnesses is that they may provide cryptographically secure tests. To see how, consider a BB84-like protocol \cite{bb84} where Alice, before sending her qubit, randomly chooses whether to apply a $\sigma_x$ gate to it. Up to an unmeasurable global phase, $\left( \ket{\Phi^+}, \ket{\Phi^-}, \ket{\Psi^+}, \ket{\Psi^-} \right) \overset{\sigma_x}{\longmapsto} ( \ket{\Psi^+}, \ket{\Psi^-}, \ket{\Phi^+}, \ket{\Phi^-})$. An eavesdropper sharing the entangled resource with Alice and measuring in the Bell basis would correctly get $x=0$ in the first situation, but wrongly guess $x=2$ in the latter. She could try switching to a $\sigma_x$-transformed Bell measurement, but without information on Alice's decision, this would be unhelpful. Worse than that, after mistaking $x$, she would send the wrong repreparation to Bob. During the whole protocol, Bob must also be blind to Alice's choice. Let us further suppose that he can choose between a standard Bell measurement or a $\sigma_x$-transformed one and that, to make ends meet, Alice sends $M + \delta$ qubits, where $M$ is the intended key size. Afterwards, Alice publicly announces the choices of $x$ and $\sigma_x$ she made on the extra $\delta$ messages. In all rounds when Bob made the correct decision on his measurements, his result should be perfectly correlated with Alice's encoding. If he observes some of them aren't, he will know Eve eavesdropped. While this example is device dependent, it is of interest to find some witness for $Y=2$ that can device-independently guarantee security in a similar protocol, or prove there is none.
 
     \review{Também tem o ponto do email do Jed, mas eu não entendi ainda o que ele disse lá...}
+

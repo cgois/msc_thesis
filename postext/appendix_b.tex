@@ -1,5 +1,332 @@
 \chapter{Proofs for chap. \ref{chap:pam-quantum}}
 \label{ap:pam-quantum}
 
+Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To aid in their understanding, we begin by reviewing some useful results.
+
 \section{Mathematical tools}
+\label{sec:ap-a-mathematical-tools}
+
+    Generalized Gell-Mann matrices (sec. \ref{sec:gell-mann}) are not the only useful choice of basis for $\hilbd{d}$. Another possibility, the \emph{Weyl operator basis} \cite{bertlmann_2008_bloch} is composed of \emph{discrete Weyl operators} which will be essential for the upcoming proofs. They are defined as
+    %
+    \begin{equation}
+        W_{x_1 x_2}^d = \sum_{m = 0}^{d-1} e^{\nicefrac{2 \pi i x_1 m}{d}} \ketbra{m \oplus_d x_2}{m} ,
+        \label{eq:weyl-operators}
+    \end{equation}
+    %
+    where $\oplus_d$ is shorthand for a modulo $d$ sum, and $x_1, x_2 \in \{0, \ldots, d-1 \}$. The result of applying $W_{x_1 x_2}$ to some basis vector $\ket{j}$ can be interpreted as a displacement to level $\ket{j \oplus_d x_2}$ together with the inclusion of a phase $e^{\nicefrac{2 \pi i x_1 j}{d}}$. If the specific values of $x_1$ and $x_2$ are unimportant, we will label $W$ simply with $x$, and we may also omit $d$. When $x_1$ and $x_2$ running on different ranges (as will be used in the proof of result \ref{res:schmidt-number-witness}), we will call $W$ \emph{generalized} Weyl operators. But, for now, let us stick to the usual ones.
+
+    Weyl operators have been useful at least since 1993, when they were used by Bennett et al. to devise a $d$-dimensional quantum states teleportation protocol \cite{bennett_1993_teleporting}. Much of their worthiness come from properties such as unitarity ($W_x W_x^\dagger = W_x^\dagger W_x = \id$, as can be verified by direct calculation) and orthonormality: $\tr{W_{x}^\dagger W_{y}} = d \delta_{x, y}$. Proofs can be found in \cite{bertlmann_2008_bloch}, appendix A.3, and in sec. 4.1.2 of \cite{watrous_book_2018}, presented among other interesting properties.
+
+    Every vector $\ket{\psi} \in \hilbd{d} \otimes \hilbd{d}$ can be obtained from a maximally entangled state, such as $\ket{\Phi^+} = \frac{1}{\sqrt{d}} \sum_{j=0}^{d-1} \ket{j} \otimes \ket{j}$, by means of a \emph{unique} transformation $L_{\ket{\psi}} \otimes \id$, acting trivially on the second subsystem. Importantly, $\ket{\psi}$ is maximally entangled if and only if $L_{\ket{\psi}}$ is unitary \cite{vollbrecht_twoqubits_2000}. From the uniqueness of the $L_{\ket{\psi}} \otimes \id$, then, there are as many orthogonal maximally entangled states as the dimension of the unitary group, i.e., $d^2$. Having the $d^2$ orthonormal unitaries $W_{x_1 x_2}$ at hand, it is then true that
+    %
+    \begin{equation}
+        \big\{ (W_{x_1 x_2} \otimes \id) \ket{\Phi^+} \big\} \equiv \big\{ \ket{\Phi_{x_1 x_2}} \big\}, \quad \forall x_1, x_2 \in \{0, \ldots, d-1\}
+        \label{eq:weyl-states}
+    \end{equation}
+    %
+    are maximally entangled and orthogonal preparations. In the prepare-and-measure dense coding scenario, Alice and Bob share a resource $\rho$ that she locally transforms to prepare $\rho_x = (\Lambda_x \otimes \id) \rho$. This is precisely the structure above. Furthermore, orthogonal states are perfectly distinguishable, and we thence should expect them to be good candidates for optimal performance in prepare-and-measure protocols.
+
+    With poorly chosen measurements, good preparations are worthless. The $d^2$-outcome measurement
+    %
+    \begin{equation}
+        \mathcal{M}^W = \{ \ketbra{\Phi_{x_1 x_2}}{\Phi_{x_1 x_2}} \}_{x_1, x_2 = 0}^{d-1} \equiv \{ M_x^W \},
+        \label{eq:weyl-measurements}
+    \end{equation}
+    %
+    whose effects project precisely in these maximally entangled vectors, will turn useful. To be sure it is well-defined, notice that each of its effects are obviously PSD and, as they are normalized and form a basis, $\sum_{x_1, x_2 = 0}^{d - 1} \ketbra{\Phi_{x_1 x_2}}{\Phi_{x_1 x_2}} = \id$.
+
+    \ornamentbreak
+    We end this section with three further results.
+
+    % Outcome probability upper bound.
+    \begin{lemma}[Outcome probability upper bound]
+        When $\rho$ is a density operator and $M$ is a measurement effect, $tr(\rho M) \leq tr(M)$.
+        \label{lem:outcome-upper-bound}
+    \end{lemma}
+    \begin{proof}
+        $M$ is PSD, thus all its eigenvalues are nonnegative and it has a spectral decomposition. Let $M = \sum_i m_i \ketbra{m_i}{m_i}$ be it, and order the eigenvalues as $m_1 \geq \ldots \geq m_d$. Notice, also, that $\rho = \sum_i p_i \ketbra{p_i}{p_i}$, where the $p_i$ form a probability distribution. Now write 
+        $$
+            \text{tr}(\rho M) = \sum_{i} p_i \sum_j m_j \braket{p_i}{m_j}^2 .
+        $$
+        If $\rho = \ketbra{m_1}{m_1}$, then, $\text{tr}(\rho M) = m_1 \leq\text{tr}(M)$. It is now left to prove this choice leads to a maximum of $\text{tr}(\rho M)$. That is indeed the case because, as $m_1$ is a largest eigenvalue, any convex combination of the $m_i$ is at most as large as $m_1$.
+    \end{proof}
+
+    % Orthogonal states
+    \begin{lemma}
+        If $d^2$ quantum states $\{ \rho_x \}_{x=1}^{d^2}$, where each $\rho_x \in \hilbd{d} \otimes \hilbd{d}$, do not overlap (i.e., $\tr{\rho_x \rho_y} = 0, \,\forall x \neq y$), they must be pure.
+        \label{lem:overlap}
+    \end{lemma}
+    \begin{proof}
+        Each of the $\rho_x$ has a spectral decomposition $\rho_x = \sum_{i = 1}^{d^2} p_i \Pi_i$ where each projector is normalized (they correspond to pure states), and $\Pi_i \Pi_j = \delta_{ij}$. Using it,
+        %
+        $$
+            \tr{\rho_x \rho_y} = \sum_{i,j=1}^{d^2} p_i^{(x)} p_j^{(y)} \tr{\Pi_i^{(x)} \Pi_j^{(y)}} .
+        $$
+        %
+        Suppose that $\text{rank}(\rho_x) = d^2$. Then no $p_i^{(x)} = 0$, and because $\{ \Pi_i \}_i$ is a basis for $\hilbd{d} \otimes \hilbd{d}$, at least some of the traces in the r.h.s. sum will be positive. This happens even if $\text{rank}(\rho_y) = 1$. So trim it down to $\text{rank}(\rho_x) = d^2 - 1$. Now we may as well find \emph{some} $\rho_y$ of unit-rank that do not overlap with $\rho_x$. But if we find some \emph{other} preparation $\rho_{y^\prime}$ such that $\tr{\rho_x \rho_{y^\prime}} = 0$, we must have that $\tr{\rho_y \rho_{y^\prime}} \neq 0$, showing that $\text{rank}(\rho_x) < d^2 - 1$. Proceeding with the analysis, we will conclude that $\text{rank}(\rho_x), \,\forall x$, must be one.
+    \end{proof}
+
+
+    Entanglement and its quantification are usually discussed with respect to the local operations and classical communications (LOCC) paradigm, briefly commented in chap. \ref{sec:states}. Local operations and shared randomness (LOSR) is a subset of LOCC operations where the parties can share a coin, but have no access to fully fledged communication. Both choices lead to the same definition of separability (but to different understandings in other regards \cite{schmid_arxiv2004.09194}), and are considered free operations in entanglement theory. One example of LOSR is the \emph{twirling operation}, where random, local $U \otimes U^*$ operations are applied to a bipartite shared state, resulting in
+    $$
+        \rho \longmapsto \int dU\, U \otimes U^* \rho\, U^\dagger \otimes U^{*^\dagger} .
+    $$
+    In this context, the following is an important result. 
+
+    % Twirling.
+    \begin{lemma}[Conversion to isotropic states through LOSR]
+        All states $\rho$ with maximal singlet fraction $\zeta(\rho)$ can be converted to an isotropic state $\chi\left[ \frac{\zeta(\rho) d^2 - 1}{d^2 - 1} \right]$ (eq.~\eqref{eq:isotropic-states}), with the same singlet fraction, through LOSR.
+        \label{lem:twirling}
+    \end{lemma}
+    \begin{proof}
+        It can be done with a twirling operation. See \cite{horodecki_1999_isotropic}, sec. V.
+    \end{proof}
+
+
 \section{Proofs}
+
+    For the following proofs, recall that
+    \begin{equation*}
+        p_{\text{suc}} = \frac{1}{N} \sum_{x=0}^{N-1} \tr{\rho_x M_x}
+    \end{equation*}
+    is the device independent dense coding average success probability, as discussed around eq.~\eqref{eq:psuc-dense-coding}. 
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \schmidtnumber*
+    \begin{proof}
+        Let the preparations $\{ \rho_x \} \in S_s$, where $S_s$ is the set of density operators with Schmidt number no larger than $s$. As discussed in sec. \ref{sec:states}, these are convex subsets of $\densop{\hilb_A \otimes \hilb_B}$.  For any measurement $\mathcal{M} = \{ M_x \}$, the average success probability $\psuc$ is a convex function in any $S_s$. Its maximum value must hence occur in extremal points, which are pure states (all mixed states are convex combinations of those). Our interest is in its maximum, thus we can limit our discussion to preparations $\{ \ketbra{\psi_x}{\psi_x} \} \in S_s$. Using their Schmidt decomposition,
+        $$
+            \ketbra{\psi_x}{\psi_x} = \sum_{i,j = 0}^{s - 1} \eta_i^x \eta_j^x \ketbra{\psi_i^x}{\psi_j^x} \otimes \ketbra{\varphi_i}{\varphi_j} .
+            \label{eq:schmidt-decomposition-witness-result}
+        $$
+        Here, each $\ket{\psi_i^x} \in \hilb_A$ and the $\ket{\varphi_i^x} \in \hilb_B$. Only the $\psi$ vectors carry the $x$ index because Alice acts with $(\Lambda_x \otimes \id)\rho$ only on \emph{her} share of the resource $\rho \in \hilb_A \otimes \hilb_B$ to prepare the $\rho_x$. In the dense coding protocol (sec. \ref{sec:sdi-dense-coding}), we consider $\text{dim}(\hilb_A) = d_A$, but Bob's local dimension, $d_B$, may be different. In any case, $s \leq \min(d_A, d_B)$. Because only $s$ vectors $\ket{\varphi_i}$ are needed in the Schmidt decomposition above, let us define $\text{span} \left( \{ \ket{\varphi_i} \}_{i=0}^{s-1} \right) \equiv \hilb_{\text{aux}}$. The $\ket{\psi_x}$ vectors thus belong to an effective Hilbert space $\hilb_{\text{eff}} = \hilb_A \otimes \hilb_{\text{aux}}$, where $\dim{\hilb_{\text{eff}}} = d_A s$. That being the case,
+        %
+        \begin{align*}
+            \psuc &= \frac{1}{N} \sum_{x=0}^{N-1} \tr{ \ketbra{\psi_x}{\psi_x} M_x } 
+                  = \frac{1}{N} \sum_{x=0}^{N-1} \ptr{\text{eff}}{ \ketbra{\psi_x}{\psi_x} M_x^\prime } \\
+                  &\leq \frac{1}{N} \ptr{\text{eff}}{ \sum_{x=0}^{N-1} M_x^\prime }
+                  = \frac{1}{N} \ptr{\text{eff}}{ \id_{\text{eff}} }
+                  = \frac{d_A s}{N} ,
+        \end{align*}
+        %
+        where the $M_x^\prime$ act on $\hilb_{\text{eff}}$ and lemma \ref{lem:outcome-upper-bound} was used for the inequality. This proves the bound.
+
+        To further see that this is tight for $N \geq d_A s$, let $N = d_A c$, with $c \geq s$, and recall the shared resource $\rho \in S_s$. Suppose Alice uses it, together with generalized Weyl operators $W_{x_1 x_2}^c$, where $x_1 \in \{ 0, \ldots, c - 1 \}$ and $x_2 \in \{ 0, \ldots, d_A - 1 \}$, to prepare the $N = d_A c$ states
+        %
+        \begin{equation}
+            \ket{\Phi_{x_1 x_2}^c} = \frac{1}{\sqrt{s}} \sum_{j=0}^{s-1} (W_{x_1 x_2}^c \otimes \id) \ket{j} \otimes \ket{j} .
+            \label{eq:schmidt-best-states}
+        \end{equation}
+        %
+        These are in the spirit of the states presented in eq. \ref{eq:weyl-states} but, because $s \leq \min(d_A, d_B)$, we may have to build more than $s^2$ preparations, which will then turn out to be nonorthogonal.
+        
+        Accordingly, let us also modify the $M_x^W$ measurement effects (eq. \ref{eq:weyl-measurements}) to
+        %
+        \begin{equation}
+            M_{x_1 x_2}^c = \frac{s}{c} \ketbra{\Phi_{x_1 x_2}^c}{\Phi_{x_1 x_2}^c} + \frac{1}{N} \sum_{j=s}^{d_B - 1} \id_A \otimes \ketbra{j}{j} .
+            \label{eq:schmidt-best-measurement}
+        \end{equation}
+        %
+        Each of these is a conic combination of two positive semidefinite operators, hence also PSD. To see that they are also complete, notice that summing on the first term leads to
+        %
+        \begin{align*}
+            &\frac{s}{c} \sum_{x_1 = 0}^{c-1} \sum_{x_2 = 0}^{d_A - 1} \ketbra{\Phi_{x_1 x_2}^c}{\Phi_{x_1 x_2}^c} \\
+            &\qquad= \frac{s}{c} \sum_{x_1 = 0}^{c-1} \sum_{x_2 = 0}^{d_A - 1} W_{x_1 x_2}^c \ketbra{\Phi^+}{\Phi^+} \left( W_{x_1 x_2}^c \right) ^\dagger \\
+            &\qquad= \frac{1}{c} \sum_{x_1 = 0}^{c-1} \sum_{x_2 = 0}^{d_A - 1} \sum_{j, k = 0}^{s - 1} \sum_{l=0}^{d_A-1} e^{\nicefrac{2 \pi i x_1 l}{c}} e^{\nicefrac{- 2 \pi i x_1 l}{c}} \ketbra{l \oplus_{d_A} x_2}{l} j \rangle \langle k \ketbra{l}{l \oplus_{d_A} x_2} \otimes \ketbra{j}{k} \\
+            &\qquad= \sum_{x_2=0}^{d_A - 1} \sum_{j=0}^{s-1} \ketbra{j \oplus_{d_A} x_2}{j \oplus_{d_A} x_2} \otimes \ketbra{j}{j} \\
+            &\qquad= \sum_{j=0}^{s-1} \id_A \otimes \ketbra{j}{j} ,
+        \end{align*}
+        %
+        making it true that
+        %
+        $$
+            \sum_{x_1 = 0}^{c-1} \sum_{x_2 = 0}^{d_A - 1} M_{x_1 x_2}^c = \sum_{j=0}^{d_B - 1} \id_A \otimes \ketbra{j}{j} = \id_A \otimes \id_B .
+        $$
+        %
+        Eqs.~\eqref{eq:schmidt-best-states} and \eqref{eq:schmidt-best-measurement} are thus a valid quantum implementation such that
+        %
+        \begin{align*}
+            \psuc = \frac{1}{N} \sum_{x_1=0}^{c-1} \sum_{x_2=0}^{d_A - 1} \tr{M_{x_1 x_2}^c \ketbra{\Phi_{x_1 x_2}^c}{\Phi_{x_1 x_2}^c}} = \frac{s}{c} = \frac{d_A s}{N}
+        \end{align*}
+        %
+    \end{proof}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \selftest*
+    \begin{proof}
+        $\psuc$ can only be saturated if the $\rho_x$ are perfectly distinguishable. From lemma \ref{lem:overlap}, $N = d_A^2$ preparations are pair-wise distinguishable only if they are pure states. Consequently, there must be $d_A^2$ orthonormal preparations of the form
+        %
+        $$
+            \ket{\psi_x} = \sum_{i = 0}^{d_A - 1} \eta_i (U_x \otimes \id) \ket{i_A} \otimes \ket{i_B} ,
+        $$
+        %
+        where $U$ are unitaries (c.f. eq.~\eqref{eq:weyl-states}). Let us analyze the reduced operator from $\sum_x \ketbra{\psi_x}{\psi_x}$ in two ways. The first tells us that
+        %
+        $$
+            \ptr{A}{\sum_{x=0}^{d_A^2 - 1} \ketbra{\psi_x}{\psi_x}} = \ptr{A}{\id_{d_A^2}} = d_A \id_{d_A} ,
+        $$
+        %
+        and the second that
+        %
+        \begin{align*}
+            &\ptr{A}{\sum_{i,j=0}^{d_A - 1} \eta_i \eta_j \sum_{x=0}^{d_A^2 - 1} U_x \ketbra{i_A}{j_A} U_x^\dagger \otimes \ketbra{i_B}{j_B}} \\
+            &\qquad\qquad = \sum_{i,j=0}^{d_A - 1} \eta_i \eta_j \sum_{x=0}^{d_A^2 - 1} \tr{U_x \ketbra{i_A}{j_A} U_x^\dagger} \otimes \ketbra{i_B}{j_B} \\
+            &\qquad\qquad = d_A^2 \sum_{i=0}^{d_A - 1} \eta_i^2 \ketbra{i_B}{i_B}
+        \end{align*}
+        %
+        Together,
+        %
+        $$
+            \id_{d_A} = d_A \sum_{i=0}^{d_A-1} \eta_i^2 \ketbra{i_B}{i_B} \quad\Longrightarrow\quad \eta_i = \frac{1}{\sqrt{d_A}}
+        $$
+    \end{proof}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \purestates*
+    \begin{proof}
+        Prepare
+        %
+        $$
+            \ket{\psi} \longmapsto \ket{\psi_{x}} = \sum_{i=0}^{s-1} \eta_i (W_x^{d_A} \otimes \id) \ket{i} \otimes \ket{i}
+        $$
+        %
+        and measure
+        $$
+            \mathcal{M} = \bigg\{ \frac{1}{d_A} \sum_{m,n=0}^{d_A - 1} W_x^{d_A} \ketbra{m}{n} (W_x^{d_A})^\dagger \otimes \ketbra{m}{n} \bigg\}_{x=0}^{d_A^2 - 1} \equiv \{ M_x \} .
+        $$
+        %
+        For some fixed Schmidt rank $s \leq \min(d_A, d_B)$, we can work on an effective space $\hilbd{d_A} \otimes \hilbd{d_A}$. In this case, $\mathcal{M}$ is a basis of $d_A^2$ orthonormal maximally entangled states (c.f. eq.~\eqref{eq:weyl-measurements}), therefore a valid measurement.
+        
+        With this prescription,
+        %
+        \begin{align*}
+            M_x \ketbra{\psi_x}{\psi_x} &= \frac{1}{d_A} \left( \sum_{m, n = 0}^{d_A - 1} W_x^{d_A} \ketbra{m}{n} (W_x^{d_A})^\dagger \otimes \ketbra{m}{n} \right) \\
+            &\qquad\qquad\qquad\times\left( \sum_{i,j=0}^{s - 1} \eta_i \eta_j  W_x^{d_A} \ketbra{i}{j} (W_x^{d_A})^\dagger \otimes \ketbra{i}{j}\right) \\
+            &= \frac{1}{d_A} \sum_{m = 0}^{d_A - 1} \sum_{i, j=0}^{s-1} \eta_i \eta_j W_x^{d_A} \ketbra{m}{j} (W_x^{d_A})^\dagger \otimes \ketbra{m}{j} ,
+        \end{align*}
+        %
+        Whereby
+        %
+        \begin{align*}
+            \psuc &= \frac{1}{d_A^2} \sum_{x=0}^{d_A^2 - 1} \tr{ M_x \ketbra{\psi_x}{\psi_x} } \\
+            &= \frac{1}{d_A^3} \sum_{x=0}^{d_A^2-1} \sum_{i,j = 0}^{s-1} \eta_i \eta_j \braopket{j}{W_x^\dagger \left( \sum_{l=0}^{d_A - 1} \ketbra{l}{l} \right) W_x}{j} \\
+            &= \frac{1}{d_A} \sum_{i,j=0}^{s-1} \eta_i \eta_j = \frac{1}{d_A} \left( \sum_{i=0}^{s-1} \eta_i^2 + \sum_{i \neq j} \eta_i \eta_j \right) = \frac{1 + \Gamma}{d_A}
+        \end{align*}
+        %
+    \end{proof}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \singletfraction*
+    \begin{proof}
+        Lemma \ref{lem:twirling} lets us restrict the discussion to isotropic states $\chi(\alpha)$ having a singlet fraction $\zeta(\rho)$. Define the preparations
+        %
+        $$
+            \rho_x = W_x \chi(\alpha) W_x^\dagger = (1 - \alpha) \frac{1}{d^2} + \alpha W_x \ketbra{\Phi^+}{\Phi^+} W_x^\dagger ,
+        $$
+        %
+        where $\ket{\Phi^+}$ is a maximally entangled state. Applying the $W_x$ will take it to another maximally entangled state, and the singlet fraction remains unchanged. Probing them with the measurement effects $M^W_x$ defined in \eqref{eq:weyl-measurements}, we get that each
+        %
+        \begin{align*}
+            \tr{\rho_x M^W_x} &= \frac{1 - \alpha}{d^2} + \alpha = \zeta(\rho_x) = \zeta(\rho) \\
+            &\Longrightarrow\quad \psuc = \frac{1}{N} \sum_{x=0}^{N-1} \zeta(\rho) = \zeta(\rho)
+        \end{align*}
+        %
+    \end{proof}
+
+
+    \moremeasurements*
+    \begin{proof}
+        Define the \emph{trace distance} as $D(\rho_x, \rho_{x^\prime}) = \frac{1}{2} \norm{\rho_x - \rho_{x^\prime}}_1$, where $\norm{\cdot}_1$ is the trace norm. A known result says that (\cite{nielsen_chuang_book}, sec. 9.2.1)
+        %
+        $$
+            D(\rho_x, \rho_{x^\prime}) = \max_{0 \leq P \leq \id} \trb{(\rho_x - \rho_x^{\prime}) P} .
+        $$
+        %
+        $P$ can thus be seen as a measurement effect. Intuitively, the trace distance measures the difference between the probabilities of a given result occurring for $\rho_x$ and $\rho_{x^\prime}$. That is way it is interpreted as a measure of distinguishability. It is also convex in $\rho_x - \rho_{x^\prime}$.
+
+        So rewrite $V_N = \sum_{x > x^\prime} \abs{ \trb{(\rho_x - \rho_{x^\prime}) M_{b=1 \mid x,x^\prime}}}^2$ and substitute the trace distance, obtaining
+        %
+        $$
+            V_N \leq \sum_{x < x^\prime} \abs{ D(\rho_x, \rho_{x^\prime}) }^2 .
+        $$
+        %
+        The inequality comes from the fact that we are not imposing completeness for each $(x,x^\prime)$ measurement, but rather only maximizing over independent effects. As its r.h.s. is convex, the maximal values are at extremal points of its domain. Thus
+        %
+        \begin{equation}
+            V_N \leq \sum_{x < x^\prime} \abs{ D\left( \ket{\psi_x}, \ket{\psi_{x^\prime}} \right) }^2 .
+            \label{eq:vn-bound}
+        \end{equation}
+        %
+        Another notion of distinguishability comes from the \emph{fidelity}
+        %
+        $$
+            F(\rho_x, \rho_{x^\prime}) \equiv \tr{\sqrt{\rho_x^{1/2} \rho_{x^\prime} \rho_x^{1/2}}}.
+        $$
+        %
+        Importantly, the fidelity is related to the trace distance (\cite{nielsen_chuang_book}, sec. 9.2.3), and for pure states   
+        %
+        $$
+            D\left( \ket{\psi_x}, \ket{\psi_{x^\prime}} \right) = \sqrt{1 - F^2(\ket{\psi_x}, \ket{\psi_{x^\prime}})} = \sqrt{1 - \abs{\braket{\psi_x}{\psi_{x^\prime}}}^2}
+        $$
+        %
+        Substituting back into eq.~\eqref{eq:vn-bound},
+        %
+        \begin{align*}
+            V_N & \leq \sum_{x < x^\prime} \abs{ D\left( \ket{\psi_x}, \ket{\psi_{x^\prime}} \right) }^2
+            = \sum_{x, x^\prime} 1 - \abs{\braket{\psi_x}{\psi_{x^\prime}}}^2 \\
+            &= \frac{N(N-1)}{2} - \frac{1}{2} \left( \sum_{x, x^\prime} \abs{\braket{\psi_x}{\psi_{x^\prime}}}^2 - N \right) \\
+            &= \frac{N^2}{2} \left[ 1 - \tr{\Omega^2} \right] ,
+        \end{align*}
+        %
+        with $\Omega = \frac{1}{N} \sum_{x=0}^{N-1} \ketbra{\psi_x}{\psi_x}$. Considering a resource with Schmidt rank $s$, all preparations can be written as in
+        %
+        $$
+            \ket{\psi_x} = \sum_{i = 0}^{s - 1} \eta_i (U_x \otimes \id) \ket{i_A} \otimes \ket{i_B} ,
+        $$
+        %
+        showing $\Omega$ acts on an effective Hilbert space of dimension $d_A s$. Therefore, the purity $\tr{\Omega^2}$ is lower bounded by $\frac{1}{d_A s}$, and
+        %
+        $$
+            V_N \leq \frac{N^2}{2} \left( 1 - \frac{1}{d_A s} \right) . \text{\todo{and the minimum of $d_A s$ and N?}}
+        $$
+        %
+
+        The last part of the result claims that, for $s=d_A$, this bound can be saturated whenever $N < d_A^2$ or $N = c d_A^2$ for $c \in \mathbb{Z}$. To see this is true, consider preparations
+        %
+        $$
+            \ket{\psi_x} = \frac{1}{\sqrt{d_A}} \sum_{i=0}^{d_A - 1} (W_x \otimes \id) \ket{i} \otimes \ket{i} ,
+        $$
+        %
+        where $W_x$ is a discrete Weyl operator and $x \in \{0, \ldots, d_A^2 - 1 \}$ (set $d=d_A$ in eq.~\eqref{eq:weyl-operators}). Because $s=d_A$, we can build $d_A^2$ orthogonal maximally entangled preparations. Substituting back into $\Omega = \frac{1}{N} \sum_{x=0}^{N-1} \ketbra{\psi_x}{\psi_x}$,
+        %
+        $$
+            \Omega^2 = \frac{1}{N^2 d_A^2} \sum_{x, x^\prime = 0}^{N - 1} \sum_{i, j, k = 0}^{d_A - 1} W_x \ket{i} \braopket{j}{W_x^\dagger W_{x^\prime}}{j} \ket{k} W_{x^\prime}^\dagger \otimes \ketbra{i}{k} .
+        $$
+        %
+        From that,
+        %
+        $$
+            \tr{\Omega^2} = \frac{1}{N^2 d_A^2} \sum_{x, x^\prime = 0}^{N-1} \tr{W_{x^\prime}^\dagger W_x} \tr{W_{x}^\dagger W_{x^\prime}} .
+        $$
+        %
+        The trick now is to divide the set of $N$ preparations into $d_A^2$ \emph{collections} of preparations. Then, as we can build at most $d_A^2$ orthogonal maximally entangled states, we associate each of these collections to one of the states (i.e., one $W_x$). To deal with all cases at once, define $c = \lfloor \frac{N}{d_A^2} \rfloor$, so making 
+        %
+        $$
+            N = c d_A^2 + N \text{ mod } d_A^2 .
+        $$
+        %
+        Then put $c+1$ states into $N \text{ mod } d_A^2$ collections, and $c$ states into each of the remaining $d_A^2 - N \text{ mod } d_A^2$ \todo{Check this sum to $d_A^2$ groups and the rest of calculations}. We then have
+        %
+        \begin{align*}
+            \tr{\Omega^2} &= \frac{1}{N^2 d_A^2} \sum_{x, x\prime = 0}^{N-1} d_A^2 \delta_{x, x^\prime} = \frac{1}{N^2} \left[ \left( \sum_{x=0}^{N \text{ mod } d_A^2 - 1} c + 1 \right) + \sum_{x = N \text{ mod } d_A^2}^{N-1} c \right] \\
+            &= \frac{1}{N^2} \left[ (c+1) N \text{ mod } d_A^2 + c (N - N \text{ mod } d_A^2) \right] = \frac{1}{N^2} (cN + N \text{ mod } d_A^2).
+        \end{align*}
+        %
+        If $N < d_A^2$, then $c = 0$ and we get $\tr{\Omega^2} = \frac{1}{N}$. Whereas if $N = c d_A^2$, for integer $c$, then $N \text{ mod } d_A^2 = 0$ and we get $\frac{1}{d_A^2}$. Both situations saturate the bound on $V_N$.
+    \end{proof}
+
+

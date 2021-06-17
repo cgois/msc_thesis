@@ -34,6 +34,7 @@
 
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{physics}
+\usepackage{nicefrac}
 \usepackage{systeme}  % \systeme{a=a, b=b} or \systeme*{...} for left alignment
 \usepackage[linesnumbered, lined]{algorithm2e}
 
@@ -48,6 +49,8 @@
 % Definitions for amsthm
 \theoremstyle{definition}
 \newtheorem{result}{Result}[chapter]
+\theoremstyle{theorem}
+\newtheorem{lemma}{Lemma}[chapter]
 % \newtheorem{dfn}{Definition}[section]
 % \newtheorem{exmp}{Example}[section]
 % \theoremstyle{remark}
@@ -71,3 +74,7 @@
 %     \end{center}%
 % }
 \newcommand{\ornamentbreak}{\begin{center}$\ast$~$\ast$~$\ast$\end{center}}
+
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\declaretheorem[name=Result,numberwithin=chapter]{res}

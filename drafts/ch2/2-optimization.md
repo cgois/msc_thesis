@@ -60,3 +60,15 @@ A drawback in dealing with density operators of measurement effects is that, whi
 https://www.gurobi.com/resource/linear-programming-basics/
 
 https://www.cs.cmu.edu/~15451-f17/lectures/lec18-lp2.pdf
+
+https://stanford.edu/class/ee363/sessions/s4notes.pdf
+
+https://www.ams.org/notices/201405/rnoti-p492.pdf
+
+https://www.newton.ac.uk/files/seminar/20130718093010001-153683.pdf
+
+http://www.math.uni-konstanz.de/~plaumann/LMI13/lmi.pdf
+
+http://plato.asu.edu/ftp/sparse_sdp.html
+
+file:///home/cgois/Downloads/Encyclopedia%20of%20Optimization%20by%20C.A.Floudas,%20P.M.Pardalos%20(Eds.)%20(z-lib.org).pdf

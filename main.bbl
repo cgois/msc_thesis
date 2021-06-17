@@ -1,19 +1,5 @@
 \begin{thebibliography}{100}
 
-\bibitem{degois_2021_general}
-Carlos de~Gois, George Moreno, Ranieri Nery, Samura{\'\i} Brito, Rafael Chaves,
-  and Rafael Rabelo.
-\newblock General method for classicality certification in the prepare and
-  measure scenario.
-\newblock {\em arXiv preprint arXiv:2101.10459}, 2021.
-
-\bibitem{moreno_pamdense_2021}
-George Moreno, Ranieri Nery, Carlos de~Gois, Rafael Rabelo, and Rafael Chaves.
-\newblock Semi-device-independent certification of entanglement in superdense
-  coding.
-\newblock {\em arXiv:2102.02709 [quant-ph]}, February 2021.
-\newblock arXiv: 2102.02709.
-
 \bibitem{epr}
 A.~Einstein, B.~Podolsky, and N.~Rosen.
 \newblock Can quantum-mechanical description of physical reality be considered
@@ -354,6 +340,13 @@ Marcin Pawłowski and Marek Żukowski.
 \newblock Entanglement-assisted random access codes.
 \newblock {\em Physical Review A}, 81(4):042326, April 2010.
 
+\bibitem{moreno_pamdense_2021}
+George Moreno, Ranieri Nery, Carlos de~Gois, Rafael Rabelo, and Rafael Chaves.
+\newblock Semi-device-independent certification of entanglement in superdense
+  coding.
+\newblock {\em arXiv:2102.02709 [quant-ph]}, February 2021.
+\newblock arXiv: 2102.02709.
+
 \bibitem{guerini_distributed_2019}
 Leonardo Guerini, Marco~Túlio Quintino, and Leandro Aolita.
 \newblock Distributed sampling, quantum communication witnesses, and
@@ -549,6 +542,13 @@ Adriano Barenco and Artur~K. Ekert.
 Ashwin Nayak and Henry Yuen.
 \newblock Rigidity of superdense coding, 2020.
 
+\bibitem{degois_2021_general}
+Carlos de~Gois, George Moreno, Ranieri Nery, Samura{\'\i} Brito, Rafael Chaves,
+  and Rafael Rabelo.
+\newblock General method for classicality certification in the prepare and
+  measure scenario.
+\newblock {\em arXiv preprint arXiv:2101.10459}, 2021.
+
 \bibitem{cavalcanti_generalmethod_2016}
 D.~Cavalcanti, L.~Guerini, R.~Rabelo, and P.~Skrzypczyk.
 \newblock General method for constructing local hidden variable models for
@@ -630,5 +630,21 @@ Daniel Collins, Nicolas Gisin, Noah Linden, Serge Massar, and Sandu Popescu.
 P\'eter Divi\'anszky, Erika Bene, and Tam\'as V\'ertesi.
 \newblock Qutrit witness from the grothendieck constant of order four.
 \newblock {\em Phys. Rev. A}, 96:012113, Jul 2017.
+
+\bibitem{watrous_book_2018}
+John Watrous.
+\newblock {\em The Theory of Quantum Information}.
+\newblock Cambridge University Press, 2018.
+
+\bibitem{vollbrecht_twoqubits_2000}
+K.~G.~H. Vollbrecht and R.~F. Werner.
+\newblock Why two qubits are special.
+\newblock {\em Journal of Mathematical Physics}, 41(10):6772--6782, 2000.
+
+\bibitem{nielsen_chuang_book}
+Michael~A. Nielsen and Isaac~L. Chuang.
+\newblock {\em Quantum Computation and Quantum Information: 10th Anniversary
+  Edition}.
+\newblock Cambridge University Press, 2010.
 
 \end{thebibliography}

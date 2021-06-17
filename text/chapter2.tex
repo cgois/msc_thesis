@@ -151,7 +151,7 @@
 
 			A general $F(x)$ may have a block-diagonal section of the form $\text{diag}(Ax + b)$, and a more general structure in the remainder. Thus, a linear matrix inequality represents an affine section of $S_+^n$, also called an \emph{spectrahedron}. Unlike polyhedra, they may have curved boundaries. A cylinder, for instance, can be parametrized as an $F(x)$ with $4 \times 4$ matrices \cite{https://www.ams.org/notices/201405/rnoti-p492.pdf}. A last, interesting link to linear programming is that $F(x) \succeq 0$ if and only if $z^\intercal F(x) z \geq 0$ for all $z \in \mathbb{R}^m$. These are infinitely many linear constraints on $x$.
 
-			SDPs can also be efficiently solved both in theory and in practice. Interior-point methods are usually robust and efficient, and are implemented in some user-friendly solvers such as SDPA \cite{}, SDPT3 \cite{} and Mosek \cite{}.
+			SDPs can also be efficiently solved both in theory and in practice. Interior-point methods are usually robust and efficient, and are implemented in some user-friendly solvers such as SDPA \cite{}, SDPT3 \cite{} and Mosek \cite{}. Performance comparisons between these and several other SDP solver are available at \cite{http://plato.asu.edu/ftp/sparse_sdp.html}.
 
 			The usefulness of semidefinite programming in quantum information is hinted by the fact that quantum states and measurement effects are positive semidefinite matrices. As long as the objective function is linear, we can optimize over them, and they have proven to be useful in quantum state discrimination, quantum steering and hierarchies for nonlocal correlations, among other applications. One of them will be shown in chap. \ref{chap:pam-dense-coding}.
 

@@ -29,9 +29,9 @@
 \contentsline {section}{\numberline {5.2}Witnessing and self-testing entanglement}{47}{section.5.2}% 
 \contentsline {section}{\numberline {5.3}Optimizing the dense coding probability of success}{51}{section.5.3}% 
 \contentsline {section}{\numberline {5.4}Open questions}{52}{section.5.4}% 
-\contentsline {chapter}{Appendices}{54}{section*.12}% 
-\contentsline {chapter}{Appendix \numberline {A}Computational details for chap. \ref {chap:pam-classical}}{55}{Appendix.a.A}% 
-\contentsline {chapter}{Appendix \numberline {B}Proofs for chap. \ref {chap:pam-quantum}}{56}{Appendix.a.B}% 
-\contentsline {section}{\numberline {B.1}Mathematical tools}{56}{section.a.B.1}% 
-\contentsline {section}{\numberline {B.2}Proofs}{56}{section.a.B.2}% 
-\contentsline {chapter}{Bibliography}{64}{chapter*.13}% 
+\contentsline {chapter}{Appendices}{55}{section*.12}% 
+\contentsline {chapter}{Appendix \numberline {A}Computational details for chap. \ref {chap:pam-classical}}{56}{Appendix.a.A}% 
+\contentsline {chapter}{Appendix \numberline {B}Proofs for chap. \ref {chap:pam-quantum}}{57}{Appendix.a.B}% 
+\contentsline {section}{\numberline {B.1}Mathematical tools}{57}{section.a.B.1}% 
+\contentsline {section}{\numberline {B.2}Proofs}{59}{section.a.B.2}% 
+\contentsline {chapter}{Bibliography}{72}{chapter*.13}% 
