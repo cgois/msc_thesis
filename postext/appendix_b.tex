@@ -298,31 +298,34 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
         The last part of the result claims that, for $s=d_A$, this bound can be saturated whenever $N < d_A^2$ or $N = c d_A^2$ for $c \in \mathbb{Z}$. To see this is true, consider preparations
         %
         $$
-            \ket{\psi_x} = \frac{1}{\sqrt{d_A}} \sum_{i=0}^{d_A - 1} (W_x \otimes \id) \ket{i} \otimes \ket{i} ,
+            \ket{\psi_x} = \frac{1}{\sqrt{d_A}} \sum_{i=0}^{d_A - 1} (U_x \otimes \id) \ket{i} \otimes \ket{i} ,
         $$
         %
-        where $W_x$ is a discrete Weyl operator and $x \in \{0, \ldots, d_A^2 - 1 \}$ (set $d=d_A$ in eq.~\eqref{eq:weyl-operators}). Because $s=d_A$, we can build $d_A^2$ orthogonal maximally entangled preparations. Substituting back into $\Omega = \frac{1}{N} \sum_{x=0}^{N-1} \ketbra{\psi_x}{\psi_x}$,
+        $U_x$ being unitaries. Substituting back into $\Omega = \frac{1}{N} \sum_{x=0}^{N-1} \ketbra{\psi_x}{\psi_x}$,
         %
         $$
-            \Omega^2 = \frac{1}{N^2 d_A^2} \sum_{x, x^\prime = 0}^{N - 1} \sum_{i, j, k = 0}^{d_A - 1} W_x \ket{i} \braopket{j}{W_x^\dagger W_{x^\prime}}{j} \ket{k} W_{x^\prime}^\dagger \otimes \ketbra{i}{k} .
+            \Omega^2 = \frac{1}{N^2 d_A^2} \sum_{x, x^\prime = 0}^{N - 1} \sum_{i, j, k = 0}^{d_A - 1} U_x \ket{i} \braopket{j}{U_x^\dagger U_{x^\prime}}{j} \ket{k} U_{x^\prime}^\dagger \otimes \ketbra{i}{k} .
         $$
         %
         From that,
         %
         $$
-            \tr{\Omega^2} = \frac{1}{N^2 d_A^2} \sum_{x, x^\prime = 0}^{N-1} \tr{W_{x^\prime}^\dagger W_x} \tr{W_{x}^\dagger W_{x^\prime}} .
+            \tr{\Omega^2} = \frac{1}{N^2 d_A^2} \sum_{x, x^\prime = 0}^{N-1} \tr{U_{x^\prime}^\dagger U_x} \tr{U_{x}^\dagger U_{x^\prime}} .
         $$
         %
-        The trick now is to divide the set of $N$ preparations into $d_A^2$ \emph{collections} of preparations. Then, as we can build at most $d_A^2$ orthogonal maximally entangled states, we associate each of these collections to one of the states (i.e., one $W_x$). To deal with all cases at once, define $c = \lfloor \frac{N}{d_A^2} \rfloor$, so making 
+
+        By hypothesis, $s=d_A$, so if $N$ were $d_A^2$, we could build $d_A^2$ orthogonal maximally entangled preparations, for instance by substituting discrete Weyl operators $W_x$ for the $U_x$, where $x \in \{0, \ldots, d_A^2 - 1 \}$. To do that while accounting for $N$ possible preparations, the trick is to distribute the set of $N$ preparations into $d_A^2$ \emph{collections}, each associated to a Weyl operator. In that case, if $\ket{\psi_x}$ are $\ket{\psi_{x^\prime}}$ are in the same collection, then $\ket{\psi_x} = \ket{\psi_{x^\prime}}$. We label the collections with $C$, where $C \in \{0, \ldots, d_A^2 -1 \}$, and each $C$ may be associated with several $x$'s.
+        
+        To deal with all cases at once, define $c = \lfloor \frac{N}{d_A^2} \rfloor$, so making 
         %
         $$
             N = c d_A^2 + N \text{ mod } d_A^2 .
         $$
         %
-        Then put $c+1$ states into $N \text{ mod } d_A^2$ collections, and $c$ states into each of the remaining $d_A^2 - N \text{ mod } d_A^2$ \todo{Check this sum to $d_A^2$ groups and the rest of calculations}. We then have
+        Then put $c+1$ states into each of $N \text{ mod } d_A^2$ collections, and $c$ states into each of the remaining $d_A^2 - N \text{ mod } d_A^2$. We then have
         %
         \begin{align*}
-            \tr{\Omega^2} &= \frac{1}{N^2 d_A^2} \sum_{x, x\prime = 0}^{N-1} d_A^2 \delta_{x, x^\prime} = \frac{1}{N^2} \left[ \left( \sum_{x=0}^{N \text{ mod } d_A^2 - 1} c + 1 \right) + \sum_{x = N \text{ mod } d_A^2}^{N-1} c \right] \\
+            \tr{\Omega^2} &= \frac{1}{N^2 d_A^2} \sum_{x, x\prime = 0}^{N-1} d_A^2 \delta_{C(x), C(x^\prime)} = \frac{1}{N^2} \left[ \left( \sum_{x=0}^{N \text{ mod } d_A^2 - 1} c + 1 \right) + \sum_{x = N \text{ mod } d_A^2}^{N-1} c \right] \\
             &= \frac{1}{N^2} \left[ (c+1) N \text{ mod } d_A^2 + c (N - N \text{ mod } d_A^2) \right] = \frac{1}{N^2} (cN + N \text{ mod } d_A^2).
         \end{align*}
         %
