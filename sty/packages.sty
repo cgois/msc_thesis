@@ -26,7 +26,8 @@
 
 \usepackage[final]{graphicx}
 \graphicspath{ {./figures/} }
-\usepackage{subcaption}
+% \usepackage{subcaption}
+\usepackage{subfigure}
 
 \usepackage{csquotes}  % \enquote{⟨text⟩} and \blockquote[⟨cite⟩]{⟨text⟩}
 % \usepackage{todonotes} 	% Use \todo{⟨text⟩} to set and \listoftodos to list
@@ -57,9 +58,13 @@
 % \newtheorem*{note}{Note}
 
 % Definitions for algorithm2e
-% \SetKwInOut{Input}{input}
-% \SetKwInOut{Output}{output}
-% \SetEndCharOfAlgoLine{}  % No semicolon at eol.
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\SetKwFor{While}{while}{:}{end}
+\SetKw{Return}{return}
+\SetEndCharOfAlgoLine{}  % No semicolon at eol.
+\let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number for one line
 
 % Pretty text separator
 % \newcommand{\ornamentleft}{%
@@ -78,3 +83,6 @@
 \usepackage{thmtools}
 \usepackage{thm-restate}
 \declaretheorem[name=Result,numberwithin=chapter]{res}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}

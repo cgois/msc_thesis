@@ -246,6 +246,135 @@ Gen Kimura.
 \newblock The bloch vector for n-level systems.
 \newblock {\em Physics Letters A}, 314(5):339--349, 2003.
 
+\bibitem{rockafellar_convexanalysis_1970}
+R.~Tyrrell Rockafellar.
+\newblock {\em Convex analysis}.
+\newblock Princeton Mathematical Series. Princeton University Press, 1970.
+
+\bibitem{grunbaum_convexpolytopes_2003}
+Branko Gr\"{u}nbaum.
+\newblock {\em Convex Polytopes}.
+\newblock Springer New York, 2003.
+
+\bibitem{ziegler_lecturespolytopes_1995}
+G\"{u}nter~M. Ziegler.
+\newblock {\em Lectures on Polytopes}.
+\newblock Springer New York, 1995.
+
+\bibitem{boyd_convexoptimization_2004}
+Stephen Boyd and Lieven Vandenberghe.
+\newblock {\em Convex Optimization}.
+\newblock Cambridge University Press, March 2004.
+
+\bibitem{PANDA}
+Stefan LÃ¶rwald and Gerhard Reinelt.
+\newblock Panda: a software for polyhedral transformations.
+\newblock {\em EURO Journal on Computational Optimization}, pages 1--12, 2015.
+
+\bibitem{lrs}
+lrs home page.
+\newblock \url={http://cgm.cs.mcgill.ca/~avis/C/lrs.html}.
+
+\bibitem{cdd}
+cddlib repository.
+\newblock \url={https://github.com/cddlib/cddlib}.
+
+\bibitem{uola_conic_2019}
+Roope Uola, Tristan Kraft, Jiangwei Shang, Xiao-Dong Yu, and Otfried G\"uhne.
+\newblock Quantifying quantum resources with conic programming.
+\newblock {\em Phys. Rev. Lett.}, 122:130404, Apr 2019.
+
+\bibitem{papadimitriou1998combinatorial}
+Christos~H Papadimitriou and Kenneth Steiglitz.
+\newblock {\em Combinatorial optimization: algorithms and complexity}.
+\newblock Courier Corporation, 1998.
+
+\bibitem{matousek2007understanding}
+Jiri Matousek and Bernd G{\"a}rtner.
+\newblock {\em Understanding and using linear programming}.
+\newblock Springer Science \& Business Media, 2007.
+
+\bibitem{vandenberghe_sdp_1996}
+Lieven Vandenberghe and Stephen Boyd.
+\newblock Semidefinite programming.
+\newblock {\em {SIAM} Review}, 38(1):49--95, March 1996.
+
+\bibitem{gartner2012approximation}
+Bernd G{\"a}rtner and Jiri Matousek.
+\newblock {\em Approximation algorithms and semidefinite programming}.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{glpk}
+Glpk (gnu linear programming kit) homepage.
+\newblock \url={https://www.gnu.org/software/glpk/}.
+
+\bibitem{gurobi}
+LLC Gurobi~Optimization.
+\newblock Gurobi optimizer reference manual.
+
+\bibitem{mosek}
+MOSEK ApS.
+\newblock Mosek optimizer documentation.
+
+\bibitem{yalmip}
+J.~Lofberg.
+\newblock Yalmip : a toolbox for modeling and optimization in matlab.
+\newblock In {\em 2004 IEEE International Conference on Robotics and Automation
+  (IEEE Cat. No.04CH37508)}, pages 284--289, 2004.
+
+\bibitem{cvx}
+Michael Grant and Stephen Boyd.
+\newblock {CVX}: Matlab software for disciplined convex programming, version
+  2.1.
+\newblock \url{http://cvxr.com/cvx}, March 2014.
+
+\bibitem{picos}
+Guillaume Sagnol and Maximilian Stahlberg.
+\newblock Picos: A python interface to conic optimization solvers.
+
+\bibitem{cvxpy}
+Steven Diamond and Stephen Boyd.
+\newblock {CVXPY}: {A} {P}ython-embedded modeling language for convex
+  optimization.
+\newblock {\em Journal of Machine Learning Research}, 17(83):1--5, 2016.
+
+\bibitem{npa_prl_2007}
+Miguel Navascu\'es, Stefano Pironio, and Antonio Ac\'{\i}n.
+\newblock Bounding the set of quantum correlations.
+\newblock {\em Phys. Rev. Lett.}, 98:010401, Jan 2007.
+
+\bibitem{npa_njp_2008}
+Miguel Navascu{\'{e}}s, Stefano Pironio, and Antonio Ac{\'{\i}}n.
+\newblock A convergent hierarchy of semidefinite programs characterizing the
+  set of quantum correlations.
+\newblock {\em New Journal of Physics}, 10(7):073013, jul 2008.
+
+\bibitem{vinzant_spectrahedron_2014}
+Cynthia Vinzant.
+\newblock {WHAT} {IS}...a spectrahedron?
+\newblock {\em Notices of the American Mathematical Society}, 61(5):1, May
+  2014.
+
+\bibitem{sdpa}
+SDPA Project.
+\newblock Sdpa (semidefinite programming algorithms).
+
+\bibitem{performance_sdp_solvers}
+Hans~D. Mittelmann.
+\newblock Several sdp-codes on sparse and other sdp problems.
+
+\bibitem{heinosaari_noiserobustness_2015}
+Teiko Heinosaari, Jukka Kiukas, and Daniel Reitzner.
+\newblock Noise robustness of the incompatibility of quantum measurements.
+\newblock {\em Phys. Rev. A}, 92:022115, Aug 2015.
+
+\bibitem{designolle_robustness_2019}
+S{\'{e}}bastien Designolle, M{\'{a}}t{\'{e}} Farkas, and J{\k{e}}drzej
+  Kaniewski.
+\newblock Incompatibility robustness of quantum measurements: a unified
+  framework.
+\newblock {\em New Journal of Physics}, 21(11):113053, nov 2019.
+
 \bibitem{carmeli_racsincompatibility_2020}
 Claudio Carmeli, Teiko Heinosaari, and Alessandro Toigo.
 \newblock Quantum random access codes and incompatibility of measurements.

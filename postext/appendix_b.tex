@@ -316,6 +316,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
 
         By hypothesis, $s=d_A$, so if $N$ were $d_A^2$, we could build $d_A^2$ orthogonal maximally entangled preparations, for instance by substituting discrete Weyl operators $W_x$ for the $U_x$, where $x \in \{0, \ldots, d_A^2 - 1 \}$. To do that while accounting for $N$ possible preparations, the trick is to distribute the set of $N$ preparations into $d_A^2$ \emph{collections}, each associated to a Weyl operator. In that case, if $\ket{\psi_x}$ are $\ket{\psi_{x^\prime}}$ are in the same collection, then $\ket{\psi_x} = \ket{\psi_{x^\prime}}$. We label the collections with $C$, where $C \in \{0, \ldots, d_A^2 -1 \}$, and each $C$ may be associated with several $x$'s.
         
+        \review{I made two minor corrections w.r.t. the paper. Is everything right?}
         To deal with all cases at once, define $c = \lfloor \frac{N}{d_A^2} \rfloor$, so making 
         %
         $$
@@ -325,7 +326,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
         Then put $c+1$ states into each of $N \text{ mod } d_A^2$ collections, and $c$ states into each of the remaining $d_A^2 - N \text{ mod } d_A^2$. We then have
         %
         \begin{align*}
-            \tr{\Omega^2} &= \frac{1}{N^2 d_A^2} \sum_{x, x\prime = 0}^{N-1} d_A^2 \delta_{C(x), C(x^\prime)} = \frac{1}{N^2} \left[ \left( \sum_{x=0}^{N \text{ mod } d_A^2 - 1} c + 1 \right) + \sum_{x = N \text{ mod } d_A^2}^{N-1} c \right] \\
+            \tr{\Omega^2} &= \frac{1}{N^2 d_A^2} \sum_{x, x\prime = 0}^{N-1} d_A^2 \frac{\delta_{C(x), C(x^\prime)}}{2} = \frac{1}{N^2} \left[ \left( \sum_{x=0}^{N \text{ mod } d_A^2 - 1} c + 1 \right) + \sum_{x = N \text{ mod } d_A^2}^{N-1} c \right] \\
             &= \frac{1}{N^2} \left[ (c+1) N \text{ mod } d_A^2 + c (N - N \text{ mod } d_A^2) \right] = \frac{1}{N^2} (cN + N \text{ mod } d_A^2).
         \end{align*}
         %
