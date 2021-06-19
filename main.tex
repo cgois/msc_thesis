@@ -1,4 +1,4 @@
-\documentclass[draft,oneside]{book}
+\documentclass[draft,oneside,a4paper]{book}
 \usepackage{sty/packages}
 \usepackage{sty/macros}
 \usepackage{pretext/titlepage}  % Set header style
@@ -6,43 +6,54 @@
 \begin{document}
 
 	\pagestyle{empty}
-	
 	\frontmatter	
+
+	\newgeometry{top=5cm,bottom=5cm,left=3cm,right=3cm}
 	\maketitle
+	\restoregeometry
 	% \include{pretext/titlepage}
-	% \include{pretext/quotes}
+	\include{pretext/quotes}
 	% \include{pretext/abstract}
-	% \include{pretext/preface}
-	% \include{pretext/publications}
+	\include{pretext/publications}
+	\include{pretext/acknowledgments}
 	
+
+	\newgeometry{top=2cm,bottom=4cm,left=3cm,right=4cm}
+	\pagestyle{empty}
 	\tableofcontents
-	\thispagestyle{empty}  % Remove page number
+	\restoregeometry
 
 	\mainmatter
 	\include{sty/fancy}  % Set header style
 	\include{pretext/introduction}
+
+	\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
 	\part{Tools}
 	\label{part:tools}
+	\restoregeometry
 		\include{text/chapter1}
 		\include{text/chapter2}
+	\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
 	\part{Prepare and measure}
 	\label{part:pam}
+	\restoregeometry
 		\include{text/chapter3}
 		\include{text/chapter4}
 		\include{text/chapter5}
 	%
-	\include{postext/final_remarks}
+	% \include{postext/final_remarks}
 	% ...
 	
-	\begin{appendices}
+	\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
+	\begin{appendices}\restoregeometry
 		\input{postext/appendix_a.tex}
 		\input{postext/appendix_b.tex}
 	\end{appendices}
 	
-	
+	\restoregeometry
 	\bibliographystyle{unsrt}
 	\bibliography{bibliography}
 	\thispagestyle{empty}  % Remove page number
-	\addcontentsline{toc}{chapter}{Bibliography}
+	\addcontentsline{toc}{chapter}{Bibliography}{\protect\thispagestyle{empty}}
 	
 \end{document}
