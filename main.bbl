@@ -6,33 +6,85 @@ A.~Einstein, B.~Podolsky, and N.~Rosen.
   complete?
 \newblock {\em Phys. Rev.}, 47:777--780, May 1935.
 
-\bibitem{schrodinger_1935}
-E.~Schrödinger.
+\bibitem{schrodinger_entanglement_1935}
+Erwin Schr{\"o}dinger.
 \newblock Discussion of probability relations between separated systems.
-\newblock {\em Mathematical Proceedings of the Cambridge Philosophical
-  Society}, 31(4):555--563, 1935.
+\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, volume~31, pages 555--563. Cambridge University Press, 1935.
+
+\bibitem{bohm_hiddenvariables_1952}
+David Bohm.
+\newblock A suggested interpretation of the quantum theory in terms of "hidden"
+  variables. i.
+\newblock {\em Phys. Rev.}, 85:166--179, Jan 1952.
 
 \bibitem{bell_1964}
 J.~S. Bell.
 \newblock On the einstein podolsky rosen paradox.
 \newblock {\em Physics Physique Fizika}, 1:195--200, Nov 1964.
 
-\bibitem{horodecki_2009_entanglement}
-Ryszard Horodecki, Pawe\l{} Horodecki, Micha\l{} Horodecki, and Karol
-  Horodecki.
-\newblock Quantum entanglement.
-\newblock {\em Rev. Mod. Phys.}, 81:865--942, Jun 2009.
-
-\bibitem{bennett_1992_superdense}
-Charles~H. Bennett and Stephen~J. Wiesner.
-\newblock Communication via one- and two-particle operators on
-  einstein-podolsky-rosen states.
-\newblock {\em Phys. Rev. Lett.}, 69:2881--2884, Nov 1992.
-
 \bibitem{bb84}
 Charles~H. Bennett and Gilles Brassard.
 \newblock Quantum cryptography: Public key distribution and coin tossing.
 \newblock {\em Theoretical Computer Science}, 560:7--11, 2014.
+
+\bibitem{ekert91}
+Artur~K. Ekert.
+\newblock Quantum cryptography based on bell's theorem.
+\newblock {\em Phys. Rev. Lett.}, 67:661--663, Aug 1991.
+
+\bibitem{prbox}
+Sandu Popescu and Daniel Rohrlich.
+\newblock Quantum nonlocality as an axiom.
+\newblock {\em Foundations of Physics}, 24(3):379--385, March 1994.
+
+\bibitem{brunner_2014_nonlocality}
+Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
+  Stephanie Wehner.
+\newblock Bell nonlocality.
+\newblock {\em Rev. Mod. Phys.}, 86:419--478, Apr 2014.
+
+\bibitem{barrett_gpts_2007}
+Jonathan Barrett.
+\newblock Information processing in generalized probabilistic theories.
+\newblock {\em Phys. Rev. A}, 75:032304, Mar 2007.
+
+\bibitem{plavala_gpts_2021}
+Martin Plávala.
+\newblock General probabilistic theories: An introduction, 2021.
+
+\bibitem{spekkens_2005_contextuality}
+R.~W. Spekkens.
+\newblock Contextuality for preparations, transformations, and unsharp
+  measurements.
+\newblock {\em Phys. Rev. A}, 71:052108, May 2005.
+
+\bibitem{wiseman_2007_steering}
+H.~M. Wiseman, S.~J. Jones, and A.~C. Doherty.
+\newblock Steering, entanglement, nonlocality, and the einstein-podolsky-rosen
+  paradox.
+\newblock {\em Phys. Rev. Lett.}, 98:140402, Apr 2007.
+
+\bibitem{uola_2020_steering}
+Roope Uola, Ana C.~S. Costa, H.~Chau Nguyen, and Otfried G\"uhne.
+\newblock Quantum steering.
+\newblock {\em Rev. Mod. Phys.}, 92:015001, Mar 2020.
+
+\bibitem{cavalcanti_2016_steering}
+D~Cavalcanti and P~Skrzypczyk.
+\newblock Quantum steering: a review with focus on semidefinite programming.
+\newblock {\em Reports on Progress in Physics}, 80(2):024001, dec 2016.
+
+\bibitem{quintino_incompatibilitysteering_2014}
+Marco~T\'ulio Quintino, Tam\'as V\'ertesi, and Nicolas Brunner.
+\newblock Joint measurability, einstein-podolsky-rosen steering, and bell
+  nonlocality.
+\newblock {\em Phys. Rev. Lett.}, 113:160402, Oct 2014.
+
+\bibitem{uola_onetoonesteering_2015}
+Roope Uola, Costantino Budroni, Otfried G\"uhne, and Juha-Pekka Pellonp\"a\"a.
+\newblock One-to-one mapping between steering and joint measurability problems.
+\newblock {\em Phys. Rev. Lett.}, 115:230402, Dec 2015.
 
 \bibitem{bennett_1993_teleporting}
 Charles~H. Bennett, Gilles Brassard, Claude Cr\'epeau, Richard Jozsa, Asher
@@ -40,6 +92,24 @@ Charles~H. Bennett, Gilles Brassard, Claude Cr\'epeau, Richard Jozsa, Asher
 \newblock Teleporting an unknown quantum state via dual classical and
   einstein-podolsky-rosen channels.
 \newblock {\em Phys. Rev. Lett.}, 70:1895--1899, Mar 1993.
+
+\bibitem{bennett_1992_superdense}
+Charles~H. Bennett and Stephen~J. Wiesner.
+\newblock Communication via one- and two-particle operators on
+  einstein-podolsky-rosen states.
+\newblock {\em Phys. Rev. Lett.}, 69:2881--2884, Nov 1992.
+
+\bibitem{schrodinger_1935}
+E.~Schrödinger.
+\newblock Discussion of probability relations between separated systems.
+\newblock {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, 31(4):555--563, 1935.
+
+\bibitem{horodecki_2009_entanglement}
+Ryszard Horodecki, Pawe\l{} Horodecki, Micha\l{} Horodecki, and Karol
+  Horodecki.
+\newblock Quantum entanglement.
+\newblock {\em Rev. Mod. Phys.}, 81:865--942, Jun 2009.
 
 \bibitem{hughston_1993_densitymatrix}
 Lane~P. Hughston, Richard Jozsa, and William~K. Wootters.
@@ -118,12 +188,6 @@ Jonathan Barrett.
   mixed states do not always violate a bell inequality.
 \newblock {\em Phys. Rev. A}, 65:042302, Mar 2002.
 
-\bibitem{wiseman_2007_steering}
-H.~M. Wiseman, S.~J. Jones, and A.~C. Doherty.
-\newblock Steering, entanglement, nonlocality, and the einstein-podolsky-rosen
-  paradox.
-\newblock {\em Phys. Rev. Lett.}, 98:140402, Apr 2007.
-
 \bibitem{horodecki_1999_isotropic}
 Micha\l{} Horodecki and Pawe\l{} Horodecki.
 \newblock Reduction criterion of separability and limits for a class of
@@ -158,37 +222,10 @@ Min Jiang, Shunlong Luo, and Shuangshuang Fu.
 \newblock Channel-state duality.
 \newblock {\em Phys. Rev. A}, 87:022310, Feb 2013.
 
-\bibitem{uola_2020_steering}
-Roope Uola, Ana C.~S. Costa, H.~Chau Nguyen, and Otfried G\"uhne.
-\newblock Quantum steering.
-\newblock {\em Rev. Mod. Phys.}, 92:015001, Mar 2020.
-
-\bibitem{cavalcanti_2016_steering}
-D~Cavalcanti and P~Skrzypczyk.
-\newblock Quantum steering: a review with focus on semidefinite programming.
-\newblock {\em Reports on Progress in Physics}, 80(2):024001, dec 2016.
-
-\bibitem{quintino_incompatibilitysteering_2014}
-Marco~T\'ulio Quintino, Tam\'as V\'ertesi, and Nicolas Brunner.
-\newblock Joint measurability, einstein-podolsky-rosen steering, and bell
-  nonlocality.
-\newblock {\em Phys. Rev. Lett.}, 113:160402, Oct 2014.
-
 \bibitem{uola_incompatibilitysteering_2014}
 Roope Uola, Tobias Moroder, and Otfried G\"uhne.
 \newblock Joint measurability of generalized measurements implies classicality.
 \newblock {\em Phys. Rev. Lett.}, 113:160403, Oct 2014.
-
-\bibitem{uola_onetoonesteering_2015}
-Roope Uola, Costantino Budroni, Otfried G\"uhne, and Juha-Pekka Pellonp\"a\"a.
-\newblock One-to-one mapping between steering and joint measurability problems.
-\newblock {\em Phys. Rev. Lett.}, 115:230402, Dec 2015.
-
-\bibitem{brunner_2014_nonlocality}
-Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
-  Stephanie Wehner.
-\newblock Bell nonlocality.
-\newblock {\em Rev. Mod. Phys.}, 86:419--478, Apr 2014.
 
 \bibitem{quintino_2016_incompatibilitybell}
 Marco~T\'ulio Quintino, Joseph Bowles, Flavien Hirsch, and Nicolas Brunner.
@@ -407,12 +444,6 @@ Marcin Pawłowski and Valerio Scarani.
 \newblock Information {Causality}.
 \newblock {\em arXiv:1112.1142 [quant-ph]}, December 2011.
 \newblock arXiv: 1112.1142.
-
-\bibitem{spekkens_2005_contextuality}
-R.~W. Spekkens.
-\newblock Contextuality for preparations, transformations, and unsharp
-  measurements.
-\newblock {\em Phys. Rev. A}, 71:052108, May 2005.
 
 \bibitem{harrigan_2008_ontological}
 Nicholas Harrigan, Terry Rudolph, and Scott Aaronson.
