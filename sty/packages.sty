@@ -3,11 +3,11 @@
 
 % -----------------------------
 %------- Constants -------
-\usepackage{calc}
-\newcommand{\marginnotewidth}{2.7cm}
-\newcommand{\marginnotesep}{.7cm}
-\newlength{\rightoffset}
-\setlength{\rightoffset}{1.7cm+\marginnotesep+\marginnotewidth}
+% \usepackage{calc}
+% \newcommand{\marginnotewidth}{2.7cm}
+% \newcommand{\marginnotesep}{.7cm}
+% \newlength{\rightoffset}
+% \setlength{\rightoffset}{1.7cm+\marginnotesep+\marginnotewidth}
 % -----------------------------
 
 
@@ -18,10 +18,10 @@
 			top=3cm,
 			bottom=2cm,
 			left=3cm,
-			right=\rightoffset,
+			right=3cm,
 			headheight=4cm,
-			marginparwidth=\marginnotewidth,
-			marginparsep=\marginnotesep,
+			% marginparwidth=\marginnotewidth,
+			% marginparsep=\marginnotesep,
 			]
 			{geometry} 
 \let\oldmarginpar\marginpar
@@ -30,6 +30,10 @@
 
 % \usepackage[stretch=10]{microtype}  % Only pdflatex
 \usepackage{setspace}
+\usepackage{bibentry}
+\nobibliography*
+
+\usepackage{nonumonpart}
 
 \usepackage{titling}
 \usepackage{fancyhdr}

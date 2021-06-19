@@ -5,55 +5,54 @@
 
 \begin{document}
 
+	% A hack so numbering don't appear in parts, toc and intro
 	\pagestyle{empty}
-	\frontmatter	
+	\fancypagestyle{plain}{%
+		\fancyhf{}                          % clear all header and footer fields
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0pt}
+	}
 
+	\frontmatter	
 	\newgeometry{top=5cm,bottom=5cm,left=3cm,right=3cm}
-	\maketitle
+		\maketitle
 	\restoregeometry
 	% \include{pretext/titlepage}
-	\include{pretext/quotes}
-	% \include{pretext/abstract}
+
+	\newgeometry{top=5cm,bottom=5cm,left=8cm,right=3cm}
+		\include{pretext/quotes}
+	\restoregeometry
+	\include{pretext/abstract}
 	\include{pretext/publications}
 	\include{pretext/acknowledgments}
-	
 
-	\newgeometry{top=2cm,bottom=4cm,left=3cm,right=4cm}
-	\pagestyle{empty}
-	\tableofcontents
+	\newgeometry{top=3cm,bottom=4cm,left=3cm,right=3cm}
+		\tableofcontents
 	\restoregeometry
 
 	\mainmatter
-	\include{sty/fancy}  % Set header style
 	\include{pretext/introduction}
+	\include{sty/fancy}  % Set header style
 
-	\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
 	\part{Tools}
 	\label{part:tools}
-	\restoregeometry
 		\include{text/chapter1}
 		\include{text/chapter2}
-	\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
 	\part{Prepare and measure}
 	\label{part:pam}
-	\restoregeometry
 		\include{text/chapter3}
 		\include{text/chapter4}
 		\include{text/chapter5}
-	%
 	% \include{postext/final_remarks}
-	% ...
 	
-	\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
-	\begin{appendices}\restoregeometry
+	\begin{appendices}
 		\input{postext/appendix_a.tex}
 		\input{postext/appendix_b.tex}
 	\end{appendices}
 	
-	\restoregeometry
+	\thispagestyle{empty}  % Remove page number
 	\bibliographystyle{unsrt}
 	\bibliography{bibliography}
-	\thispagestyle{empty}  % Remove page number
-	\addcontentsline{toc}{chapter}{Bibliography}{\protect\thispagestyle{empty}}
+	\addcontentsline{toc}{chapter}{Bibliography}
 	
 \end{document}
