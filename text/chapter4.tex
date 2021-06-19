@@ -5,7 +5,7 @@
 
     In this chapter, I introduce novel methods for deciding whether some set of quantum preparations or quantum measurements behaves classically. These will, in turn, provide new insights about a nonclassicality activation phenomenon and the relation between measurement incompatibility and quantum behaviors in prepare-and-measure scenarios.
 
-    These results were published in \cite{degois_2021_general}, and all their proofs are provided in appendix \ref{ap:a}.\review{Precisa mesmo do apêndice com as demonstrações? Acho que a construção que fiz aqui já é suficiente...}
+    These results were published in \cite{degois_2021_general}, and computational details are provided in appendix \ref{ap:a}.
 
     \ornamentbreak
 
@@ -62,12 +62,18 @@
         %
         but they are still not all possible measurements. As an example, unless $\eta = 1$, many rank-1 projective measurements (those on the Bloch sphere) will be left out.
 
-        \begin{figure}
-            \centering
-            \includegraphics[width=.55\columnwidth]{measurements-hull.png}
-            \caption{Representation of the method for $d = 2$. Each vertex on the Bloch sphere represents a measurement operator. To every $\Pi_{0 \vert y}$ we associate a corresponding antipodal $\Pi_{1 \vert y}$. Measurements inside the set enclosed by $\textbf{conv}(\mathcal{M})$ can be simulated by mixing these extremal ones. In particular, any measurement $\{ \Pi_{b \vert u}^\eta \}_b$ in a ball with radius $\eta$ inscribed in the polytope is simulable in such manner.}
-        \label{fig:measurements-hull}
-    \end{figure}
+		\begin{figure}
+		%
+			\begin{minipage}[c]{0.42\textwidth}
+				\centering
+            	\includegraphics[width=.9\columnwidth]{measurements-hull.png}
+			\end{minipage}
+			%
+			\begin{minipage}[c]{0.56\textwidth}
+            	\caption{Representation of the method for $d = 2$. Each vertex on the Bloch sphere represents a measurement operator. To every $\Pi_{0 \vert y}$ we associate a corresponding antipodal $\Pi_{1 \vert y}$. Measurements inside the set enclosed by $\textbf{conv}(\mathcal{M})$ can be simulated by mixing these extremal ones. In particular, any measurement $\{ \Pi_{b \vert u}^\eta \}_b$ in a ball with radius $\eta$ inscribed in the polytope is simulable in such manner.}
+   		    	\label{fig:measurements-hull}
+			\end{minipage}
+		\end{figure}
 
         The work-around is to consider the dual map $\Phi_\eta^\dagger$ applied to the preparations. This will result in each
         %
@@ -152,21 +158,31 @@
 
             Let us start by defining $\mathcal{S}(\alpha, \theta) = \{ \rho_{\mathbf{r_1}}, \rho_{\mathbf{r_2}}, \rho_{\mathbf{r_3}}, \rho_{\mathbf{r_4}} \}$ as the preparation set illustrated in fig. \ref{fig:preparation-set-activation}. They are parametrized by $\alpha$ --- a shrinking factor from the surface of the Bloch sphere ---, and the angle $\theta$. For the probe measurements, we will choose the ones parametrized by the Bloch vectors $\mathbf{q}_1 = (- \mathbf{x} + \mathbf{z}) / \sqrt{2}$ and  $\mathbf{q}_2 = (\mathbf{x} + \mathbf{z}) / \sqrt{2}$. Substituting back into inequality $S$ (eq.~\eqref{eq:inequality-s}), we get that $S(\alpha, \theta) = 4\sqrt{2} \alpha \sin \theta$. This curve is shown in fig. \ref{fig:nonclassicality-activation}, where any violation of $S \leq 4$ certifies nonclassicality.
 
-            \begin{figure}
-                \centering
-                \includegraphics[width=.55\columnwidth]{preparation-states.png}
-                \caption{Preparations $\mathcal{S}(\alpha, \theta) = \{ \rho_{\mathbf{r_1}}, \rho_{\mathbf{r_2}}, \rho_{\mathbf{r_3}}, \rho_{\mathbf{r_4}} \}$ represented for $\alpha=0.8$. At $\theta=0$, all preparations are at $\alpha \mathbf{y}$. For $\theta = \pi/2$, $\mathcal{S} =  \{ -\alpha\mathbf{x}, \alpha\mathbf{x}, -\alpha\mathbf{z}, \alpha\mathbf{z} \}$, corresponding to the largest violation of inequality \eqref{eq:inequality-s}.}
-            \label{fig:preparation-set-activation}
-            \end{figure}
+            % \begin{figure}
+            %     \centering
+            %     \includegraphics[width=.55\columnwidth]{preparation-states.png}
+            %     \caption{Preparations $\mathcal{S}(\alpha, \theta) = \{ \rho_{\mathbf{r_1}}, \rho_{\mathbf{r_2}}, \rho_{\mathbf{r_3}}, \rho_{\mathbf{r_4}} \}$ represented for $\alpha=0.8$. At $\theta=0$, all preparations are at $\alpha \mathbf{y}$. For $\theta = \pi/2$, $\mathcal{S} =  \{ -\alpha\mathbf{x}, \alpha\mathbf{x}, -\alpha\mathbf{z}, \alpha\mathbf{z} \}$, corresponding to the largest violation of inequality \eqref{eq:inequality-s}.}
+            % \label{fig:preparation-set-activation}
+            % \end{figure}
 
             Our second step is to take every subset of $3$ preparations from $\mathcal{S}(\alpha, \theta)$ at some $\theta$. For each possibility, we run program~\eqref{eq:preparation-classicality-projective} and find the largest $\alpha^*$ such that \emph{any} collection of $3$ preparations is classical. Any $\alpha < \alpha^*$ has more of the identity state, thus preserves classicality. Sweeping $\theta$, we obtain the dotted curve shown in fig. \ref{fig:nonclassicality-activation}. The shaded region then corresponds to a situation where all triads of preparations are classical, but that taken together have their nonclassicality activated.
 
-            \begin{figure}
-                \centering
-                \includegraphics[width=.8\columnwidth]{preparation-activation.png}
-                \caption{Nonclassicality activation for the preparations in fig. \ref{fig:preparation-set-activation} and $12$ probe measurement effects arranged as the vertices of a rhombicuboctahedron ($\eta \approx 0.86$). As $S \propto \alpha$, every preparation set above the $S=4$ curve is non-classical. On the other hand, the classicality curve shows the maximum visibility such that any triad of states in the preparation set are classical. The shaded region thence represents sets of four preparations that are three-wise classical, but that that when taken together behave nonclassically. In this sense, nonclassicality is activated by measurement inclusion.}
-            \label{fig:nonclassicality-activation}
-            \end{figure}
+            % \begin{figure}
+            %     \centering
+            %     \includegraphics[width=.8\columnwidth]{preparation-activation.png}
+            %     \caption{Nonclassicality activation for the preparations in fig. \ref{fig:preparation-set-activation} and $12$ probe measurement effects arranged as the vertices of a rhombicuboctahedron ($\eta \approx 0.86$). As $S \propto \alpha$, every preparation set above the $S=4$ curve is non-classical. On the other hand, the classicality curve shows the maximum visibility such that any triad of states in the preparation set are classical. The shaded region thence represents sets of four preparations that are three-wise classical, but that that when taken together behave nonclassically. In this sense, nonclassicality is activated by measurement inclusion.}
+            % \label{fig:nonclassicality-activation}
+            % \end{figure}
+
+			\begin{figure*}[t!]
+				\newdimen\subfigcapmargin  \subfigcapmargin  =  -3em
+				\centering
+				%
+				\subfigure[Preparations]{\label{fig:preparation-set-activation}\includegraphics[width=.4\linewidth]{preparation-states.png}}\hfill
+				\subfigure[Activation]{\label{fig:nonclassicality-activation}\includegraphics[width=.58\linewidth]{preparation-activation.png}}\hfill
+				%
+				\caption{Nonclassicality activation in the prepare-and-measure scenario. On the left, preparations $\mathcal{S}(\alpha, \theta) = \{ \rho_{\mathbf{r_1}}, \rho_{\mathbf{r_2}}, \rho_{\mathbf{r_3}}, \rho_{\mathbf{r_4}} \}$ are represented by their Bloch vectors, for $\alpha=0.8$. At $\theta=0$, all preparations are at $\alpha \mathbf{y}$. For $\theta = \pi/2$, $\mathcal{S} =  \{ -\alpha\mathbf{x}, \alpha\mathbf{x}, -\alpha\mathbf{z}, \alpha\mathbf{z} \}$, corresponding to the largest violation of inequality \eqref{eq:inequality-s}. On the right, result of applying program \ref{eq:preparation-classicality-projective} to $\mathcal{S}$. To run it, $12$ probe measurement effects arranged as the vertices of a rhombicuboctahedron ($\eta \approx 0.86$). As $S \propto \alpha$, every preparation set above the $S=4$ curve is non-classical. On the other hand, the classicality curve shows the maximum visibility such that any triad of states in the preparation set are classical. The shaded region thence represents sets of four preparations that are three-wise classical, but that that when taken together behave nonclassically. In this sense, nonclassicality is activated by measurement inclusion.}
+			\end{figure*}
             
             The significance of this results can be illustrated when considering a $\rac{2}{2}{1}$ RAC. Section \ref{sec:racs}) tells us it can me mapped to a $(d,B,X,Y) = (2,2,4,2)$ prepare-and-measure instance, which is exactly the case for the class of inequalities represented by $S$. A more ergonomic representant for our current task is $s = E_{11} + E_{12} + E_{21} - E_{22} - E_{31} + E_{32} - E_{41} - E_{42} \leq 4$. Borrowing from \cite{pawlowski_pamqkd_2011}, we note that, for this RAC, the average probability of success \emph{is} the facet $s$. To see that, let's relabel preparations $\left( 1, 2, 3, 4 \right) \mapsto \left(00, 01, 10, 11\right)$ and open up
             %
@@ -282,19 +298,29 @@
             %
             where $\mathbf{N}(\mathcal{M})$ is a choice of noise model which is generally dependant on the desired application. Unbiased (or white) noise $N_{b|y} = \mathbf{1}/\abs{\mathcal{B}}$ is a common choice when one wants to model experimental imperfections that affect all degrees of freedom undiscriminately. Considering this choice, the lower curve in fig. \ref{fig:incompatibility-vs-classicality} stands for $\chi^*_{\mathcal{M}(\theta)}$, and it is a tight upper bound, up to numerical precision. Consequently, any value of $\chi$ above it defines a non-jointly measurable measurement set.
 
-            \begin{figure}
-                \centering
-                \includegraphics[width=.55\columnwidth]{mirror-symmetric-measurements.png}
-                \caption{Measurements used to show the existence of classical, non-jointly measurable measurements. The projection on $\mathbf{z}$ and its antipodal effect are fixed, while the two other measurements vary with $0 \leq \theta \leq \pi/2$. In the upper bound, they degenerate in an $\mathbf{x}$ measurement.}
-            \label{fig:mirror-symmetric-measurements}
-            \end{figure}
-            %
-            \begin{figure}
-                \centering
-                \includegraphics[width=.8\columnwidth]{incompatibility-vs-classicality.png}
-                \caption{Incompatibility is insufficient for non-classicality in the prepare and measure scenario. For each $\theta$ (see fig. \ref{fig:mirror-symmetric-measurements}), any $\chi$ above the incompatibility robustness curve stands for an incompatible measurement set, and any $\alpha$ below the measurement classicality lower bound represents measurements that certifiedly do not generate non-classical statistics, regardless what preparations they act upon. Thenceforth, the shaded region contains incompatible albeit classical measurements.}
-            \label{fig:incompatibility-vs-classicality}
-            \end{figure}
+            % \begin{figure}
+            %     \centering
+            %     \includegraphics[width=.55\columnwidth]{mirror-symmetric-measurements.png}
+            %     \caption{Measurements used to show the existence of classical, non-jointly measurable measurements. The projection on $\mathbf{z}$ and its antipodal effect are fixed, while the two other measurements vary with $0 \leq \theta \leq \pi/2$. In the upper bound, they degenerate in an $\mathbf{x}$ measurement.}
+            % \label{fig:mirror-symmetric-measurements}
+            % \end{figure}
+            % %
+            % \begin{figure}
+            %     \centering
+            %     \includegraphics[width=.8\columnwidth]{incompatibility-vs-classicality.png}
+            %     \caption{Incompatibility is insufficient for non-classicality in the prepare and measure scenario. For each $\theta$ (see fig. \ref{fig:mirror-symmetric-measurements}), any $\chi$ above the incompatibility robustness curve stands for an incompatible measurement set, and any $\alpha$ below the measurement classicality lower bound represents measurements that certifiedly do not generate non-classical statistics, regardless what preparations they act upon. Thenceforth, the shaded region contains incompatible albeit classical measurements.}
+            % \label{fig:incompatibility-vs-classicality}
+            % \end{figure}
+
+			\begin{figure*}[t!]
+				\newdimen\subfigcapmargin  \subfigcapmargin  =  -3em
+				\centering
+				%
+				\subfigure[]{\label{fig:mirror-symmetric-measurements}\includegraphics[width=.4\linewidth]{mirror-symmetric-measurements.png}}\hfill
+				\subfigure[]{\label{fig:incompatibility-vs-classicality}\includegraphics[width=.58\linewidth]{incompatibility-vs-classicality.png}}\hfill
+				%
+				\caption{Incompatibility is insufficient for non-classicality in the prepare and measure scenario. On the left, parametrized measurements used in the demonstration. The projection on $\mathbf{z}$ and its antipodal effect are fixed, while the two other measurements vary with $0 \leq \theta \leq \pi/2$. In the upper bound, they degenerate in an $\mathbf{x}$ measurement. On the right, program~\eqref{eq:measurement-classicality-projective} was applied. For each $\theta$ (see fig. \ref{fig:mirror-symmetric-measurements}), any $\chi$ above the incompatibility robustness curve stands for an incompatible measurement set, and any $\alpha$ below the measurement classicality lower bound represents measurements that certifiedly do not generate non-classical statistics, regardless what preparations they act upon. Thenceforth, the shaded region contains incompatible albeit classical measurements.}
+			\end{figure*}
 
             Program~\eqref{eq:measurement-classicality-projective} was used to generate the upper curve in the same figure. Twenty-four probe preparations were disposed as the vertices of a rhombicuboctahedron, leading to $\eta \approx 0.86$, and the deterministic strategies were iteratively explored following the algorithm described in appendix \ref{ap:a-computational}. For each $\theta$, the obtained $\alpha$ is a lower bound on the visibility of $\mathcal{M}$ such that a classical model exists for all preparations. Specifically, anything below the classicality curve defines a measurement set which cannot generate nonclassical behaviors. The non-empty region between these two curves certifies there are plenty of incompatible measurements which are classical. Accordingly, non-joint measurability is insufficient for nonclassicality in the prepare-and-measure scenario.
 
@@ -310,4 +336,6 @@
 
         In view of the method itself, choosing $\Phi$ as the noise model is a natural but not required choice. Different transformations, such as inscribing an ellipsis instead of a depolarized Bloch ball in $\conv{\mathcal{M}}$ (and then applying the corresponding dual map to the preparations) could lead to better computational results, and, potentially, to new insights \cite{fillettaz_algorithmic_2018}.
 
-        We believe all these suggestions are worth of pursuit, and to aid in future works, all implementations used in this chapter are available at a public code repository \cite{classicality_repository}.
+		The relationship of prepare-and-measure scenarios with random access coding, which was only superficially explored in sec. \ref{sec:racs} and sec. \ref{sec:nonclassicality-activation}, also deserves more exploration. Although the mapping of a RAC to a PM scenario can be trivially done, this is not enough to prove a RACs $\psuc$ is always a facet of the corresponding PM polytope. Believing that, as in the $\rac{2}{2}{1}$, this was always the case, we have further investigated this question. It turns out this is not true. In the general case, a RAC's $\psuc$ must then be some lower dimensional face of prepare-and-measure polytopes. One possible direction is to investigate whether there are subclasses of RACs with this property, of which the $\rac{2}{2}{1}$ is but one example. Another is to explore the meaning of other classes of inequalities defining PM polytopes, and if they represent other instances of information retrieval tasks.
+
+        We believe all these suggestions are worthy of pursuit. Implementations of the programs used in this chapter could be helpful to some of these questions, and are available at a public code repository \cite{classicality_repository}.

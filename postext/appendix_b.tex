@@ -171,9 +171,9 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
         and the second that
         %
         \begin{align*}
-            &\ptr{A}{\sum_{i,j=0}^{d_A - 1} \eta_i \eta_j \sum_{x=0}^{d_A^2 - 1} U_x \ketbra{i_A}{j_A} U_x^\dagger \otimes \ketbra{i_B}{j_B}} \\
-            &\qquad\qquad = \sum_{i,j=0}^{d_A - 1} \eta_i \eta_j \sum_{x=0}^{d_A^2 - 1} \tr{U_x \ketbra{i_A}{j_A} U_x^\dagger} \otimes \ketbra{i_B}{j_B} \\
-            &\qquad\qquad = d_A^2 \sum_{i=0}^{d_A - 1} \eta_i^2 \ketbra{i_B}{i_B}
+            \ptr{A}{\sum_{i,j=0}^{d_A - 1} \eta_i \eta_j \sum_{x=0}^{d_A^2 - 1} U_x \ketbra{i_A}{j_A} U_x^\dagger \otimes \ketbra{i_B}{j_B}}
+            &= \sum_{i,j=0}^{d_A - 1} \eta_i \eta_j \sum_{x=0}^{d_A^2 - 1} \tr{U_x \ketbra{i_A}{j_A} U_x^\dagger} \otimes \ketbra{i_B}{j_B} \\
+            &= d_A^2 \sum_{i=0}^{d_A - 1} \eta_i^2 \ketbra{i_B}{i_B}
         \end{align*}
         %
         Together,
@@ -203,8 +203,8 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
         With this prescription,
         %
         \begin{align*}
-            M_x \ketbra{\psi_x}{\psi_x} &= \frac{1}{d_A} \left( \sum_{m, n = 0}^{d_A - 1} W_x^{d_A} \ketbra{m}{n} (W_x^{d_A})^\dagger \otimes \ketbra{m}{n} \right) \\
-            &\qquad\qquad\qquad\times\left( \sum_{i,j=0}^{s - 1} \eta_i \eta_j  W_x^{d_A} \ketbra{i}{j} (W_x^{d_A})^\dagger \otimes \ketbra{i}{j}\right) \\
+            M_x \ketbra{\psi_x}{\psi_x}
+			&= \frac{1}{d_A} \left( \sum_{m, n = 0}^{d_A - 1} W_x^{d_A} \ketbra{m}{n} (W_x^{d_A})^\dagger \otimes \ketbra{m}{n} \right) \left( \sum_{i,j=0}^{s - 1} \eta_i \eta_j  W_x^{d_A} \ketbra{i}{j} (W_x^{d_A})^\dagger \otimes \ketbra{i}{j}\right) \\
             &= \frac{1}{d_A} \sum_{m = 0}^{d_A - 1} \sum_{i, j=0}^{s-1} \eta_i \eta_j W_x^{d_A} \ketbra{m}{j} (W_x^{d_A})^\dagger \otimes \ketbra{m}{j} ,
         \end{align*}
         %

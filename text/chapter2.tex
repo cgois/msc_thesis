@@ -68,6 +68,49 @@
 			L(A, b) = \big\{ x \in \mathbb{R}^d \mid Ax \leq b \big\} ,
 		$$
 		where $A \in \mathbb{R}^{d \times m}$ and $b \in \mathbb{R}^m$ specify a set of linear inequalities. A single halfspace, which is obviously unbounded, fits the definition. If a polyhedron $L$ is furthermore bounded (i.e., has no rays), it is a convex \emph{polytope}, denoted by $P$. A convex hull of finitely many points is thus a polytope. Polyhedrons and polytopes inherit their dimensions from their affine hull's. From the definition follows that one way to test if an $x \in P$ (or $L$) is to check whether it does not violate any of the inequalities defining the halfspaces. This is closely linked to nonclassicality witnesses, to be further discussed in chap. \ref{chap:pam}.
+		%
+		\begin{figure*}[t!]
+			\newdimen\subfigcapmargin  \subfigcapmargin  =  -3em
+			\centering
+			\begin{minipage}{.8\textwidth}
+				\subfigure[Line]{\label{fig:line}\includegraphics[width=.16\linewidth]{affine_combination.png}}\hfill
+				\subfigure[Segment]{\label{fig:line-segment}\includegraphics[width=.16\linewidth]{convex_combination.png}}\hfill
+				\subfigure[Affine hull]{\label{fig:affine-hull}\includegraphics[width=.16\linewidth]{affine_hull.png}}
+	
+				\subfigure[Convex hull]{\label{fig:convex-hull}\includegraphics[width=.16\linewidth]{convex_hull.png}}\hfill
+				\subfigure[Convex]{\label{fig:convex-not-polytope}\includegraphics[width=.16\linewidth]{not_polytope.png}}\hfill
+				\subfigure[Nonconvex]{\label{fig:nonconvex}\includegraphics[width=.16\linewidth]{not_convex.png}}
+			\end{minipage}
+			%
+			\caption{Pictorial representation of the definitions introduced in sec. \ref{sec:convexity}. Fig. \ref{fig:line} shows a line, which is an affine combination of two points. In \ref{fig:line-segment}, a line segment (or a convex hull of two points) is shown. Two affine hull of three noncollinear points is the plane (\ref{fig:affine-hull}), while the convex hull of a finite number of points defines a polytope (\ref{fig:convex-hull}). Any polytope is a polyhedron, but the converse is not true. Fig. \ref{fig:convex-not-polytope} shows a convex set which is not a polytope. Is has an infinite number of extremal points. Nonconvex sets do not contain every line segment between its elements (\ref{fig:nonconvex}).}
+		\end{figure*}
+
+
+		% \begin{figure}[t!]
+		% 	\centering
+		% 	\begin{subfigure}{0.3\textwidth}
+		% 		\includegraphics[width=.5\textwidth]{affine_combination.png}}
+		% 	\end{subfigure}
+		% 	\begin{subfigure}{0.3\textwidth}
+		% 		\includegraphics[height=.13\linewidth]{affine_combination.png}}
+		% 	\end{subfigure}
+		% 	\begin{subfigure}{0.3\textwidth}
+		% 		\includegraphics[height=.13\linewidth]{affine_combination.png}}
+		% 	\end{subfigure}
+
+		% 	\begin{subfigure}{0.3\textwidth}
+		% 		\includegraphics[height=.13\linewidth]{affine_combination.png}}
+		% 	\end{subfigure}
+		% 	\begin{subfigure}{0.3\textwidth}
+		% 		\includegraphics[height=.13\linewidth]{affine_combination.png}}
+		% 	\end{subfigure}
+		% 	\begin{subfigure}{0.3\textwidth}
+		% 		\includegraphics[height=.13\linewidth]{affine_combination.png}}
+		% 	\end{subfigure}
+		% 	%
+		% 	\caption{Pictorial representation of the definitions introduced in sec. \ref{sec:convexity}. Fig. \ref{fig:line} shows a line, which is an affine combination of two points. In \ref{fig:line-segment}, a line segment (or a convex hull of two points) is shown. Two affine hull of three noncollinear points is the plane (\ref{fig:affine-hull}), while the convex hull of a finite number of points defines a polytope (\ref{fig:convex-hull}). Any polytope is a polyhedron, but the converse is not true. Fig. \ref{fig:convex-not-polytope} shows a convex set which is not a polytope. Is has an infinite number of extremal points. Nonconvex sets do not contain every line segment between its elements (\ref{nonconvex}).}
+		% \end{figure}
+
 
 		As much as cubes have vertices, edges and faces, polytopes have $k$-faces. Any \emph{face} $F$ of a polytope $P$ is a set
 		$$

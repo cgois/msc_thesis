@@ -18,13 +18,22 @@
     
         Alice is allowed to interact with her device through a classical input $x \in \mathcal{X} \equiv \natrange{X} \equiv [X]$. Her choice may weight on the probability $\condprob{m}{x}$ with which a state labeled by $m \in \mathcal{S}$ is prepared. Here, $\mathcal{S}$ represents the set of possible preparations. This choice can be more intuitively understood as the message Alice aims to encode in her preparation.
         
-        Similarly, Bob can choose a configuration $y \in \mathcal{Y} \equiv [Y]$ for the measurement device, which will thence output $b \in \mathcal{B} \equiv [B]$ with probability $\condprob{b}{m,y}$. This reflects the fact that the outcome of the experiment may be influenced by both the received message and Bob's choice of measurement (fig. \ref{fig:pam}). More intuitively, $Y$ limits how many choices of decoding procedures can be used by Bob to try and recover Alice's message $x$.
+        Similarly, Bob can choose a configuration $y \in \mathcal{Y} \equiv [Y]$ for the measurement device, which will thence output $b \in \mathcal{B} \equiv [B]$ with probability $\condprob{b}{m,y}$. This reflects the fact that the outcome of the experiment may be influenced by both the received message and Bob's choice of measurement (fig. \ref{fig:pam-scenario}). More intuitively, $Y$ limits how many choices of decoding procedures can be used by Bob to try and recover Alice's message $x$.
 
-        \begin{figure}
-            \caption{\todo{}}
-            \label{fig:pam}
-        \end{figure}
-        
+		\begin{figure}
+			%
+			\begin{minipage}[c]{0.41\textwidth}
+				\centering
+				\includegraphics[width=.8\columnwidth]{pam_scenario.png}
+			\end{minipage}
+			%
+			\begin{minipage}[c]{0.58\textwidth}
+				\caption{Prepare-and-measure scenarios. The measurement box, upon receiving an input $x$, prepares either a classical, $\tau_x$, or quantum $\rho_x$, state to the measurement device. In turn, given a choice $y$ of measurement, an output $b$ is observed. From their causal past, the devices may be independent ($\emptyset$), share classical randomness ($\lambda$), or even quantum correlations ($\rho$).}	
+				\label{fig:pam-scenario}
+			\end{minipage}
+			%
+		\end{figure}
+
         A last, indispensable condition is that neither Alice nor Bob know what happens in each other's labs. In other words, she must have no knowledge of $y$, as this is a choice made in her causal future, and he cannot know what was her choice $x$ of preparation, as this trivializes the scenario in a sense that will soon be made clearer. Taken together, these constraints amount to saying that all communication between them is mediated by the message $m$. Given that our intention is to study how this communication influence the observed statistics, this is clearly a natural assumption.
         
         An \emph{round} is a single run of the protocol described above. After many such rounds, Alice and Bob are allowed to share their knowledge with each other, and together they can build the \emph{behavior} $\mathbf{p} = \{ \condprob{b}{x,y} \}_{b,x,y}$ of their devices. This behavior characterizes the prepare-and-measure \emph{experiment}. Naturally, each $\condprob{b}{x,y} \geq 0$ and $\sum_b \condprob{b}{x,y} = 1, \,\forall x,y$ or, equivalently, $\mathbf{p}$ is a collection of conditional probability distributions, one for any fixed choice of a pair of settings $(x,y)$.
@@ -52,7 +61,7 @@
             
             Briefly detouring, it is interesting to notice that model~\eqref{eq:pam-classical-independent} is very much in the spirit of ontological models \cite{spekkens_2005_contextuality,harrigan_2008_ontological,galvao_2009_economical}. To see that, consider $\mathcal{S}$ as a finite, dimension-bounded ontic state space, and $x$ as the preparation procedure. Then, $\condprob{m}{x}$ models our epistemic state. Similarly, if we take $y$ as a choice of measurement procedure, we may interpret $\condprob{b}{m,y}$ as the indicator function. In this way, any theory that only produces behaviors $\mathbf{p} \in \mathcal{C}_{d,X,Y}$ admits a dimension-bounded ontological model.
             
-            Conditions (iii)--(v) above are pretty much natural for any communication scenario, but the case is different for (i) and (ii). While in many situations, such as when we have some trust on our devices, (i) is justifiable, it is not always safe to assume that the devices are uncorrelated. The worst-case scenario for classical variables is when P and M can share an unbounded amount of pre-established classical correlations. Such correlations must reside in the causal past of the experiment (fig. \ref{fig:pam-scenarios}), but even so, they can be used to achieve better performance in several communication protocols implemented in the PM scenario \cite{de_vicente_bound_2019}, and lead to quite different geometrical structures \cite{de_vicente_shared_2017,dallarno_robustness_2012}. Without knowledge on what information they share, the best we can do is to call it $\lambda$ and say that $\pi$ is some probability distribution over this random variable. As both devices can fully access $\lambda \in \Lambda$,
+            Conditions (iii)--(v) above are pretty much natural for any communication scenario, but the case is different for (i) and (ii). While in many situations, such as when we have some trust on our devices, (i) is justifiable, it is not always safe to assume that the devices are uncorrelated. The worst-case scenario for classical variables is when P and M can share an unbounded amount of pre-established classical correlations. Such correlations must reside in the causal past of the experiment (fig. \ref{fig:pam-dag}), but even so, they can be used to achieve better performance in several communication protocols implemented in the PM scenario \cite{de_vicente_bound_2019}, and lead to quite different geometrical structures \cite{de_vicente_shared_2017,dallarno_robustness_2012}. Without knowledge on what information they share, the best we can do is to call it $\lambda$ and say that $\pi$ is some probability distribution over this random variable. As both devices can fully access $\lambda \in \Lambda$,
             %
             \begin{equation}
                 \mathbf{p} \in \mathcal{C}_{d,X,Y}^\lambda \quad\Longleftrightarrow \quad \condprob{b}{x,y} = \int_{\Lambda} \sum_{m \in \mathcal{S}} \pi(\lambda) \condprob{m}{x,\lambda} \condprob{b}{m,y,\lambda} d\lambda \quad\forall b,x,y .
@@ -61,11 +70,18 @@
             %
             Here, $\mathcal{C}_{d,X,Y}^\lambda$ is the set of behaviors we get from $\mathcal{C}_{d,X,Y}$ by allowing for shared randomness. As $\pi(\lambda) \geq 0$ and $\sum_\lambda \pi(\lambda) = 1$, eq.~\eqref{eq:pam-classical-sr} is actually telling us that $\mathcal{C}_{d,X,Y}^\lambda = \conv{\mathcal{C}_{d,X,Y}}$. More than that, a slight variation on Fine's theorem \cite{fine_hidden_1982} (or sec. 2.3 of \cite{scarani_bell_2019} for a more pedagogical discussion) can show that the set $\mathcal{C}_{d,X,Y}$ has a finite amount of extremal points, called deterministic strategies \cite{gallego_pam_2010,de_vicente_bound_2019}. They are the points given by eq.~\eqref{eq:pam-classical-independent} when the response functions are deterministic, i.e., when $\condprob{m}{x} = \delta_{m,f(x)}$ and $ \condprob{b}{m,y} = \delta_{b,g(m,y)}$, for some functions $f : \mathcal{X} \rightarrow [d]$ and $g : [d] \times \mathcal{Y} \rightarrow \mathcal{B}$ that are made precise in the aforementioned references. As $\mathcal{C}_{d,X,Y}^\lambda$ can now be seen as a convex hull of finitely many points, this proves that $\mathcal{C}_{d,X,Y}^\lambda$ is a polytope. Recalling the discussion in sec. \ref{sec:convexity}, we emphasize that $\mathcal{C}_{d,X,Y}^\lambda$ can thus be described by an intersection of half-spaces, which are given by the linear inequalities defining its facets. This description will turn out to be especially useful during chap. \ref{chap:pam-classical}, in which we will get back to this topic and work out an example that should clarify this discussion.
 
-            \begin{figure}
-                \centering
-                \caption{\todo{}}
-                \label{fig:pam-scenarios}
-            \end{figure}
+			\begin{figure}
+			%
+				\begin{minipage}[c]{0.31\textwidth}
+					\centering
+					\includegraphics[width=.5\columnwidth]{pam-dag.png}
+				\end{minipage}
+				%
+				\begin{minipage}[c]{0.68\textwidth}
+					\caption{Causal structure of a prepare-and-measure experiment. Choice $x$ of preparation can only directly influence the message $m$, which can be encoded in a classical or quantum system. Communicating $m$ effectively screens-off the choice of $x$, unless the measurement device can perfectly recover it. Observable $b$ is influenced by the received message $m$ and the choice $y$ of measurement, which can be seen as a decoding function. Both $m$ and $b$ can be further classically or quantumly correlated by some variable in the causal past of the experiment.}	
+					\label{fig:pam-dag}
+				\end{minipage}
+			\end{figure}
             
             For an example of the usefulness in understanding these sets, notice that for some fixed $X$ and $Y$, and some $d^\prime > d$, we have the proper inclusion $\mathcal{C}_{d} \subset \mathcal{C}_{d^\prime}$, which implies the same for the SR case. Ultimately, this means that larger dimensional communication can carry strictly more information. Now suppose that $W_d$ is a linear functional defining some facet of $\mathcal{C}_{d}^\lambda$ which is not a facet of $\mathcal{C}_{d^\prime}^\lambda$ (at least one such $W_d$ must exist, since $\mathcal{C}_{d}^\lambda \subset \mathcal{C}_{d^\prime}^\lambda$) and that, for any behavior $\mathbf{p} \in \mathcal{C}_d^\lambda$, we have a bound $W_d \cdot \mathbf{p} \leq C_d$. Because $W_d$ does not define a facet of $\mathcal{C}_{d^\prime}^\lambda$, there is some $\mathbf{p}^\prime \in \mathcal{C}_{d^\prime}^\lambda$ such that $W_d \cdot \mathbf{p}^\prime > C_d$. Hence, if we are given preparation and measurement boxes which are guaranteed to prepare only classical systems, and we observe some behavior that, like $\mathbf{p}^\prime$, violates the bound on $W_d$, we can certify that our uncharacterized devices is preparing states of dimension at least $d+1$.
             
@@ -87,9 +103,9 @@
                 \condprob{b}{x,y} =  \int_\Lambda \pi(\lambda) \tr{\rho_x^\lambda E_{b \vert y}^\lambda},
             $$
             %
-            making it true that $\mathcal{Q}_d^\lambda = \conv{\mathcal{Q}_d}$.
+            making it true that $\mathcal{Q}_d^\lambda = \conv{\mathcal{Q}_d}$ \review{Mas $\mathcal{Q}_d$ já é convexo, não? Então $\mathcal{Q}_d^\lambda = \mathcal{Q}_d$?}
             
-            Lastly, and most importantly for chap. \ref{chap:pam-quantum}, Alice and Bob may share a quantum system $\rho \in \hilb_A \otimes \hilb_B$ and use it as a resource to improve their quantum communication. Most generally, Alice can use her share of $\rho$ as an aid in her encoding of $x$. The way to do it is by applying a local CPTP map $\Lambda_x$. As we must bound the communication to $d$-dimensional systems, $\Lambda_x : \mathcal{L}(\hilb_A) \rightarrow \mathcal{L}(\hilb_C)$, where $\hilb_C \simeq \mathbb{C}^d$. This system in $\hilb_C$ is then transmitted to Bob, who will afterwards hold $\rho_x = \left( \Lambda_x \otimes \id_B \right) \rho$. His measurements' effects act on $\hilb_C \otimes \hilb_B$ (fig. \ref{fig:pam-scenarios}). Behaviors compatible with experiments implementing this procedure are in the set $\mathcal{Q}^\rho_{d}$.
+            Lastly, and most importantly for chap. \ref{chap:pam-quantum}, Alice and Bob may share a quantum system $\rho \in \hilb_A \otimes \hilb_B$ and use it as a resource to improve their quantum communication. Most generally, Alice can use her share of $\rho$ as an aid in her encoding of $x$. The way to do it is by applying a local CPTP map $\Lambda_x$. As we must bound the communication to $d$-dimensional systems, $\Lambda_x : \mathcal{L}(\hilb_A) \rightarrow \mathcal{L}(\hilb_C)$, where $\hilb_C \simeq \mathbb{C}^d$. This system in $\hilb_C$ is then transmitted to Bob, who will afterwards hold $\rho_x = \left( \Lambda_x \otimes \id_B \right) \rho$. His measurements' effects act on $\hilb_C \otimes \hilb_B$. Behaviors compatible with experiments implementing this procedure are in the set $\mathcal{Q}^\rho_{d}$.
             
             Sometimes, it is a reasonable assumption to make $\hilb_A \simeq \hilb_C$ (see sec. \ref{sec:dense-coding} and chap. \ref{chap:pam-quantum}). Bear in mind, though, that it can lead to some loss of generality: recently, Tavakoli et al. \cite{tavakoli_eapam_2021} considered a qubit communication protocol where $4$-dimensional entanglement shows advantage over having only a $2$-dimensional entangled resource. To the best of my knoledge, those, together with Moreno et al.'s (\cite{moreno_pamdense_2021} and chap. \ref{chap:pam-quantum}), were the first results considering this most general quantum communication scenario.
             
@@ -105,8 +121,22 @@
                 &\mathcal{C}_d \subset \mathcal{C}_d^\lambda \subset \mathcal{C}_d^\rho \subset \mathcal{Q}_d^\rho ,
             \end{align}
             %
-            showing it is thus also possible to build nonclassicality witnesses for the prepare-and-measure scenario.
-            
+            showing it is thus also possible to build nonclassicality witnesses for the prepare-and-measure scenario. Fig. \ref{fig:pam-behaviors} illustrates some of the set relationships discussed in this section.
+
+			\begin{figure}
+				%
+				\begin{minipage}[c]{0.43\textwidth}
+					\centering
+	                \includegraphics[width=.8\columnwidth]{behaviors.png}
+			 	\end{minipage}
+			 	%
+				\begin{minipage}[c]{0.55\textwidth}
+					\caption{Pictorial representation of prepare-and-measure behaviors. $\mathcal{C}_2^\lambda$, arising from $2$-dimensional classical communication with shared randomness, is a subset of any $\mathcal{C}_d^\lambda$ with $d > 2$ (eq.~\ref{eq:pam-classical-sr}). Qubit preparations, $\mathcal{Q}_2$, can behave in ways that violate the facets of $\mathcal{C}_2^\lambda$ \cite{gallego_pam_2010}.}	
+            		\label{fig:pam-behaviors}
+			    \end{minipage}
+			    %
+			\end{figure}
+			            
             \ornamentbreak
             
             In recent years, a multitude of dimension and nonclassicality witnesses for prepare-and-measure scenarios have been proposed \cite{gallego_pam_2010,brunner_dimension_2013,sikora_dimension_2016,dallarno_robustness_2012,de_vicente_bound_2019,bowles_certifying_2014,wehner_lower_2008} and some of them experimentally tested \cite{hendrych_experimental_2012,ahrens_experimental_2012,dambrosio_highdimensional_2014}. More stringent conditions can also be used to perform self-testing of states and measurements, which can be used to certify the use of mutually unbiased bases, nonprojective measurements, or targeted sets of states \cite{tavakoli_selftesting_2018,farkas_selftesting_2019,wei_selftesting_2019,mironowicz_fouroutcome_2019,tavakoli_selftesting_2020,miklin_universal_2021,moreno_pamdense_2021}. All the while, known computational methods can aid in bounding the set of finite dimensional quantum correlations in prepare-and-measure scenarios \cite{navascues_bounding_2015,navascues_characterizing_2015}. The prepare-and-measure scenario and its sequential, or prepare-transform-and-measure variations \cite{mohan_sequential_2019,miklin_sequentialunsharp_2020} are also expected to serve as building blocks for quantum networks \cite{bowles_pamnetworks_2015,wang_pamnetworks_2019}. Complementing their versatility, they can also be seen as a physical implementation of many paradigmatic communication protocols such as random access coding and dense coding, which I now briefly introduce.

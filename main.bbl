@@ -13,6 +13,12 @@ George Moreno, Ranieri Nery, Carlos de~Gois, Rafael Rabelo, and Rafael Chaves.
   coding.
 \newblock {\em Phys. Rev. A}, 103:022426, Feb 2021.
 
+\bibitem{classicality_repository}
+C.~de~Gois.
+\newblock Code for ``{G}eneral method for classicality certification in the
+  prepare and measure scenario'' (\cite{degois_2021_general}).
+\newblock \url{https://github.com/cgois/pam_classicality}, 2021.
+
 \bibitem{epr}
 A.~Einstein, B.~Podolsky, and N.~Rosen.
 \newblock Can quantum-mechanical description of physical reality be considered
@@ -799,12 +805,6 @@ Mathieu Fillettaz, Flavien Hirsch, S\'ebastien Designolle, and Nicolas Brunner.
 \newblock Algorithmic construction of local models for entangled quantum
   states: Optimization for two-qubit states.
 \newblock {\em Phys. Rev. A}, 98:022115, Aug 2018.
-
-\bibitem{classicality_repository}
-C.~de~Gois.
-\newblock Code for ``{G}eneral method for classicality certification in the
-  prepare and measure scenario'' (\cite{degois_2021_general}).
-\newblock \url{https://github.com/cgois/pam_classicality}, 2021.
 
 \bibitem{guhne_faithful_2021}
 Otfried G\"uhne, Yuanyuan Mao, and Xiao-Dong Yu.
