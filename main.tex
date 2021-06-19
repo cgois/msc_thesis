@@ -6,15 +6,20 @@
 \begin{document}
 
 	% A hack so numbering don't appear in parts, toc and intro
-	\pagestyle{empty}
-	\fancypagestyle{plain}{%
-		\fancyhf{}                          % clear all header and footer fields
-		\renewcommand{\headrulewidth}{0pt}
-		\renewcommand{\footrulewidth}{0pt}
-	}
+	% \pagestyle{empty}
+	% \fancypagestyle{plain}{%
+	% 	\fancyhf{}                          % clear all header and footer fields
+	% 	\renewcommand{\headrulewidth}{0pt}
+	% 	\renewcommand{\footrulewidth}{0pt}
+	% 	\addtocounter{\thepage}{1}
+	% }
 
-	\frontmatter	
-	\newgeometry{top=5cm,bottom=5cm,left=3cm,right=3cm}
+
+	\include{sty/plain}  % Renew the plain page style 
+	\pagestyle{plain}
+
+	% \frontmatter	
+	\newgeometry{top=5cm,bottom=3cm,left=3cm,right=3cm}
 		\maketitle
 	\restoregeometry
 	% \include{pretext/titlepage}
@@ -30,7 +35,8 @@
 		\tableofcontents
 	\restoregeometry
 
-	\mainmatter
+	% \mainmatter
+
 	\include{pretext/introduction}
 	\include{sty/fancy}  % Set header style
 

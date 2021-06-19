@@ -112,6 +112,32 @@ Charles~H. Bennett and Stephen~J. Wiesner.
   einstein-podolsky-rosen states.
 \newblock {\em Phys. Rev. Lett.}, 69:2881--2884, Nov 1992.
 
+\bibitem{nielsen_chuang_book}
+Michael~A. Nielsen and Isaac~L. Chuang.
+\newblock {\em Quantum Computation and Quantum Information: 10th Anniversary
+  Edition}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{barnett_book}
+Stephen Barnett.
+\newblock {\em Quantum Information}.
+\newblock Oxford University Press, 2009.
+
+\bibitem{terra_amaral_baraviera_livro}
+Bárbara Amaral, Alexandre~Tavares Baraviera, and Marcelo O.~Terra Cunha.
+\newblock {\em Mecânica Quântica para Matemáticos em Formação}.
+\newblock IMPA, 2011.
+
+\bibitem{wilde2013book}
+Mark~M Wilde.
+\newblock {\em Quantum information theory}.
+\newblock Cambridge University Press, 2013.
+
+\bibitem{schumacher2010book}
+Benjamin Schumacher and Michael Westmoreland.
+\newblock {\em Quantum processes systems, and information}.
+\newblock Cambridge University Press, 2010.
+
 \bibitem{schrodinger_1935}
 E.~Schrödinger.
 \newblock Discussion of probability relations between separated systems.
@@ -176,6 +202,11 @@ Asher Peres.
 Michał Horodecki, Paweł Horodecki, and Ryszard Horodecki.
 \newblock Separability of mixed states: necessary and sufficient conditions.
 \newblock {\em Physics Letters A}, 223(1):1--8, 1996.
+
+\bibitem{rabelo_dissertacao}
+Rafael~Luiz da~Silva~Rabelo.
+\newblock Não-localidade quântica: matemática e fundamentos.
+\newblock {\em Universidade Federal de Minas Gerais}, 2011.
 
 \bibitem{acin_2006_grothendieck}
 Antonio Ac\'{\i}n, Nicolas Gisin, and Benjamin Toner.
@@ -799,11 +830,5 @@ John Watrous.
 K.~G.~H. Vollbrecht and R.~F. Werner.
 \newblock Why two qubits are special.
 \newblock {\em Journal of Mathematical Physics}, 41(10):6772--6782, 2000.
-
-\bibitem{nielsen_chuang_book}
-Michael~A. Nielsen and Isaac~L. Chuang.
-\newblock {\em Quantum Computation and Quantum Information: 10th Anniversary
-  Edition}.
-\newblock Cambridge University Press, 2010.
 
 \end{thebibliography}
