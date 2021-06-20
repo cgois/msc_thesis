@@ -67,7 +67,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
     \end{proof}
 
 
-    Entanglement and its quantification are usually discussed with respect to the local operations and classical communications (LOCC) paradigm, briefly commented in chap. \ref{sec:states}. Local operations and shared randomness (LOSR) is a subset of LOCC operations where the parties can share a coin, but have no access to fully fledged communication. Both choices lead to the same definition of separability (but to different understandings in other regards \cite{schmid_arxiv2004.09194}), and are considered free operations in entanglement theory. One example of LOSR is the \emph{twirling operation}, where random, local $U \otimes U^*$ operations are applied to a bipartite shared state, resulting in
+    Entanglement and its quantification are usually discussed with respect to the local operations and classical communications (LOCC) paradigm, briefly commented in chap. \ref{sec:states}. Local operations and shared randomness (LOSR) is a subset of LOCC operations where the parties can share a coin, but have no access to fully fledged communication. Both choices lead to the same definition of separability (but to different understandings in other regards \cite{schmid2021understanding}), and are considered free operations in entanglement theory. One example of LOSR is the \emph{twirling operation}, where random, local $U \otimes U^*$ operations are applied to a bipartite shared state, resulting in
     $$
         \rho \longmapsto \int dU\, U \otimes U^* \rho\, U^\dagger \otimes U^{*^\dagger} .
     $$
@@ -316,7 +316,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
 
         By hypothesis, $s=d_A$, so if $N$ were $d_A^2$, we could build $d_A^2$ orthogonal maximally entangled preparations, for instance by substituting discrete Weyl operators $W_x$ for the $U_x$, where $x \in \{0, \ldots, d_A^2 - 1 \}$. To do that while accounting for $N$ possible preparations, the trick is to distribute the set of $N$ preparations into $d_A^2$ \emph{collections}, each associated to a Weyl operator. In that case, if $\ket{\psi_x}$ are $\ket{\psi_{x^\prime}}$ are in the same collection, then $\ket{\psi_x} = \ket{\psi_{x^\prime}}$. We label the collections with $C$, where $C \in \{0, \ldots, d_A^2 -1 \}$, and each $C$ may be associated with several $x$'s.
         
-        \review{I made two minor corrections w.r.t. the paper. Is everything right?}
+        \review{I made two minor corrections w.r.t. the paper: one is that I think the counting of $d_A^2 - N \text{ mod } d_A^2$ collections was wrong in the paper (there it says $d_A^2$), and the other is that I put a factor of $1/2$ in the $\delta_{C(x),C(x^\prime)}$ in the sum below because we are actually double counting the elements of each collection. Is everything right?}
         To deal with all cases at once, define $c = \lfloor \frac{N}{d_A^2} \rfloor$, so making 
         %
         $$

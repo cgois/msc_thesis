@@ -57,9 +57,11 @@
 			\conv{S} \equiv \bigcap \big\{ C \supseteq S \mid C \text{ is convex} \big\} .
 		$$
 		Equivalently, it is also the set of all convex combinations of $S$'s elements,
-		$$
+		%
+		\begin{equation}
 			\conv{S} = \Big\{ \sum_i \alpha_i x_i \mid \alpha_i \geq 0, \sum_i \alpha_i = 1, \, x_i \in S \Big\} .
-		$$
+		\label{eq:convex-hull}
+		\end{equation}
 		%
 		Convex sets can be further divided into extremal and nonextremal points. An $x \in C$ is an \emph{extreme point} of $C$ when it is not in the relative interior of any segment of $C$; respectively, when $x = \alpha y + (1 - \alpha) z \,\Rightarrow\, x=y=z$ for any $y, z \in C$ and $\alpha \in (0, 1)$.
 
@@ -82,7 +84,7 @@
 				\subfigure[Nonconvex]{\label{fig:nonconvex}\includegraphics[width=.16\linewidth]{not_convex.png}}
 			\end{minipage}
 			%
-			\caption{Pictorial representation of the definitions introduced in sec. \ref{sec:convexity}. Fig. \ref{fig:line} shows a line, which is an affine combination of two points. In \ref{fig:line-segment}, a line segment (or a convex hull of two points) is shown. Two affine hull of three noncollinear points is the plane (\ref{fig:affine-hull}), while the convex hull of a finite number of points defines a polytope (\ref{fig:convex-hull}). Any polytope is a polyhedron, but the converse is not true. Fig. \ref{fig:convex-not-polytope} shows a convex set which is not a polytope. Is has an infinite number of extremal points. Nonconvex sets do not contain every line segment between its elements (\ref{fig:nonconvex}).}
+			\caption{Pictorial representation of the definitions introduced in sec. \ref{sec:convexity}. Fig. \ref{fig:line} shows a line, which is an affine combination of two points. In \ref{fig:line-segment}, a line segment between (or a convex combination of) two points is shown. The affine hull of three noncollinear points is the plane (\ref{fig:affine-hull}), while the convex hull of a finite number of points defines a polytope (\ref{fig:convex-hull}). Any polytope is a polyhedron, but the converse is not true. Fig. \ref{fig:convex-not-polytope} shows a convex set with an infinite number of extremal points, therefore not a polytope. Nonconvex sets do not contain every line segment between its elements (\ref{fig:nonconvex}).}
 		\end{figure*}
 
 
@@ -118,7 +120,7 @@
 		$$
 		where $c \in \mathbb{R}^d$ is a column-vector, $b \in \mathbb{R}$, and any $x \in P$ is such that $c^\intercal x \leq b$. Visually, a face is any intersection of $P$ with a closed halfspace that touches $P$ but is not inside of it. The dimension $k$ of the affine hull of $F$ goes into the name $k$-face. Faces of dimension $0$ and $1$ are vertices and edges, while faces of dimension $\text{dim} (P) - 1$ are especially named \emph{facets}. For a cube ($\mathbb{R}^3$), the facets would match the commonly called faces.
 
-		Our previous definitions of polyhedra and polytopes are sometimes termed $\mathcal{H}$-polyhedra and $\mathcal{H}$-polytopes. An alternative that will later become important is that of $\mathcal{V}$-polytopes, which are defined as the the convex hull of a \emph{finite} set of points. After the convex hull is performed, they become the extremal points of the convex set. The $\mathcal{V}$-description of a unit square is $\mathcal{V} = \{ (0, 0), (1, 0), (0, 1), (1, 1) \}$, and after taking $\conv{\mathcal{V}}$ we get all points satisfying the $\mathcal{H}$-description $Ax \leq b$ defined by 
+		Our previous definitions of polyhedra and polytopes are sometimes termed $\mathcal{H}$-polyhedra and $\mathcal{H}$-polytopes. An alternative that will later become important is that of $\mathcal{V}$-polytopes, which are defined as the the convex hull of a \emph{finite} set of points. After the convex hull is performed, they become the extremal points of the convex set. The $\mathcal{V}$-description of a unit square is $\mathcal{V} = \{ (0, 0), (1, 0), (0, 1), (1, 1) \}$, and after taking $\conv{\mathcal{V}}$ we get all points that, in the $\mathcal{H}$-description satisfy the linear system $Ax \leq b$ defined by 
 		%
 		$$
 			A =
