@@ -6,7 +6,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
 \section{Mathematical tools}
 \label{sec:ap-a-mathematical-tools}
 
-    Generalized Gell-Mann matrices (sec. \ref{sec:gell-mann}) are not the only useful choice of basis for $\hilbd{d}$. Another possibility, the \emph{Weyl operator basis} \cite{bertlmann_2008_bloch} is composed of \emph{discrete Weyl operators} which will be essential for the upcoming proofs. They are defined as
+    Generalized Gell-Mann matrices (sec. \ref{sec:gell-mann}) are not the only useful choice of basis for $\mathcal{L}(\hilbd{d})$. Another possibility, the \emph{Weyl operator basis} \cite{bertlmann_2008_bloch} is composed of \emph{discrete Weyl operators} which will be essential for the upcoming proofs. They are defined as
     %
     \begin{equation}
         W_{x_1 x_2}^d = \sum_{m = 0}^{d-1} e^{\nicefrac{2 \pi i x_1 m}{d}} \ketbra{m \oplus_d x_2}{m} ,
@@ -15,7 +15,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
     %
     where $\oplus_d$ is shorthand for a modulo $d$ sum, and $x_1, x_2 \in \{0, \ldots, d-1 \}$. The result of applying $W_{x_1 x_2}$ to some basis vector $\ket{j}$ can be interpreted as a displacement to level $\ket{j \oplus_d x_2}$ together with the inclusion of a phase $e^{\nicefrac{2 \pi i x_1 j}{d}}$. If the specific values of $x_1$ and $x_2$ are unimportant, we will label $W$ simply with $x$, and we may also omit $d$. When $x_1$ and $x_2$ running on different ranges (as will be used in the proof of result \ref{res:schmidt-number-witness}), we will call $W$ \emph{generalized} Weyl operators. But, for now, let us stick to the usual ones.
 
-    Weyl operators have been useful at least since 1993, when they were used by Bennett et al. to devise a $d$-dimensional quantum states teleportation protocol \cite{bennett_1993_teleporting}. Much of their worthiness come from properties such as unitarity ($W_x W_x^\dagger = W_x^\dagger W_x = \id$, as can be verified by direct calculation) and orthonormality: $\tr{W_{x}^\dagger W_{y}} = d \delta_{x, y}$. Proofs can be found in \cite{bertlmann_2008_bloch}, appendix A.3, and in sec. 4.1.2 of \cite{watrous_book_2018}, presented among other interesting properties.
+    Weyl operators have been useful at least since 1993, when they were used by Bennett et al. to devise a $d$-dimensional quantum state teleportation protocol \cite{bennett_1993_teleporting}. Much of their worthiness come from properties such as unitarity ($W_x W_x^\dagger = W_x^\dagger W_x = \id$, as can be verified by direct calculation) and orthonormality: $\tr{W_{x}^\dagger W_{y}} = d \delta_{x, y}$. Proofs can be found in \cite{bertlmann_2008_bloch}, appendix A.3, and in sec. 4.1.2 of \cite{watrous_book_2018}, presented among other interesting properties.
 
     Every vector $\ket{\psi} \in \hilbd{d} \otimes \hilbd{d}$ can be obtained from a maximally entangled state, such as $\ket{\Phi^+} = \frac{1}{\sqrt{d}} \sum_{j=0}^{d-1} \ket{j} \otimes \ket{j}$, by means of a \emph{unique} transformation $L_{\ket{\psi}} \otimes \id$, acting trivially on the second subsystem. Importantly, $\ket{\psi}$ is maximally entangled if and only if $L_{\ket{\psi}}$ is unitary \cite{vollbrecht_twoqubits_2000}. From the uniqueness of the $L_{\ket{\psi}} \otimes \id$, then, there are as many orthogonal maximally entangled states as the dimension of the unitary group, i.e., $d^2$. Having the $d^2$ orthonormal unitaries $W_{x_1 x_2}$ at hand, it is then true that
     %
@@ -24,7 +24,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
         \label{eq:weyl-states}
     \end{equation}
     %
-    are maximally entangled and orthogonal preparations. In the prepare-and-measure dense coding scenario, Alice and Bob share a resource $\rho$ that she locally transforms to prepare $\rho_x = (\Lambda_x \otimes \id) \rho$. This is precisely the structure above. Furthermore, orthogonal states are perfectly distinguishable, and we thence should expect them to be good candidates for optimal performance in prepare-and-measure protocols.
+    are maximally entangled and orthogonal preparations. In the prepare and measure dense coding scenario, Alice and Bob share a resource $\rho$ that she locally transforms to prepare $\rho_x = (\Lambda_x \otimes \id) \rho$. This is precisely the structure above. Furthermore, orthogonal states are perfectly distinguishable, and we thence should expect them to be good candidates for optimal performance in prepare and measure protocols.
 
     With poorly chosen measurements, good preparations are worthless. The $d^2$-outcome measurement
     %
@@ -67,7 +67,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
     \end{proof}
 
 
-    Entanglement and its quantification are usually discussed with respect to the local operations and classical communications (LOCC) paradigm, briefly commented in chap. \ref{sec:states}. Local operations and shared randomness (LOSR) is a subset of LOCC operations where the parties can share a coin, but have no access to fully fledged communication. Both choices lead to the same definition of separability (but to different understandings in other regards \cite{schmid2021understanding}), and are considered free operations in entanglement theory. One example of LOSR is the \emph{twirling operation}, where random, local $U \otimes U^*$ operations are applied to a bipartite shared state, resulting in
+    Entanglement and its quantification are usually discussed with respect to the local operations and classical communications (LOCC) paradigm, briefly commented in chap. \ref{sec:states}. Local operations and shared randomness (LOSR) is a subset of LOCC operations where the parties can share randomness, but have no access to fully fledged communication. Both choices lead to the same definition of separability (but to different understandings in other regards \cite{schmid2021understanding}), and are considered free operations in entanglement theory. One example of LOSR is the \emph{twirling operation}, where random, local $U \otimes U^*$ operations are applied to a bipartite shared state, resulting in
     $$
         \rho \longmapsto \int dU\, U \otimes U^* \rho\, U^\dagger \otimes U^{*^\dagger} .
     $$
@@ -79,7 +79,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
         \label{lem:twirling}
     \end{lemma}
     \begin{proof}
-        It can be done with a twirling operation. See \cite{horodecki_1999_isotropic}, sec. V.
+        It can be done with a twirling operation. See \cite{horodecki_1999_isotropic}, sec. VI.
     \end{proof}
 
 
@@ -156,7 +156,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \selftest*
     \begin{proof}
-        $\psuc$ can only be saturated if the $\rho_x$ are perfectly distinguishable. From lemma \ref{lem:overlap}, $N = d_A^2$ preparations are pair-wise distinguishable only if they are pure states. Consequently, there must be $d_A^2$ orthonormal preparations of the form
+        We can only saturate $\psuc$ if the $\rho_x$ are perfectly distinguishable. From lemma \ref{lem:overlap}, $N = d_A^2$ preparations are pair-wise distinguishable only if they are pure states. Consequently, there must be $d_A^2$ orthonormal preparations of the form
         %
         $$
             \ket{\psi_x} = \sum_{i = 0}^{d_A - 1} \eta_i (U_x \otimes \id) \ket{i_A} \otimes \ket{i_B} ,
@@ -246,7 +246,7 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
             D(\rho_x, \rho_{x^\prime}) = \max_{0 \leq P \leq \id} \trb{(\rho_x - \rho_x^{\prime}) P} .
         $$
         %
-        $P$ can thus be seen as a measurement effect. Intuitively, the trace distance measures the difference between the probabilities of a given result occurring for $\rho_x$ and $\rho_{x^\prime}$. That is way it is interpreted as a measure of distinguishability. It is also convex in $\rho_x - \rho_{x^\prime}$.
+        $P$ can thus be seen as a measurement effect. Intuitively, the trace distance measures the difference between the probabilities of a given result occurring for $\rho_x$ and $\rho_{x^\prime}$. That is why it is interpreted as a measure of distinguishability. It is also convex in $\rho_x - \rho_{x^\prime}$.
 
         So rewrite $V_N = \sum_{x > x^\prime} \abs{ \trb{(\rho_x - \rho_{x^\prime}) M_{b=1 \mid x,x^\prime}}}^2$ and substitute the trace distance, obtaining
         %
@@ -291,9 +291,10 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
         showing $\Omega$ acts on an effective Hilbert space of dimension $d_A s$. Therefore, the purity $\tr{\Omega^2}$ is lower bounded by $\frac{1}{d_A s}$, and
         %
         $$
-            V_N \leq \frac{N^2}{2} \left( 1 - \frac{1}{d_A s} \right) . \text{\todo{and the minimum of $d_A s$ and N?}}
+            V_N \leq \frac{N^2}{2} \left( 1 - \frac{1}{\min(d_A s, N)} \right) ,
         $$
         %
+		where the minimum comes from the fact that whenever $N \leq d_A s$, $V_N$ is saturated.
 
         The last part of the result claims that, for $s=d_A$, this bound can be saturated whenever $N < d_A^2$ or $N = c d_A^2$ for $c \in \mathbb{Z}$. To see this is true, consider preparations
         %
@@ -316,7 +317,6 @@ Proofs for all results in chap. \ref{chap:pam-quantum} are hereby provided. To a
 
         By hypothesis, $s=d_A$, so if $N$ were $d_A^2$, we could build $d_A^2$ orthogonal maximally entangled preparations, for instance by substituting discrete Weyl operators $W_x$ for the $U_x$, where $x \in \{0, \ldots, d_A^2 - 1 \}$. To do that while accounting for $N$ possible preparations, the trick is to distribute the set of $N$ preparations into $d_A^2$ \emph{collections}, each associated to a Weyl operator. In that case, if $\ket{\psi_x}$ are $\ket{\psi_{x^\prime}}$ are in the same collection, then $\ket{\psi_x} = \ket{\psi_{x^\prime}}$. We label the collections with $C$, where $C \in \{0, \ldots, d_A^2 -1 \}$, and each $C$ may be associated with several $x$'s.
         
-        \review{I made two minor corrections w.r.t. the paper: one is that I think the counting of $d_A^2 - N \text{ mod } d_A^2$ collections was wrong in the paper (there it says $d_A^2$), and the other is that I put a factor of $1/2$ in the $\delta_{C(x),C(x^\prime)}$ in the sum below because we are actually double counting the elements of each collection. Is everything right?}
         To deal with all cases at once, define $c = \lfloor \frac{N}{d_A^2} \rfloor$, so making 
         %
         $$

@@ -1,0 +1,876 @@
+\begin{thebibliography}{100}
+
+\bibitem{boldauthor-degois_2021_general}
+\textbf{Carlos de Gois}, George Moreno, Ranieri Nery, Samura{\'\i} Brito,
+  Rafael Chaves, and Rafael Rabelo.
+\newblock General method for classicality certification in the prepare and
+  measure scenario.
+\newblock {\em arXiv preprint arXiv:2101.10459}, 2021.
+
+\bibitem{boldauthor-moreno_pamdense_2021}
+George Moreno, Ranieri Nery, \textbf{Carlos de Gois}, Rafael Rabelo, and Rafael
+  Chaves.
+\newblock Semi-device-independent certification of entanglement in superdense
+  coding.
+\newblock {\em Phys. Rev. A}, 103:022426, Feb 2021.
+
+\bibitem{boldauthor-classicality_repository}
+\textbf{Carlos de Gois}.
+\newblock Code for ``{G}eneral method for classicality certification in the
+  prepare and measure scenario'' (\cite{degois_2021_general}).
+\newblock \url{https://github.com/cgois/pam_classicality}, 2021.
+
+\bibitem{degois_2021_general}
+Carlos de~Gois, George Moreno, Ranieri Nery, Samura{\'\i} Brito, Rafael Chaves,
+  and Rafael Rabelo.
+\newblock General method for classicality certification in the prepare and
+  measure scenario.
+\newblock {\em arXiv preprint arXiv:2101.10459}, 2021.
+
+\bibitem{epr}
+A.~Einstein, B.~Podolsky, and N.~Rosen.
+\newblock Can quantum-mechanical description of physical reality be considered
+  complete?
+\newblock {\em Phys. Rev.}, 47:777--780, May 1935.
+
+\bibitem{schrodinger_entanglement_1935}
+Erwin Schr{\"o}dinger.
+\newblock Discussion of probability relations between separated systems.
+\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, volume 31--4, pages 555--563. Cambridge University Press, 1935.
+
+\bibitem{bohm_hiddenvariables_1952}
+David Bohm.
+\newblock A suggested interpretation of the quantum theory in terms of "hidden"
+  variables. i.
+\newblock {\em Phys. Rev.}, 85:166--179, Jan 1952.
+
+\bibitem{bell_1964}
+J.~S. Bell.
+\newblock On the einstein podolsky rosen paradox.
+\newblock {\em Physics Physique Fizika}, 1:195--200, Nov 1964.
+
+\bibitem{bb84}
+Charles~H. Bennett and Gilles Brassard.
+\newblock Quantum cryptography: Public key distribution and coin tossing.
+\newblock {\em Theoretical Computer Science}, 560:7--11, 2014.
+
+\bibitem{ekert91}
+Artur~K. Ekert.
+\newblock Quantum cryptography based on bell's theorem.
+\newblock {\em Phys. Rev. Lett.}, 67:661--663, Aug 1991.
+
+\bibitem{prbox}
+Sandu Popescu and Daniel Rohrlich.
+\newblock Quantum nonlocality as an axiom.
+\newblock {\em Foundations of Physics}, 24(3):379--385, March 1994.
+
+\bibitem{brunner_2014_nonlocality}
+Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
+  Stephanie Wehner.
+\newblock Bell nonlocality.
+\newblock {\em Rev. Mod. Phys.}, 86:419--478, Apr 2014.
+
+\bibitem{barrett_gpts_2007}
+Jonathan Barrett.
+\newblock Information processing in generalized probabilistic theories.
+\newblock {\em Phys. Rev. A}, 75:032304, Mar 2007.
+
+\bibitem{plavala_gpts_2021}
+Martin Plávala.
+\newblock General probabilistic theories: An introduction, 2021.
+
+\bibitem{spekkens_2005_contextuality}
+R.~W. Spekkens.
+\newblock Contextuality for preparations, transformations, and unsharp
+  measurements.
+\newblock {\em Phys. Rev. A}, 71:052108, May 2005.
+
+\bibitem{bennett_1992_superdense}
+Charles~H. Bennett and Stephen~J. Wiesner.
+\newblock Communication via one- and two-particle operators on
+  einstein-podolsky-rosen states.
+\newblock {\em Phys. Rev. Lett.}, 69:2881--2884, Nov 1992.
+
+\bibitem{pawlowski_pamqkd_2011}
+Marcin Pawlowski and Nicolas Brunner.
+\newblock Semi-device-independent security of one-way quantum key distribution.
+\newblock {\em Physical Review A}, 84(1), July 2011.
+\newblock arXiv: 1103.4105.
+
+\bibitem{tavakoli_selftesting_2018}
+Armin Tavakoli, Jędrzej Kaniewski, Tamás Vértesi, Denis Rosset, and Nicolas
+  Brunner.
+\newblock Self-testing quantum states and measurements in the
+  prepare-and-measure scenario.
+\newblock {\em Physical Review A}, 98(6), December 2018.
+
+\bibitem{tavakoli_selftesting_2020}
+Armin Tavakoli, Massimiliano Smania, Tamás Vértesi, Nicolas Brunner, and
+  Mohamed Bourennane.
+\newblock Self-testing nonprojective quantum measurements in
+  prepare-and-measure experiments.
+\newblock {\em Science Advances}, 6(16), April 2020.
+
+\bibitem{poderini_pamcriteria_2020}
+Davide Poderini, Samuraí Brito, Ranieri Nery, Fabio Sciarrino, and Rafael
+  Chaves.
+\newblock Criteria for nonclassicality in the prepare-and-measure scenario.
+\newblock {\em Physical Review Research}, 2(4), October 2020.
+
+\bibitem{bowles_pamnetworks_2015}
+Joseph Bowles, Nicolas Brunner, and Marcin Pawłowski.
+\newblock Testing dimension and nonclassicality in communication networks.
+\newblock {\em Physical Review A}, 92(2), August 2015.
+
+\bibitem{ambainis_qracsoriginal_1999}
+Andris Ambainis, Ashwin Nayak, Ammon Ta-Shma, and Umesh Vazirani.
+\newblock Dense quantum coding and a lower bound for 1-way quantum automata.
+\newblock In {\em Proceedings of the Thirty-First Annual ACM Symposium on
+  Theory of Computing}, STOC '99, pages 376--383, New York, NY, USA, 1999.
+  Association for Computing Machinery.
+
+\bibitem{nielsen_chuang_book}
+Michael~A. Nielsen and Isaac~L. Chuang.
+\newblock {\em Quantum Computation and Quantum Information: 10th Anniversary
+  Edition}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{barnett_book}
+Stephen Barnett.
+\newblock {\em Quantum Information}.
+\newblock Oxford University Press, 2009.
+
+\bibitem{terra_amaral_baraviera_livro}
+Bárbara Amaral, Alexandre~Tavares Baraviera, and Marcelo O.~Terra Cunha.
+\newblock {\em Mecânica Quântica para Matemáticos em Formação}.
+\newblock IMPA, 2011.
+
+\bibitem{wilde2013book}
+Mark~M Wilde.
+\newblock {\em Quantum information theory}.
+\newblock Cambridge University Press, 2013.
+
+\bibitem{schumacher2010book}
+Benjamin Schumacher and Michael Westmoreland.
+\newblock {\em Quantum processes systems, and information}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{schrodinger_1935}
+E.~Schrödinger.
+\newblock Discussion of probability relations between separated systems.
+\newblock {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, 31(4):555--563, 1935.
+
+\bibitem{horodecki_2009_entanglement}
+Ryszard Horodecki, Pawe\l{} Horodecki, Micha\l{} Horodecki, and Karol
+  Horodecki.
+\newblock Quantum entanglement.
+\newblock {\em Rev. Mod. Phys.}, 81:865--942, Jun 2009.
+
+\bibitem{bennett_1993_teleporting}
+Charles~H. Bennett, Gilles Brassard, Claude Cr\'epeau, Richard Jozsa, Asher
+  Peres, and William~K. Wootters.
+\newblock Teleporting an unknown quantum state via dual classical and
+  einstein-podolsky-rosen channels.
+\newblock {\em Phys. Rev. Lett.}, 70:1895--1899, Mar 1993.
+
+\bibitem{hughston_1993_densitymatrix}
+Lane~P. Hughston, Richard Jozsa, and William~K. Wootters.
+\newblock A complete classification of quantum ensembles having a given density
+  matrix.
+\newblock {\em Physics Letters A}, 183(1):14--18, 1993.
+
+\bibitem{terra_2007_singleparticle}
+Marcelo O.~Terra Cunha, Jacob~A Dunningham, and Vlatko Vedral.
+\newblock Entanglement in single-particle systems.
+\newblock {\em Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences}, 463(2085):2277--2286, 2007.
+
+\bibitem{werner_1989}
+Reinhard~F. Werner.
+\newblock Quantum states with einstein-podolsky-rosen correlations admitting a
+  hidden-variable model.
+\newblock {\em Phys. Rev. A}, 40:4277--4281, Oct 1989.
+
+\bibitem{plenio_2007_entanglementmeasures}
+Martin~B. Plenio and Shashank Virmani.
+\newblock An introduction to entanglement measures.
+\newblock {\em Quantum Inf. Comput.}, 7(1):1--51, 2007.
+
+\bibitem{terra_tese}
+Marcelo O.~Terra Cunha.
+\newblock Emaranhamento: caracterização, manipulação e consequências.
+\newblock {\em Universidade Federal de Minas Gerais}, 2005.
+
+\bibitem{dagmar_2002_entanglement}
+Dagmar Bruß.
+\newblock Characterizing entanglement.
+\newblock {\em Journal of Mathematical Physics}, 43(9):4237--4251, 2002.
+
+\bibitem{nielsen_1999_majorization}
+M.~A. Nielsen.
+\newblock Conditions for a class of entanglement transformations.
+\newblock {\em Phys. Rev. Lett.}, 83:436--439, Jul 1999.
+
+\bibitem{terhal_2000_schmidtnumber}
+Barbara~M. Terhal and Pawe\l{} Horodecki.
+\newblock Schmidt number for density matrices.
+\newblock {\em Phys. Rev. A}, 61:040301, Mar 2000.
+
+\bibitem{peres_1996_ppt}
+Asher Peres.
+\newblock Separability criterion for density matrices.
+\newblock {\em Phys. Rev. Lett.}, 77:1413--1415, Aug 1996.
+
+\bibitem{horodecki_1996_ppt}
+Michał Horodecki, Paweł Horodecki, and Ryszard Horodecki.
+\newblock Separability of mixed states: necessary and sufficient conditions.
+\newblock {\em Physics Letters A}, 223(1):1--8, 1996.
+
+\bibitem{rabelo_dissertacao}
+Rafael~Luiz da~Silva~Rabelo.
+\newblock Não-localidade quântica: matemática e fundamentos.
+\newblock {\em Universidade Federal de Minas Gerais}, 2011.
+
+\bibitem{acin_2006_grothendieck}
+Antonio Ac\'{\i}n, Nicolas Gisin, and Benjamin Toner.
+\newblock Grothendieck's constant and local models for noisy entangled quantum
+  states.
+\newblock {\em Phys. Rev. A}, 73:062105, Jun 2006.
+
+\bibitem{vertesi_2008_moreefficient}
+T.~V\'ertesi.
+\newblock More efficient bell inequalities for werner states.
+\newblock {\em Phys. Rev. A}, 78:032112, Sep 2008.
+
+\bibitem{hirsch_2017_betterlocalhidden}
+Flavien Hirsch, Marco~T{\'{u}}lio Quintino, Tam{\'{a}}s V{\'{e}}rtesi, Miguel
+  Navascu{\'{e}}s, and Nicolas Brunner.
+\newblock Better local hidden variable models for two-qubit {W}erner states and
+  an upper bound on the {G}rothendieck constant {$K_G(3)$}.
+\newblock {\em {Quantum}}, 1:3, April 2017.
+
+\bibitem{barrett_2002_povmslocality}
+Jonathan Barrett.
+\newblock Nonsequential positive-operator-valued measurements on entangled
+  mixed states do not always violate a bell inequality.
+\newblock {\em Phys. Rev. A}, 65:042302, Mar 2002.
+
+\bibitem{wiseman_2007_steering}
+H.~M. Wiseman, S.~J. Jones, and A.~C. Doherty.
+\newblock Steering, entanglement, nonlocality, and the einstein-podolsky-rosen
+  paradox.
+\newblock {\em Phys. Rev. Lett.}, 98:140402, Apr 2007.
+
+\bibitem{cavalcanti_2016_steering}
+D~Cavalcanti and P~Skrzypczyk.
+\newblock Quantum steering: a review with focus on semidefinite programming.
+\newblock {\em Reports on Progress in Physics}, 80(2):024001, dec 2016.
+
+\bibitem{uola_2020_steering}
+Roope Uola, Ana C.~S. Costa, H.~Chau Nguyen, and Otfried G\"uhne.
+\newblock Quantum steering.
+\newblock {\em Rev. Mod. Phys.}, 92:015001, Mar 2020.
+
+\bibitem{horodecki_1999_isotropic}
+Micha\l{} Horodecki and Pawe\l{} Horodecki.
+\newblock Reduction criterion of separability and limits for a class of
+  distillation protocols.
+\newblock {\em Phys. Rev. A}, 59:4206--4216, Jun 1999.
+
+\bibitem{quintino_2015_inequivalence}
+Marco~T\'ulio Quintino, Tam\'as V\'ertesi, Daniel Cavalcanti, Remigiusz
+  Augusiak, Maciej Demianowicz, Antonio Ac\'{\i}n, and Nicolas Brunner.
+\newblock Inequivalence of entanglement, steering, and bell nonlocality for
+  general measurements.
+\newblock {\em Phys. Rev. A}, 92:032107, Sep 2015.
+
+\bibitem{wilde_2013_book}
+Mark~M. Wilde.
+\newblock {\em Quantum Information Theory}.
+\newblock Cambridge University Press, 2013.
+
+\bibitem{wood_2015_tensor}
+Christopher~J. Wood, Jacob~D. Biamonte, and David~G. Cory.
+\newblock Tensor networks and graphical calculus for open quantum systems,
+  2015.
+
+\bibitem{jamiolkowski}
+A.~Jamiołkowski.
+\newblock Linear transformations which preserve trace and positive
+  semidefiniteness of operators.
+\newblock {\em Reports on Mathematical Physics}, 3(4):275--278, 1972.
+
+\bibitem{jiang_2013_channelstate}
+Min Jiang, Shunlong Luo, and Shuangshuang Fu.
+\newblock Channel-state duality.
+\newblock {\em Phys. Rev. A}, 87:022310, Feb 2013.
+
+\bibitem{watrous_book_2018}
+John Watrous.
+\newblock {\em The Theory of Quantum Information}.
+\newblock Cambridge University Press, 2018.
+
+\bibitem{quintino_incompatibilitysteering_2014}
+Marco~T\'ulio Quintino, Tam\'as V\'ertesi, and Nicolas Brunner.
+\newblock Joint measurability, einstein-podolsky-rosen steering, and bell
+  nonlocality.
+\newblock {\em Phys. Rev. Lett.}, 113:160402, Oct 2014.
+
+\bibitem{uola_incompatibilitysteering_2014}
+Roope Uola, Tobias Moroder, and Otfried G\"uhne.
+\newblock Joint measurability of generalized measurements implies classicality.
+\newblock {\em Phys. Rev. Lett.}, 113:160403, Oct 2014.
+
+\bibitem{uola_onetoonesteering_2015}
+Roope Uola, Costantino Budroni, Otfried G\"uhne, and Juha-Pekka Pellonp\"a\"a.
+\newblock One-to-one mapping between steering and joint measurability problems.
+\newblock {\em Phys. Rev. Lett.}, 115:230402, Dec 2015.
+
+\bibitem{quintino_2016_incompatibilitybell}
+Marco~T\'ulio Quintino, Joseph Bowles, Flavien Hirsch, and Nicolas Brunner.
+\newblock Incompatible quantum measurements admitting a local-hidden-variable
+  model.
+\newblock {\em Phys. Rev. A}, 93:052115, May 2016.
+
+\bibitem{quintino_2018_incompatibilitybellgeneral}
+Flavien Hirsch, Marco~T\'ulio Quintino, and Nicolas Brunner.
+\newblock Quantum measurement incompatibility does not imply bell nonlocality.
+\newblock {\em Phys. Rev. A}, 97:012129, Jan 2018.
+
+\bibitem{bene_2018_incompatibilitybell}
+Erika Bene and Tam{\'{a}}s V{\'{e}}rtesi.
+\newblock Measurement incompatibility does not give rise to bell violation in
+  general.
+\newblock {\em New Journal of Physics}, 20(1):013021, jan 2018.
+
+\bibitem{oszmaniec_2017_simulating}
+Micha\l{} Oszmaniec, Leonardo Guerini, Peter Wittek, and Antonio Ac\'{\i}n.
+\newblock Simulating positive-operator-valued measures with projective
+  measurements.
+\newblock {\em Phys. Rev. Lett.}, 119:190501, Nov 2017.
+
+\bibitem{heinosaari_2016_incompatible}
+Teiko Heinosaari, Takayuki Miyadera, and M{\'{a}}rio Ziman.
+\newblock An invitation to quantum incompatibility.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  49(12):123001, feb 2016.
+
+\bibitem{guerini_tese}
+Leonardo Guerini.
+\newblock Simulating quantum measurements and quantum correlations.
+\newblock {\em Universidade Federal de Minas Gerais}, 2018.
+
+\bibitem{guerini_2017_measurementsimulability}
+Leonardo Guerini, Jessica Bavaresco, Marcelo Terra~Cunha, and Antonio Acín.
+\newblock Operational framework for quantum measurement simulability.
+\newblock {\em Journal of Mathematical Physics}, 58(9):092102, 2017.
+
+\bibitem{haapasalo_2012_measurementsmixing}
+Erkka Haapasalo, Teiko Heinosaari, and Juha-Pekka Pellonp{\"a}{\"a}.
+\newblock Quantum measurements on finite dimensional systems: relabeling and
+  mixing.
+\newblock {\em Quantum Information Processing}, 11(6):1751--1763, 2012.
+
+\bibitem{bertlmann_2008_bloch}
+Reinhold~A Bertlmann and Philipp Krammer.
+\newblock Bloch vectors for qudits.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  41(23):235303, may 2008.
+
+\bibitem{kimura_2003_bloch}
+Gen Kimura.
+\newblock The bloch vector for n-level systems.
+\newblock {\em Physics Letters A}, 314(5):339--349, 2003.
+
+\bibitem{rockafellar_convexanalysis_1970}
+R.~Tyrrell Rockafellar.
+\newblock {\em Convex analysis}.
+\newblock Princeton Mathematical Series. Princeton University Press, 1970.
+
+\bibitem{grunbaum_convexpolytopes_2003}
+Branko Gr\"{u}nbaum.
+\newblock {\em Convex Polytopes}.
+\newblock Springer New York, 2003.
+
+\bibitem{ziegler_lecturespolytopes_1995}
+G\"{u}nter~M. Ziegler.
+\newblock {\em Lectures on Polytopes}.
+\newblock Springer New York, 1995.
+
+\bibitem{boyd_convexoptimization_2004}
+Stephen Boyd and Lieven Vandenberghe.
+\newblock {\em Convex Optimization}.
+\newblock Cambridge University Press, March 2004.
+
+\bibitem{PANDA}
+Stefan L\"{o}rwald and Gerhard Reinelt.
+\newblock {PANDA}: a software for polyhedral transformations.
+\newblock {\em {EURO} Journal on Computational Optimization}, 3(4):297--308,
+  June 2015.
+
+\bibitem{lrs}
+lrs home page.
+\newblock \url{http://cgm.cs.mcgill.ca/~avis/C/lrs.html}.
+
+\bibitem{cdd}
+cddlib repository.
+\newblock \url{https://github.com/cddlib/cddlib}.
+
+\bibitem{uola_conic_2019}
+Roope Uola, Tristan Kraft, Jiangwei Shang, Xiao-Dong Yu, and Otfried G\"uhne.
+\newblock Quantifying quantum resources with conic programming.
+\newblock {\em Phys. Rev. Lett.}, 122:130404, Apr 2019.
+
+\bibitem{papadimitriou1998combinatorial}
+Christos~H Papadimitriou and Kenneth Steiglitz.
+\newblock {\em Combinatorial optimization: algorithms and complexity}.
+\newblock Courier Corporation, 1998.
+
+\bibitem{matousek2007understanding}
+Jiri Matousek and Bernd G{\"a}rtner.
+\newblock {\em Understanding and using linear programming}.
+\newblock Springer Science \& Business Media, 2007.
+
+\bibitem{vandenberghe_sdp_1996}
+Lieven Vandenberghe and Stephen Boyd.
+\newblock Semidefinite programming.
+\newblock {\em {SIAM} Review}, 38(1):49--95, March 1996.
+
+\bibitem{gartner2012approximation}
+Bernd G{\"a}rtner and Jiri Matousek.
+\newblock {\em Approximation algorithms and semidefinite programming}.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{glpk}
+{GLPK} ({GNU} {L}inear {P}rogramming {K}it) homepage.
+\newblock \url{https://www.gnu.org/software/glpk/}.
+
+\bibitem{gurobi}
+LLC Gurobi~Optimization.
+\newblock Gurobi optimizer reference manual.
+\newblock \url{http://www.gurobi.com}.
+
+\bibitem{mosek}
+MOSEK ApS.
+\newblock Mosek optimizer documentation.
+\newblock \url{https://www.mosek.com/documentation/}.
+
+\bibitem{yalmip}
+J.~Lofberg.
+\newblock {YALMIP}: a toolbox for modeling and optimization in matlab.
+\newblock In {\em 2004 IEEE International Conference on Robotics and Automation
+  (IEEE Cat. No.04CH37508)}, pages 284--289, 2004.
+
+\bibitem{cvx}
+Michael Grant and Stephen Boyd.
+\newblock {CVX}: Matlab software for disciplined convex programming, version
+  2.1.
+\newblock \url{http://cvxr.com/cvx}, March 2014.
+
+\bibitem{picos}
+Guillaume Sagnol and Maximilian Stahlberg.
+\newblock {PICOS}: A python interface to conic optimization solvers.
+\newblock \url{https://picos-api.gitlab.io/picos/index.html}.
+
+\bibitem{cvxpy}
+Steven Diamond and Stephen Boyd.
+\newblock {CVXPY}: {A} {P}ython-embedded modeling language for convex
+  optimization.
+\newblock {\em Journal of Machine Learning Research}, 17(83):1--5, 2016.
+
+\bibitem{npa_prl_2007}
+Miguel Navascu\'es, Stefano Pironio, and Antonio Ac\'{\i}n.
+\newblock Bounding the set of quantum correlations.
+\newblock {\em Phys. Rev. Lett.}, 98:010401, Jan 2007.
+
+\bibitem{npa_njp_2008}
+Miguel Navascu{\'{e}}s, Stefano Pironio, and Antonio Ac{\'{\i}}n.
+\newblock A convergent hierarchy of semidefinite programs characterizing the
+  set of quantum correlations.
+\newblock {\em New Journal of Physics}, 10(7):073013, jul 2008.
+
+\bibitem{vinzant_spectrahedron_2014}
+Cynthia Vinzant.
+\newblock {WHAT} {IS}...a spectrahedron?
+\newblock {\em Notices of the American Mathematical Society}, 61(5):1, May
+  2014.
+
+\bibitem{bae_discrimination_2015}
+Joonwoo Bae and Leong-Chuan Kwek.
+\newblock Quantum state discrimination and its applications.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  48(8):083001, jan 2015.
+
+\bibitem{sdpa}
+SDPA Project.
+\newblock Sdpa (semidefinite programming algorithms).
+
+\bibitem{performance_sdp_solvers}
+Hans~D. Mittelmann.
+\newblock Several sdp-codes on sparse and other sdp problems.
+
+\bibitem{heinosaari_noiserobustness_2015}
+Teiko Heinosaari, Jukka Kiukas, and Daniel Reitzner.
+\newblock Noise robustness of the incompatibility of quantum measurements.
+\newblock {\em Phys. Rev. A}, 92:022115, Aug 2015.
+
+\bibitem{designolle_robustness_2019}
+S{\'{e}}bastien Designolle, M{\'{a}}t{\'{e}} Farkas, and J{\k{e}}drzej
+  Kaniewski.
+\newblock Incompatibility robustness of quantum measurements: a unified
+  framework.
+\newblock {\em New Journal of Physics}, 21(11):113053, nov 2019.
+
+\bibitem{carmeli_racsincompatibility_2020}
+Claudio Carmeli, Teiko Heinosaari, and Alessandro Toigo.
+\newblock Quantum random access codes and incompatibility of measurements.
+\newblock {\em EPL (Europhysics Letters)}, 130(5), June 2020.
+
+\bibitem{brunner_dimension_2013}
+Nicolas Brunner, Miguel Navascués, and Tamás Vértesi.
+\newblock Dimension {Witnesses} and {Quantum} {State} {Discrimination}.
+\newblock {\em Physical Review Letters}, 110(15), April 2013.
+
+\bibitem{pawlowski_infocausality_2009}
+Marcin Pawłowski, Tomasz Paterek, Dagomir Kaszlikowski, Valerio Scarani,
+  Andreas Winter, and Marek Żukowski.
+\newblock Information causality as a physical principle.
+\newblock {\em Nature}, 461(7267):1101--1104, October 2009.
+
+\bibitem{pawlowski_infocausalityreview_2011}
+Marcin Pawłowski and Valerio Scarani.
+\newblock Information {Causality}.
+\newblock {\em arXiv:1112.1142 [quant-ph]}, December 2011.
+\newblock arXiv: 1112.1142.
+
+\bibitem{harrigan_2008_ontological}
+Nicholas Harrigan, Terry Rudolph, and Scott Aaronson.
+\newblock Representing probabilistic data via ontological models, 2008.
+
+\bibitem{galvao_2009_economical}
+Ernesto~F. Galv\~ao.
+\newblock Economical ontological models for discrete quantum systems.
+\newblock {\em Phys. Rev. A}, 80:022106, Aug 2009.
+
+\bibitem{de_vicente_bound_2019}
+Julio I.~de Vicente.
+\newblock A general bound for the dimension of quantum behaviours in the
+  prepare-and-measure scenario.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  52(9):095304, February 2019.
+\newblock Publisher: IOP Publishing.
+
+\bibitem{de_vicente_shared_2017}
+Julio~I. de~Vicente.
+\newblock Shared randomness and device-independent dimension witnessing.
+\newblock {\em Physical Review A}, 95(1):012340, January 2017.
+
+\bibitem{dallarno_robustness_2012}
+Michele Dall'Arno, Elsa Passaro, Rodrigo Gallego, and Antonio Acin.
+\newblock Robustness of {Device} {Independent} {Dimension} {Witnesses}.
+\newblock {\em Physical Review A}, 86(4):042312, October 2012.
+\newblock arXiv: 1207.2574.
+
+\bibitem{fine_hidden_1982}
+Arthur Fine.
+\newblock Hidden variables, joint probability, and the bell inequalities.
+\newblock {\em Phys. Rev. Lett.}, 48:291--295, Feb 1982.
+
+\bibitem{scarani_bell_2019}
+Valerio Scarani.
+\newblock {\em Bell {Nonlocality}}.
+\newblock Oxford University Press, 1 edition, August 2019.
+
+\bibitem{gallego_pam_2010}
+Rodrigo Gallego, Nicolas Brunner, Christopher Hadley, and Antonio Acín.
+\newblock Device-{Independent} {Tests} of {Classical} and {Quantum}
+  {Dimensions}.
+\newblock {\em Physical Review Letters}, 105(23):230501, November 2010.
+
+\bibitem{tavakoli_eapam_2021}
+Armin Tavakoli, Jef Pauwels, Erik Woodhead, and Stefano Pironio.
+\newblock Correlations in entanglement-assisted prepare-and-measure scenarios.
+\newblock {\em arXiv:2103.10748 [quant-ph]}, March 2021.
+\newblock arXiv: 2103.10748.
+
+\bibitem{pawlowski_earacs_2010}
+Marcin Pawłowski and Marek Żukowski.
+\newblock Entanglement-assisted random access codes.
+\newblock {\em Physical Review A}, 81(4):042326, April 2010.
+
+\bibitem{ambainis_srqracs_2009}
+Andris Ambainis, Debbie Leung, Laura Mancinska, and Maris Ozols.
+\newblock Quantum {Random} {Access} {Codes} with {Shared} {Randomness}.
+\newblock {\em arXiv:0810.2937 [quant-ph]}, June 2009.
+\newblock arXiv: 0810.2937.
+
+\bibitem{moreno_pamdense_2021}
+George Moreno, Ranieri Nery, Carlos de~Gois, Rafael Rabelo, and Rafael Chaves.
+\newblock Semi-device-independent certification of entanglement in superdense
+  coding.
+\newblock {\em Phys. Rev. A}, 103:022426, Feb 2021.
+
+\bibitem{guerini_distributed_2019}
+Leonardo Guerini, Marco~Túlio Quintino, and Leandro Aolita.
+\newblock Distributed sampling, quantum communication witnesses, and
+  measurement incompatibility.
+\newblock {\em Physical Review A}, 100(4):042308, 2019.
+\newblock arXiv: 1904.08435.
+
+\bibitem{sikora_dimension_2016}
+Jamie Sikora, Antonios Varvitsiotis, and Zhaohui Wei.
+\newblock Device-independent dimension tests in the prepare-and-measure
+  scenario.
+\newblock {\em Physical Review A}, 94(4), October 2016.
+\newblock Publisher: American Physical Society.
+
+\bibitem{bowles_certifying_2014}
+Joseph Bowles, Marco~Túlio Quintino, and Nicolas Brunner.
+\newblock Certifying the {Dimension} of {Classical} and {Quantum} {Systems} in
+  a {Prepare}-and-{Measure} {Scenario} with {Independent} {Devices}.
+\newblock {\em Physical Review Letters}, 112(14), April 2014.
+
+\bibitem{wehner_lower_2008}
+Stephanie Wehner, Matthias Christandl, and Andrew~C. Doherty.
+\newblock A lower bound on the dimension of a quantum system given measured
+  data.
+\newblock {\em Physical Review A}, 78(6), December 2008.
+\newblock arXiv: 0808.3960.
+
+\bibitem{hendrych_experimental_2012}
+Martin Hendrych, Rodrigo Gallego, Michal Mičuda, Nicolas Brunner, Antonio
+  Acín, and Juan~P. Torres.
+\newblock Experimental estimation of the dimension of classical and quantum
+  systems.
+\newblock {\em Nature Physics}, 8(8), August 2012.
+
+\bibitem{ahrens_experimental_2012}
+Johan Ahrens, Piotr Badziag, Ad{\'a}n Cabello, and Mohamed Bourennane.
+\newblock Experimental device-independent tests of classical and quantum
+  dimensions.
+\newblock {\em Nature Physics}, 8(8):592--595, 2012.
+
+\bibitem{dambrosio_highdimensional_2014}
+Vincenzo D'Ambrosio, Fabrizio Bisesto, Fabio Sciarrino, Johanna~F. Barra,
+  Gustavo Lima, and Adán Cabello.
+\newblock Device-{Independent} {Certification} of {High}-{Dimensional}
+  {Quantum} {Systems}.
+\newblock {\em Physical Review Letters}, 112(14):140503, April 2014.
+
+\bibitem{farkas_selftesting_2019}
+Máté Farkas and Jędrzej Kaniewski.
+\newblock Self-testing mutually unbiased bases in the prepare-and-measure
+  scenario.
+\newblock {\em Physical Review A}, 99(3), March 2019.
+
+\bibitem{wei_selftesting_2019}
+Shi-Hui Wei, Fen-Zhuo Guo, Xin-Hui Li, and Qiao-Yan Wen.
+\newblock Robustness self-testing of states and measurements in the
+  prepare-and-measure scenario with
+  {\textbackslash}textdollar3{\textbackslash}textbackslashto
+  1{\textbackslash}textdollar random access code.
+\newblock {\em Chinese Physics B}, 28(7), July 2019.
+\newblock Publisher: IOP Publishing.
+
+\bibitem{mironowicz_fouroutcome_2019}
+Piotr Mironowicz and Marcin Paw\l{}owski.
+\newblock Experimentally feasible semi-device-independent certification of
+  four-outcome positive-operator-valued measurements.
+\newblock {\em Phys. Rev. A}, 100:030301, Sep 2019.
+
+\bibitem{miklin_universal_2021}
+Nikolai Miklin and Michał Oszmaniec.
+\newblock A universal scheme for robust self-testing in the prepare-and-measure
+  scenario.
+\newblock {\em Quantum}, 5:424, Apr 2021.
+
+\bibitem{navascues_bounding_2015}
+Miguel Navascués and Tamás Vértesi.
+\newblock Bounding the {Set} of {Finite} {Dimensional} {Quantum}
+  {Correlations}.
+\newblock {\em Physical Review Letters}, 115(2), July 2015.
+
+\bibitem{navascues_characterizing_2015}
+Miguel Navascués, Adrien Feix, Mateus Araújo, and Tamás Vértesi.
+\newblock Characterizing finite-dimensional quantum behavior.
+\newblock {\em Physical Review A}, 92(4), October 2015.
+
+\bibitem{mohan_sequential_2019}
+Karthik Mohan, Armin Tavakoli, and Nicolas Brunner.
+\newblock Sequential random access codes and self-testing of quantum
+  measurement instruments.
+\newblock {\em New Journal of Physics}, 21(8):083034, August 2019.
+
+\bibitem{miklin_sequentialunsharp_2020}
+Nikolai Miklin, Jakub~J. Borkała, and Marcin Pawłowski.
+\newblock Semi-device-independent self-testing of unsharp measurements.
+\newblock {\em Physical Review Research}, 2(3):033014, July 2020.
+
+\bibitem{wang_pamnetworks_2019}
+Yukun Wang, Ignatius~William Primaatmaja, Emilien Lavie, Antonios Varvitsiotis,
+  and Charles Ci~Wen Lim.
+\newblock Characterising the correlations of prepare-and-measure quantum
+  networks.
+\newblock {\em npj Quantum Information}, 5(1), February 2019.
+
+\bibitem{schmid_secret_2005}
+Christian Schmid, Pavel Trojek, Mohamed Bourennane, Christian Kurtsiefer, Marek
+  \ifmmode~\dot{Z}\else \.{Z}\fi{}ukowski, and Harald Weinfurter.
+\newblock Experimental single qubit quantum secret sharing.
+\newblock {\em Phys. Rev. Lett.}, 95:230505, Dec 2005.
+
+\bibitem{buhrman_communicationreview_2010}
+Harry Buhrman, Richard Cleve, Serge Massar, and Ronald de~Wolf.
+\newblock Nonlocality and communication complexity.
+\newblock {\em Reviews of Modern Physics}, 82(1):665--698, March 2010.
+
+\bibitem{wiesner1983conjugate}
+Stephen Wiesner.
+\newblock Conjugate coding.
+\newblock {\em ACM Sigact News}, 15(1):78--88, 1983.
+
+\bibitem{nayak1999optimal}
+Ashwin Nayak.
+\newblock Optimal lower bounds for quantum automata and random access codes.
+\newblock In {\em 40th Annual Symposium on Foundations of Computer Science
+  (Cat. No. 99CB37039)}, pages 369--376. IEEE, 1999.
+
+\bibitem{ambainis2002dense}
+Andris Ambainis, Ashwin Nayak, Amnon Ta-Shma, and Umesh Vazirani.
+\newblock Dense quantum coding and quantum finite automata.
+\newblock {\em Journal of the ACM (JACM)}, 49(4):496--511, 2002.
+
+\bibitem{hayashi_41qracs_2006}
+Masahito Hayashi, Kazuo Iwama, Harumichi Nishimura, Rudy Raymond, and Shigeru
+  Yamashita.
+\newblock (4, 1)-quantum random access coding does not exist—one qubit is not
+  enough to recover one of four bits.
+\newblock {\em New Journal of Physics}, 8(8):129, 2006.
+
+\bibitem{spekkens2009preparation}
+Robert~W Spekkens, Daniel~H Buzacott, Anthony~J Keehn, Ben Toner, and Geoff~J
+  Pryde.
+\newblock Preparation contextuality powers parity-oblivious multiplexing.
+\newblock {\em Physical review letters}, 102(1):010401, 2009.
+
+\bibitem{emeriau_torpedo_2020}
+Pierre-Emmanuel Emeriau, Mark Howard, and Shane Mansfield.
+\newblock Quantum advantage in information retrieval, 2020.
+
+\bibitem{holevo-bound-1973}
+Alexander~Semenovich Holevo.
+\newblock Bounds for the quantity of information transmitted by a quantum
+  communication channel.
+\newblock {\em Problemy Peredachi Informatsii}, 9(3):3--11, 1973.
+
+\bibitem{barenco_dense_1995}
+Adriano Barenco and Artur~K. Ekert.
+\newblock Dense coding based on quantum entanglement.
+\newblock {\em Journal of Modern Optics}, 42(6):1253--1259, 1995.
+
+\bibitem{nayak_rigidity_2020}
+Ashwin Nayak and Henry Yuen.
+\newblock Rigidity of superdense coding, 2020.
+
+\bibitem{cavalcanti_generalmethod_2016}
+D.~Cavalcanti, L.~Guerini, R.~Rabelo, and P.~Skrzypczyk.
+\newblock General method for constructing local hidden variable models for
+  entangled quantum states.
+\newblock {\em Phys. Rev. Lett.}, 117:190401, Nov 2016.
+
+\bibitem{hirsch_algorithmic_2016}
+Flavien Hirsch, Marco~T\'ulio Quintino, Tam\'as V\'ertesi, Matthew~F. Pusey,
+  and Nicolas Brunner.
+\newblock Algorithmic construction of local hidden variable models for
+  entangled quantum states.
+\newblock {\em Phys. Rev. Lett.}, 117:190402, Nov 2016.
+
+\bibitem{popescu-filtering-1995}
+Sandu Popescu.
+\newblock Bell's inequalities and density matrices: Revealing ``hidden''
+  nonlocality.
+\newblock {\em Phys. Rev. Lett.}, 74:2619--2622, Apr 1995.
+
+\bibitem{hirsch-hidden-2013}
+Flavien Hirsch, Marco~T\'ulio Quintino, Joseph Bowles, and Nicolas Brunner.
+\newblock Genuine hidden quantum nonlocality.
+\newblock {\em Phys. Rev. Lett.}, 111:160402, Oct 2013.
+
+\bibitem{gallego2014nonlocality}
+Rodrigo Gallego, Lars~Erik W{\"u}rflinger, Rafael Chaves, Antonio Ac{\'\i}n,
+  and Miguel Navascu{\'e}s.
+\newblock Nonlocality in sequential correlation scenarios.
+\newblock {\em New Journal of Physics}, 16(3):033037, 2014.
+
+\bibitem{navascues-activation-2011}
+Miguel Navascu\'es and Tam\'as V\'ertesi.
+\newblock Activation of nonlocal quantum resources.
+\newblock {\em Phys. Rev. Lett.}, 106:060403, Feb 2011.
+
+\bibitem{palazuelos-superactivation-2012}
+Carlos Palazuelos.
+\newblock Superactivation of quantum nonlocality.
+\newblock {\em Phys. Rev. Lett.}, 109:190401, Nov 2012.
+
+\bibitem{cavalcanti2011quantum}
+Daniel Cavalcanti, Mafalda~L Almeida, Valerio Scarani, and Antonio Acin.
+\newblock Quantum networks reveal quantum nonlocality.
+\newblock {\em Nature communications}, 2(1):1--6, 2011.
+
+\bibitem{bowles2020singlecopy}
+Joseph Bowles, Flavien Hirsch, and Daniel Cavalcanti.
+\newblock Single-copy activation of bell nonlocality via broadcasting of
+  quantum states, 2020.
+
+\bibitem{giovannetti_metrology_2006}
+Vittorio Giovannetti, Seth Lloyd, and Lorenzo Maccone.
+\newblock Quantum metrology.
+\newblock {\em Phys. Rev. Lett.}, 96:010401, Jan 2006.
+
+\bibitem{fillettaz_algorithmic_2018}
+Mathieu Fillettaz, Flavien Hirsch, S\'ebastien Designolle, and Nicolas Brunner.
+\newblock Algorithmic construction of local models for entangled quantum
+  states: Optimization for two-qubit states.
+\newblock {\em Phys. Rev. A}, 98:022115, Aug 2018.
+
+\bibitem{classicality_repository}
+Carlos de~Gois.
+\newblock Code for ``{G}eneral method for classicality certification in the
+  prepare and measure scenario'' (\cite{degois_2021_general}).
+\newblock \url{https://github.com/cgois/pam_classicality}, 2021.
+
+\bibitem{guhne_faithful_2021}
+Otfried G\"uhne, Yuanyuan Mao, and Xiao-Dong Yu.
+\newblock Geometry of faithful entanglement.
+\newblock {\em Phys. Rev. Lett.}, 126:140503, Apr 2021.
+
+\bibitem{collins_cglmp_2002}
+Daniel Collins, Nicolas Gisin, Noah Linden, Serge Massar, and Sandu Popescu.
+\newblock Bell inequalities for arbitrarily high-dimensional systems.
+\newblock {\em Phys. Rev. Lett.}, 88:040404, Jan 2002.
+
+\bibitem{divianszky_qutritwitness_2017}
+P\'eter Divi\'anszky, Erika Bene, and Tam\'as V\'ertesi.
+\newblock Qutrit witness from the grothendieck constant of order four.
+\newblock {\em Phys. Rev. A}, 96:012113, Jul 2017.
+
+\bibitem{nguyen_somemeasurements_2020}
+H.~Chau Nguyen and Otfried G\"uhne.
+\newblock Some quantum measurements with three outcomes can reveal
+  nonclassicality where all two-outcome measurements fail to do so.
+\newblock {\em Phys. Rev. Lett.}, 125:230402, Dec 2020.
+
+\bibitem{vollbrecht_twoqubits_2000}
+K.~G.~H. Vollbrecht and R.~F. Werner.
+\newblock Why two qubits are special.
+\newblock {\em Journal of Mathematical Physics}, 41(10):6772--6782, 2000.
+
+\bibitem{schmid2021understanding}
+David Schmid, Thomas~C. Fraser, Ravi Kunjwal, Ana~Belen Sainz, Elie Wolfe, and
+  Robert~W. Spekkens.
+\newblock Understanding the interplay of entanglement and nonlocality:
+  motivating and developing a new branch of entanglement theory, 2021.
+
+\end{thebibliography}
