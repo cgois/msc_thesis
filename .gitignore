@@ -4,13 +4,7 @@
 *.fdb_latexmk
 *.blg
 *.fls
-drafts/Icon
-drafts/ch1/Icon
-drafts/ch3/Icon
-drafts/.obsidian
-postext/Icon
-pretext/Icon
-review/Icon
-sty/Icon
-text/Icon
-Icon
+*Icon\r
+drafts/
+.vscode/
+review/

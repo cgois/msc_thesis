@@ -50,15 +50,29 @@
 		\include{text/chapter4}
 		\include{text/chapter5}
 	% \include{postext/final_remarks}
+	% \@endpart
+
+	% \backmatter
 	
 	\begin{appendices}
+	% \addappheadtotoc
+	\appendixpage
+    % \makeatletter
+    % \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}
+    % \makeatother
+
+		\addcontentsline{toc}{part}{Appendices}
 		\input{postext/appendix_a.tex}
 		\input{postext/appendix_b.tex}
 	\end{appendices}
 	
+
+	% \bookmarksetupnext{level=-1}
+	% \bookmarksetup{startatroot}
 	\thispagestyle{empty}  % Remove page number
 	\bibliographystyle{unsrt}
 	\bibliography{bibliography}
-	\addcontentsline{toc}{chapter}{Bibliography}
+
+	\addcontentsline{toc}{part}{Bibliography}
 	
 \end{document}

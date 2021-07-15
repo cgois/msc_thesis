@@ -1,9 +1,0 @@
-# Future directions
-
-Albeit the applications discussed in secs. \ref{sec:activation} and \ref{sec:incompatibility-vs-classicality} rely on the projective measurements case of our criterion, their respective generalized instances are easily implementable. They do, however, incur in more demanding computational requirements, as the measurement depolarization factor $t$ can be seen as effectively lowering the insphere radius $\eta$.  It could nevertheless be interesting to investigate applications of it, as for instance showing a nonclassicality activation phenomenon valid for all POVMs.
-
-A second kind of activation phenomenon, emerging by adding more measuremens instead of preparations, has also been observed when the number of preparations is limited \cite{poderini}. Similarly to sec. \ref{sec:activation}, the measurement classicality criterion derived in sec. \ref{sec:measurement-classicality} could be used to attempt on finding a "genuine" form of this result, where all preparations are considered.
-
-An interesting open question in the steering scenario is whether POVMs can be used to demonstrate steering in states where no projective measurements can \cite{}. This naturally extends to the prepare-and-measure scenario. One could approach this question in the following way. Start by selecting classical preparation sets from the results in sec. \ref{sec:activation}, that are only certifiedly classical for projective measurements. Then characterize the facets of a $(d=2, B>2, X=3,Y)$ prepare-and-measure polytope. Finally, search for a set of POVMs that, for some choice of those classical preparations, violates some of the obtained facets.
-
-To aid in future works, all implementations used in this chapter are available at a public code repository \cite{classicality-repository}.

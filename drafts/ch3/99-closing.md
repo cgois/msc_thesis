@@ -1,1 +1,0 @@
-(Precisa algo ou tá bom encerrar assim?)

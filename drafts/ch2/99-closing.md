@@ -1,2 +1,0 @@
-- Comments on other types of optimization (convex and nonlinear, rank-constrained etc.)
-- In chap. 4 and 5 we use linear and sdp, respectively
