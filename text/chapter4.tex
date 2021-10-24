@@ -233,8 +233,8 @@
             \begin{alignat}{2}
                 &\text{given}    &\quad & \mathcal{S},\, \mathcal{M},\, \eta, \{ \lambda \} \\
                 &\underset{\pi(\lambda)}{\text{max.}}   &	  & \alpha \\
-                &\text{s.t.}    &      & \alpha E_{b \mid y} + (1 - \alpha)\frac{\mathbf{1}_d}{d} = \eta O_{b \mid y} + \left( 1 - \eta \right) \frac{\mathbf{1}_d}{d}, \quad\forall x \\
-                &                  &      & \text{tr}(O_{b \vert y} \rho_x) = \sum_{a, \lambda} \pi(\lambda) p(a \vert x, \lambda) p(b \vert a, y, \lambda), \quad\forall b, x, y \\
+                &\text{s.t.}    &      & \alpha E_{b \mid y} + (1 - \alpha)\frac{\mathbf{1}_d}{d} = \eta O_{b \mid y} + \left( 1 - \eta \right) \frac{\mathbf{1}_d}{d}, \quad\forall b, y \\
+                &                  &      & \text{tr}(O_{b \vert y} \rho_x) = \sum_{m, \lambda} \pi(\lambda) p(m \vert x, \lambda) p(b \vert m, y, \lambda), \quad\forall b, x, y \\
                 &				   &	  & 0 \leq \alpha \leq 1 \\
                 &				   &	  & \pi(\lambda) \geq 0 \\
                 &				   &	  & \sum_\lambda \pi(\lambda) = 1 .
@@ -244,7 +244,7 @@
         %
         Running it amounts to choosing a suitable set of pure probes $\mathcal{S} = \{ \rho_x \}_x$, finding its corresponding $\eta$, generating the deterministic strategies $\{ \lambda \}$, and querying for the maximum $\alpha$ such that the projective measurements in $\mathcal{M}$ are classical. As before, $\alpha = 1$ certifies they are classical, while $\alpha < 1$ tells us only that the measurements $\mathcal{M}_\alpha = \{ \Phi_\alpha \left( E_{b \mid y} \right) \}_{b,y}$ are. From self-duality of the depolarizing map $\Phi$, another valid interpretation is that $\mathcal{M}$ is classical for all preparations at least as mixed as $\Phi_\alpha \left( \rho_x \right)$.
 
-        Once more in full analogy to the preparation classicality case, we may use concepts of projective simulatability to extend this criterion to POVMs. Let $t$ be a depolarization parameter that turns a POVM set $\mathcal{M}$ projective-simulatable, and recal that $\trb{ \phi_t( E_{b \mid y}) \rho^t } = \trb{ E_{b \mid y} \phi_t(\rho) }$. Testing $\mathcal{M}$ for classicality is hence equivalent to certifying $\Phi_t \left( \mathcal{M} \right)$ is classical with respect to a set
+        Once more in full analogy to the preparation classicality case, we may use concepts of projective simulatability to extend this criterion to POVMs. Let $t$ be a depolarization parameter that turns a POVM set $\mathcal{M}$ projective-simulatable, and recall that $\trb{ \phi_t( E_{b \mid y}) \rho^t } = \trb{ E_{b \mid y} \phi_t(\rho) }$. Testing $\mathcal{M}$ for classicality is hence equivalent to certifying $\Phi_t \left( \mathcal{M} \right)$ is classical with respect to a set
         $$
             \mathcal{S}^t = \{ \rho_x^t \}_x = \Bigg\{ \frac{1}{t} \left( \rho_x - \frac{1-t}{d} \mathbf{1} \right) \Bigg\}_x
         $$
@@ -254,9 +254,9 @@
             \begin{alignat}{2}
                 &\text{given}    &\quad & \mathcal{S},\, \mathcal{M},\, \eta, \{ \lambda \}, t \\
                 &\underset{\pi(\lambda)}{\text{max.}}   &	  & \alpha \\
-                &\text{s.t.}    &      & \alpha E_{b \mid y} + (1 - \alpha)\frac{\mathbf{1}_d}{d} = \eta O_{b \mid y} + \left( 1 - \eta \right) \frac{\mathbf{1}_d}{d}, \quad\forall x \\
+                &\text{s.t.}    &      & \alpha E_{b \mid y} + (1 - \alpha)\frac{\mathbf{1}_d}{d} = \eta O_{b \mid y} + \left( 1 - \eta \right) \frac{\mathbf{1}_d}{d}, \quad\forall b, y \\
                 &                  &      & \rho_x^\prime = \frac{1}{t} \left( \rho_x - \frac{1-t}{d} \mathbf{1} \right) \\
-                &                  &      & \text{tr}(O_{b \vert y} \rho_x^\prime) = \sum_{a, \lambda} \pi(\lambda) p(a \vert x, \lambda) p(b \vert a, y, \lambda), \quad\forall b, x, y \\
+                &                  &      & \text{tr}(O_{b \vert y} \rho_x^\prime) = \sum_{m, \lambda} \pi(\lambda) p(m \vert x, \lambda) p(b \vert m, y, \lambda), \quad\forall b, x, y \\
                 &				   &	  & 0 \leq \alpha \leq 1 \\
                 &				   &	  & \pi(\lambda) \geq 0 \\
                 &				   &	  & \sum_\lambda \pi(\lambda) = 1 .

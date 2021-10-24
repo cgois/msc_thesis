@@ -1,6 +1,3 @@
-
-
-% Fancy header settings
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0em}
@@ -10,5 +7,22 @@
 	\markright{Section \thesection\qquad {\bf #1}}}
 \renewcommand{\chaptermark}[1]{%
 	\markboth{Chapter \thechapter\qquad {\bf #1}}{}}
-\fancyhead[LE]{\nouppercase\raggedright\pagenumber \qquad \leftmark}
-\fancyhead[RO]{\nouppercase\rightmark \qquad \pagenumber}
+\fancyhead[R]{\nouppercase\rightmark \qquad \pagenumber}
+
+\fancypagestyle{plain}{
+	\fancyhead[R]{\pagenumber}
+}
+
+
+% % Fancy header settings
+% \pagestyle{fancy}
+% \fancyhf{}
+% \renewcommand{\headrulewidth}{0em}
+% \fancyheadoffset[LE, RO]{1cm}
+% \newcommand{\pagenumber}{{\bf\large\thepage}}
+% \renewcommand{\sectionmark}[1]{%
+% 	\markright{Section \thesection\qquad {\bf #1}}}
+% \renewcommand{\chaptermark}[1]{%
+% 	\markboth{Chapter \thechapter\qquad {\bf #1}}{}}
+% \fancyhead[LE]{\nouppercase\raggedright\pagenumber \qquad \leftmark}
+% \fancyhead[RO]{\nouppercase\rightmark \qquad \pagenumber}

@@ -1,8 +1,8 @@
 \chapter{Convexity and optimization}
 \label{chap:optimization}
-\thispagestyle{empty}  % Remove opening page number
+% \thispagestyle{empty}  % Remove opening page number
 
-	Catenaries, Fermat's principle of least time and thermodynamic equilibrium are well known examples of extremum principles applied to the description of nature. On the opposite side, multiple essential modern technologies, such as network routing, logistics and integrated circuit design rely on finding good solutions to optimization problems. No matter whether you are minimizing a Gibbs free energy under constant $T$ and $P$, or searching for the best arrangement of electronic components on a chip to reduce its footprint while satisfying heat dissipation and fabrication constraints, this is what an optimization problem looks like
+	Catenaries, Fermat's principle of least time and thermodynamic equilibrium are well known examples of extremum principles applied to the description of nature. On the opposite side, multiple essential modern technologies, such as network routing, logistics and integrated circuit design rely on finding sufficiently good solutions to optimization problems. No matter whether you are minimizing a Gibbs free energy under constant $T$ and $P$, or searching for the best arrangement of electronic components on a chip to reduce its footprint while satisfying heat dissipation and fabrication constraints, this is what an optimization problem looks like
 	%
 	\begin{equation}
 		p^* = \min \big\{ f_0(x) \mid f_i(x) \leq b_i, \,\forall i \in \{1, \ldots, m\} \big\} .
@@ -32,7 +32,7 @@
 
 		Finite induction on the definition shows that, for $x_1, \ldots, x_n \in A$ and $\sum_i \alpha_i = 1$, all points $x = \sum_i \alpha_i x_i \in A$.  Such a sum is an \emph{affine combination} of the $x_i$.
 
-		When $A_i$ are affine sets, $A = \bigcap_i A_i$ is also affine. Intersections can only decrease cardinality. Hence, if we take some (not necessarily affine) set $S$ and intersect all possible $A_i \supseteq S$, we will get the smallest affine set containing $S$. This is called an \emph{affine hull}, and denoted $\aff{S}$. Equivalently, it can be shown that
+		When $A_i$ are affine sets, $A = \bigcap_i A_i$ is also affine. Intersections can only decrease dimensionality. Hence, if we take some (not necessarily affine) set $S$ and intersect all possible $A_i \supseteq S$, we will get the smallest affine set containing $S$. This is called an \emph{affine hull}, and denoted $\aff{S}$. Equivalently, it can be shown that
 		$$
 			\aff{S} = \Big\{ \sum_i \alpha_i x_i \mid \sum_i \alpha_i = 1, \, x_i \in S \Big\} .
 		$$

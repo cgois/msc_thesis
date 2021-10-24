@@ -1,44 +1,37 @@
 \documentclass[oneside,a4paper]{book}
 \usepackage{sty/packages}
 \usepackage{sty/macros}
-\usepackage{pretext/titlepage}  % Set header style
+\usepackage{pretext/titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-	% A hack so numbering don't appear in parts, toc and intro
-	% \pagestyle{empty}
-	% \fancypagestyle{plain}{%
-	% 	\fancyhf{}                          % clear all header and footer fields
-	% 	\renewcommand{\headrulewidth}{0pt}
-	% 	\renewcommand{\footrulewidth}{0pt}
-	% 	\addtocounter{\thepage}{1}
-	% }
-
-
-	\include{sty/plain}  % Renew the plain page style 
-	\pagestyle{plain}
-
-	% \frontmatter	
-	\newgeometry{top=5cm,bottom=3cm,left=3cm,right=3cm}
+	\newgeometry{top=3cm,bottom=3cm,left=3cm,right=3cm}
 		\maketitle
+		\include{pretext/cover_sheet}
 	\restoregeometry
-	% \include{pretext/titlepage}
 
+ 	\addtocounter{page}{1}
+	\includepdf[pages=-]{pretext/ficha_catalografica.pdf}
+  	\addtocounter{page}{1}
+	\includepdf[pages=-]{pretext/capa_aprovacao.pdf}
+
+	\pagestyle{empty}
 	\newgeometry{top=5cm,bottom=5cm,left=8cm,right=3cm}
 		\include{pretext/quotes}
 	\restoregeometry
-	\include{pretext/abstract}
-	\include{pretext/publications}
 	\include{pretext/acknowledgments}
+	\include{pretext/abstract}
 
 	\newgeometry{top=3cm,bottom=4cm,left=3cm,right=3cm}
 		\tableofcontents
+		\addtocontents{toc}{\protect\thispagestyle{empty}}
 	\restoregeometry
 
-	% \mainmatter
 
+	\include{sty/fancy}
 	\include{pretext/introduction}
-	\include{sty/fancy}  % Set header style
 
 	\part{Tools}
 	\label{part:tools}
@@ -54,6 +47,17 @@
 
 	% \backmatter
 	
+
+
+	% \bookmarksetupnext{level=-1}
+	% \bookmarksetup{startatroot}
+	% \thispagestyle{empty}  % Remove page number
+	\bibliographystyle{abbrv}
+	\bibliography{bibliography}
+
+	% \printbibliography
+	\addcontentsline{toc}{part}{Bibliography}
+
 	\begin{appendices}
 	% \addappheadtotoc
 	\appendixpage
@@ -64,15 +68,8 @@
 		\addcontentsline{toc}{part}{Appendices}
 		\input{postext/appendix_a.tex}
 		\input{postext/appendix_b.tex}
+		\include{pretext/publications}
 	\end{appendices}
 	
-
-	% \bookmarksetupnext{level=-1}
-	% \bookmarksetup{startatroot}
-	\thispagestyle{empty}  % Remove page number
-	\bibliographystyle{unsrt}
-	\bibliography{bibliography}
-
-	\addcontentsline{toc}{part}{Bibliography}
 	
 \end{document}
